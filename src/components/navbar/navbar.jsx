@@ -1,8 +1,19 @@
 import React, { useReducer } from "react";
-import { Dropmenu, Infos, Navdiv, Selection } from "./style";
+import {
+  Camper,
+  Dropmenu,
+  Hamburger,
+  HamburgerRight,
+  Infos,
+  Navdiv,
+  Selection,
+} from "./style";
 import message from "../../assets/Vector (1).png";
 import people from "../../assets/Vector.png";
 import car from "../../assets/car.png";
+import hamburger from "../../assets/hamburger.png";
+import { Link } from "react-router-dom";
+import ImageWithDropdown from "./ImageDropdown/dropdown";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,7 +30,12 @@ const Navbar = () => {
   });
   return (
     <Navdiv>
-      <h1>Camper</h1>
+      <Hamburger>
+        <a href="">
+          <img src={hamburger} />
+        </a>
+      </Hamburger>
+      <Camper to='/'>Camper</Camper>
       <Infos>
         <p
           onClick={() => {
@@ -143,8 +159,17 @@ const Navbar = () => {
         )}
       </Infos>
       <Selection>
-        <img src={message} />
-        <img src={people} />
+        <a href="">
+        <ImageWithDropdown className="message"/>
+        </a>
+        <Link to='login'>
+        <img src={people} className="people" />
+        </Link>
+        <HamburgerRight>
+          <a href="">
+            <img src={hamburger} alt="" />
+          </a>
+        </HamburgerRight>
         <select name="Language">
           <option value="eng">ENG</option>
           <option value="kor">KOR</option>

@@ -35,6 +35,10 @@ export const Servicesdiv = styled.div`
     color: black;
     cursor: pointer;
   }
+
+  @media (max-width: 830px) {
+    display: none;
+  }
 `;
 export const Writings = styled.div`
   display: flex;
@@ -52,5 +56,30 @@ export const Writings = styled.div`
   p:hover {
     cursor: pointer;
     color: black;
+  }
+`;
+export const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 830px) {
+    h1 {
+      display: none;
+    }
+    p {
+      display: none;
+    }
+  }
+`;
+export const SocialMedia = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  a {
+    display: flex;
+    gap: 60px;
+    cursor: pointer;
   }
 `;

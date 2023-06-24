@@ -9,21 +9,26 @@ import {
 } from "./style";
 import Example from "./carouselcomp/carousel";
 import image from "../../assets/car22.png";
+import image1 from "../../assets/car33.png";
+import image2 from "../../assets/imag3car.png";
+import MultiCarousel from "./multicarousel/multicarousel";
+
 
 const Home = () => {
   return (
     <div>
       <Example />
       <div
-        style={{ display: `flex`, flexDirection: `column`, height: `300px` }}
+        style={{ display: `flex`, flexDirection: `column` }}
       >
         <Homecontainer>
           <h1>Recommend</h1>
           <Linediv></Linediv>
+          <MultiCarousel/>
           <h1>Videos</h1>
           <Linediv></Linediv>
           <Videodiv>
-            <video src=""></video>
+            <video src={image}></video>
             <video src=""></video>
             <video src=""></video>
             <video src=""></video>
@@ -46,11 +51,11 @@ const Home = () => {
             </Loremcontainer>
             <Imagecontainer>
               <img src={image} />
-              <img src="" />
-              <img src="" />
-              <img src="" />
-              <img src="" />
-              <img src="" />
+              <img src={image1} />
+              <img src={image2} />
+              <img src={image} />
+              <img src={image1} />
+              <img src={image2} />
             </Imagecontainer>
           </Blogscontainer>
         </Homecontainer>

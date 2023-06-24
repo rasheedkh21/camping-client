@@ -1,5 +1,11 @@
 import React from "react";
-import { Footerdiv, Servicesdiv, Writings } from "./style";
+import {
+  Contact,
+  Footerdiv,
+  Servicesdiv,
+  SocialMedia,
+  Writings,
+} from "./style";
 import youtube from "../../assets/youteube.png";
 import insta from "../../assets/insta.png";
 import naver from "../../assets/naver.png";
@@ -27,25 +33,26 @@ const Footer = () => {
             <p>Blog</p>
           </Writings>
         </Servicesdiv>
-        <div>
+        <Contact>
           <h1 style={{ fontSize: `20xp`, fontFamily: `monospace` }}>Contact</h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: `row`,
-              justifyContent: `space-evenly`,
-              alignItems: `center`,
-              marginTop: `40px`,
-            }}
-          >
-            <img src={youtube} alt="none" />
-            <img src={insta} alt="none" />
-            <img src={naver} alt="none" />
-          </div>
+          <SocialMedia>
+            <a href="https://www.instagram.com/rasheedkh_/">
+              {" "}
+              <img src={youtube}  alt="none" />{" "}
+            </a>
+            <a href="">
+              {" "}
+              <img src={insta} alt="none" />{" "}
+            </a>
+            <a href="">
+              {" "}
+              <img src={naver} alt="none" />{" "}
+            </a>
+          </SocialMedia>
           <p style={{ color: `white` }}>021 Korea Seul, LA</p>
           <p style={{ color: `white` }}>Camper@example.com</p>
           <p style={{ color: `white` }}>(021) 345-6789-99</p>
-        </div>
+        </Contact>
       </Footerdiv>
     </div>
   );
