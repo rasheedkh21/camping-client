@@ -4,10 +4,8 @@ import message from "../../../assets/Vector (1).png"
 
 const ImageWithDropdown = () => {
   return (
-    <div className="container">
-      {/* <img src={message} alt="Your Image" /> */}
+    <div className="container"> 
       <div className="dropdown">
-        {/* <button className="dropbtn">Dropdown</button> */}
         <img src={message} className='dropbtn' alt="" />
         <div className="dropdown-content">
           <a href="#">My orders</a>
