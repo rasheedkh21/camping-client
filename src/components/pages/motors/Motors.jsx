@@ -6,4 +6,4 @@ const Motors = () => {
   )
 }
 
-export default Motors;
+export default Motors

@@ -14,6 +14,11 @@
   width: 500px;
 height: 614px;
 flex-shrink: 0;
+@media (max-width: 414px)  {
+  width: 384px;
+  height: 626px;
+  flex-shrink: 0;
+}
 }
 .email {
   display: flex;
@@ -28,6 +33,12 @@ flex-shrink: 0;
   border: none;
   padding-left: 10px;
   margin-top: 10px;
+
+  @media (max-width: 414px)  {
+    width: 334px;
+    height: 50px;
+    flex-shrink: 0;
+  }
 }
 .email label {
   color: rgba(55, 55, 55, 0.8);
@@ -36,6 +47,12 @@ flex-shrink: 0;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+@media (max-width: 414px) {
+  width: 334px;
+height: 50px;
+flex-shrink: 0;
+
+}
 }
 .password {
   display: flex;
@@ -50,6 +67,11 @@ flex-shrink: 0;
   border: none;
   padding-left: 10px;
   margin-top: 10px;
+  @media (max-width: 414px) {
+    width: 334px;
+  height: 50px;
+  flex-shrink: 0;
+  }
 }
 .password label {
   color: rgba(55, 55, 55, 0.8);
@@ -59,6 +81,11 @@ flex-shrink: 0;
   font-weight: 600;
   line-height: normal;
   margin-top: 15px;
+  @media (max-width: 414px) {
+    width: 334px;
+  height: 50px;
+  flex-shrink: 0;
+  }
 }
 .checkbox {
   display: flex;
@@ -89,6 +116,7 @@ flex-shrink: 0;
   flex-shrink: 0;
   border-radius: 5px;
   background: rgba(55, 55, 55, 0.15);
+
 }
 .check label {
   color: #373737;
@@ -97,6 +125,7 @@ flex-shrink: 0;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
 }
 .signin {
   width: 434px;
@@ -112,6 +141,11 @@ flex-shrink: 0;
   line-height: normal;
   border: none;
   margin-top: 20px;
+  @media (max-width: 414px) {
+    width: 334px;
+  height: 50px;
+  flex-shrink: 0;
+  }
 }
 .or {
   display: flex;
@@ -134,6 +168,13 @@ line-height: normal;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 15px;
+  @media (max-width: 414px) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 .circle-green {
   display: flex;
@@ -178,4 +219,9 @@ line-height: normal;
   font-weight: 700;
   line-height: normal;
   margin-top: 15px;
+  @media (max-width: 414px) {
+    width: 334px;
+  height: 50px;
+  flex-shrink: 0;
+  }
 }

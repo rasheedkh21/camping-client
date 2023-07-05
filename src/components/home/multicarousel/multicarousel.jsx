@@ -1,89 +1,88 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import slidecar from "../../../assets/slidecar.png"
+import React from 'react'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import "./MultiCarouselstyle.css";
+import offercar from "../../../assets/offercar1.png"
+import offercar1 from "../../../assets/offercar2.png"
+import offercar2 from "../../../assets/offercar3.png"
+import offercar3 from "../../../assets/offercar4.png"
+
+import Slider from 'react-slick';
 
 const MultiCarousel = () => {
-  const carouselItems = [
-    {
-        src: `${slidecar}`,
-      alt: 'Image 1',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      src: `${slidecar}`,
-      alt: 'Image 2',
-      description: 'Nulla venenatis ipsum non laoreet tristique.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    {
-        src: `${slidecar}`,
-      alt: 'Image 3',
-      description: 'Suspendisse tristique nunc eget efficitur luctus.',
-    },
-    // Add more images as needed
-  ];
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 834,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 414,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 6,
-    },
-    tablet: {
-      breakpoint: { max: 1023, min: 768 },
-      items: 4,
-    },
-    phone: {
-      breakpoint: { max: 767, min: 0 },
-      items: 1,
-    },
-  };
+
 
   return (
-    <Carousel responsive={responsive} infinite>
-      {carouselItems.map((item, index) => (
-        <div key={index}>
-          <img src={item.src} alt={item.alt} />
-          <p>{item.description}</p>
-          <button>Click Me</button>
-        </div>
-      ))}
-    </Carousel>
-  );
-};
+    <div className='multicarousel'>
+        <Slider {...settings}>
+            <div className="box">
+                <img src={offercar}/>
+                <h1>Cranus</h1>
+                <button>Discover the range</button>
+                <a href="/">Choosa a model</a>
+            </div>
+            <div className="box">
+            <img src={offercar1} />
+            <h1>Aidal</h1>
+                <button>Discover the range</button>
+                <a href="/">Choosa a model</a>
+            </div>
+            <div className="box">
+            <img src={offercar2}/>
+            <h1>Escape</h1>
+                <button>Discover the range</button>
+                <a href="/">Choosa a model</a>
+            </div>
+            <div className="box">
+            <img src={offercar3}/>
+            <h1>Lyseo</h1>
+                <button>Discover the range</button>
+                <a href="/">Choosa a model</a>
+            </div>
+            <div className="box">
+                <img src={offercar}/>
+                <h1>Cranus</h1>
+                <button>Discover the range</button>
+                <p>Choose a model</p>
+            </div>
+        </Slider>
+    </div>    
+  )
+}
 
 export default MultiCarousel;

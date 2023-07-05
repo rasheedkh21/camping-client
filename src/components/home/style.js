@@ -75,6 +75,7 @@ export const Blogscontainer = styled.div`
 export const Loremcontainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex: 1;
   h1 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -93,8 +94,8 @@ export const Loremcontainer = styled.div`
     color: #ff7a00;
   }
   p {
-    /* width: 380px;
-    height: 107px; */
+    width: 380px;
+    height: 107px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

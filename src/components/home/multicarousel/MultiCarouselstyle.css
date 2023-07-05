@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.multicarousel {
+  margin-top: 10px;
+  padding: 5rem;
+  color: fff;
+  width: 100vw;
+
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 276px; */
+    /* height: 319px; */
+}
+.box h1{
+    color: var(--text, #373737);
+text-align: center;
+font-size: 18px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.box button{
+    width: 259px;
+height: 45px;
+background: #006dab;
+color: #FFF;
+font-size: 18px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+cursor: pointer;
+border: none;
+}
+.box a{
+    color: var(--text, #373737);
+    font-size: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.slick-slide div {
+  margin: 0 1rem;
+  display: flex;
+}
+.slick-prev,
+.slick-next {
+  border-radius: 40px;
+  color: #006dab;
+  background: #006dab;
+
+}
