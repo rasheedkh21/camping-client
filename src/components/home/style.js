@@ -27,7 +27,7 @@ export const Videodiv = styled.div`
     border-radius: 20px;
   }
   @media (max-width: 830px){
-    display: grid;
+    display: flexbox;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
     align-items: center;

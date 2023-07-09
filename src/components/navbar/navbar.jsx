@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import {
-  Camper,
   Dropmenu,
   Hamburger,
   HamburgerRight,
@@ -8,7 +7,6 @@ import {
   Navdiv,
   Selection,
 } from "./style";
-import message from "../../assets/Vector (1).png";
 import people from "../../assets/Vector.png";
 import car from "../../assets/car.png";
 import hamburger from "../../assets/hamburger.png";
@@ -35,7 +33,9 @@ const Navbar = () => {
           <img src={hamburger} />
         </a>
       </Hamburger>
-      <Camper to='/'>Camper</Camper>
+      <Link to="/">
+        <p>Camper</p>
+      </Link>
       <Infos>
         <p
           onClick={() => {
@@ -160,10 +160,10 @@ const Navbar = () => {
       </Infos>
       <Selection>
         <a href="">
-        <ImageWithDropdown className="message"/>
+          <ImageWithDropdown className="message" />
         </a>
-        <Link to='login'>
-        <img src={people} className="people" />
+        <Link to="login">
+          <img src={people} className="people" />
         </Link>
         <HamburgerRight>
           <a href="">

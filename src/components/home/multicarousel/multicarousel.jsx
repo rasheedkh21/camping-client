@@ -8,6 +8,7 @@ import offercar2 from "../../../assets/offercar3.png";
 import offercar3 from "../../../assets/offercar4.png";
 
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const MultiCarousel = () => {
   var settings = {
@@ -58,50 +59,182 @@ const MultiCarousel = () => {
       <Slider {...settings}>
         <div className="box">
           <div>
-            <img src={offercar} />
+            <img
+              src={offercar}
+              alt="car"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
           </div>
           <h1>Cranus</h1>
-          <div>
-            <button>Discover the range</button>
-          </div>
-          <a href="/">Choosa a model</a>
+          <Link to="/aidal">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button>Discover the range</button>
+            </div>
+          </Link>
+          <a
+            href="/aidal"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Choosa a model
+          </a>
         </div>
         <div className="box">
-          <div>
-            <img src={offercar1} />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={offercar1}
+              alt="car"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
           </div>
           <h1>Aidal</h1>
-          <div>
-            <button>Discover the range</button>
-          </div>
-          <a href="/">Choosa a model</a>
+          <Link to="/aidal">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button>Discover the range</button>
+            </div>
+          </Link>
+          <a
+            href="/aidal"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Choosa a model
+          </a>
         </div>
         <div className="box">
           <div>
-            <img src={offercar2} />
+            <img
+              src={offercar2}
+              alt="car"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
           </div>
           <h1>Escape</h1>
-          <div>
-            <button>Discover the range</button>
-          </div>
-          <a href="/">Choosa a model</a>
+          <Link to="/aidal">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button>Discover the range</button>
+            </div>
+          </Link>
+          <a
+            href="/aidal"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Choosa a model
+          </a>
         </div>
         <div className="box">
           <div>
-            <img src={offercar3} />
+            <img
+              src={offercar3}
+              alt="car"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            />
           </div>
           <h1>Lyseo</h1>
-          <div>
-            <button>Discover the range</button>
-          </div>
-
-          <a href="/">Choosa a model</a>
+          <Link to="/aidal">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button>Discover the range</button>
+            </div>
+          </Link>
+          <a
+            href="/aidal"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Choosa a model
+          </a>
         </div>
         <div className="box">
-          <img src={offercar} />
+          <img
+            src={offercar}
+            alt="car"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          />
           <h1>Cranus</h1>
-          <button>Discover the range</button>
-          <p>Choose a model</p>
+          <Link to="/aidal">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button>Discover the range</button>
+            </div>
+          </Link>
+          <a
+            href="/aidal"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Choose a model
+          </a>
         </div>
       </Slider>
     </div>

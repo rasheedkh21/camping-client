@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 export const Navdiv = styled.div`
@@ -8,6 +8,17 @@ export const Navdiv = styled.div`
   align-items: center;
   width: 100%;
   height: 100px;
+  p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+    color: #006dab;
+    cursor: pointer;
+  }
 
   @media (max-width: 420px) {
     h1 {
@@ -19,20 +30,6 @@ export const Navdiv = styled.div`
     }
   }
 `;
-export const Camper=styled.a`
-
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 46px;
-    color: #006dab;
-    cursor: pointer;
-
-`
 export const Hamburger = styled.div`
   display: none;
 

@@ -12,10 +12,9 @@ import Example from "./carouselcomp/carousel";
 import image from "../../assets/car22.png";
 import image1 from "../../assets/car33.png";
 import image2 from "../../assets/imag3car.png";
-import { Overlay } from "./modalpupup";
-import MultiCarousel from "./multicarousel/Multicarousel";
+import MultiCarousel from "./multicarousel/multicarousel";
+
 const Home = () => {
-  // const [modal, setModal] = useState(false);
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
 
@@ -30,13 +29,13 @@ const Home = () => {
         <Homecontainer>
           <h1>Recommend</h1>
           <Linediv></Linediv>
-          <MultiCarousel />
+          <MultiCarousel/>
           <h1>Videos</h1>
           <Linediv></Linediv>
           <Videodiv>
             <div
               onClick={() => setOpen((o) => !o)}
-              style={{ border: "1px solid black" }}
+              // style={{ border: "1px solid black" }}
             >
               {/* <button>+++</button> */}
               <video>

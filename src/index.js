@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import Login from "./components/navbar/loginpage/login";
 import Register from "./components/navbar/regiterfom/register";
+import Aidal from "./components/pages/Aidal/Aidal";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ return (
       <Route path="/" element={<MainComponents />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="aidal" element={<Aidal/>} />
     </Routes>
     {!isLoginPage && !isRegisterPage && <Footer />}
   </React.StrictMode>
