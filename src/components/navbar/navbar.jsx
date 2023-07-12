@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import {
+  DropdownShow,
   Dropmenu,
   Hamburger,
   HamburgerRight,
@@ -46,18 +47,28 @@ const Navbar = () => {
         </p>
         {state.showText && (
           <Dropmenu>
-            <div>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-            </div>
+            <DropdownShow>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+            </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}
@@ -70,18 +81,28 @@ const Navbar = () => {
         </p>
         {state.showText && (
           <Dropmenu>
-            <div>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-            </div>
+            <DropdownShow>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+            </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}
@@ -94,18 +115,28 @@ const Navbar = () => {
         </p>
         {state.showText && (
           <Dropmenu>
-            <div>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-            </div>
+            <DropdownShow>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+            </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}
@@ -118,18 +149,28 @@ const Navbar = () => {
         </p>
         {state.showText && (
           <Dropmenu>
-            <div>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-            </div>
+            <DropdownShow>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+            </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}
@@ -142,18 +183,28 @@ const Navbar = () => {
         </p>
         {state.showText && (
           <Dropmenu>
-            <div>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-              <img src={car} />
-              <p>Car name</p>
-            </div>
+            <DropdownShow>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} />
+                <p>Car name</p>
+              </div>
+            </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}

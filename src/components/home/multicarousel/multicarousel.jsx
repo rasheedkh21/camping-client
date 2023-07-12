@@ -37,7 +37,7 @@ const MultiCarousel = () => {
         },
       },
       {
-        breakpoint: 834,
+        breakpoint: 850,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -45,7 +45,7 @@ const MultiCarousel = () => {
         },
       },
       {
-        breakpoint: 414,
+        breakpoint: 420,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

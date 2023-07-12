@@ -14,7 +14,7 @@
   width: 500px;
 height: 614px;
 flex-shrink: 0;
-@media (max-width: 414px)  {
+@media (max-width: 420px)  {
   width: 384px;
   height: 626px;
   flex-shrink: 0;
@@ -34,7 +34,7 @@ flex-shrink: 0;
   padding-left: 10px;
   margin-top: 10px;
 
-  @media (max-width: 414px)  {
+  @media  screen and(max-width: 414px)  {
     width: 334px;
     height: 50px;
     flex-shrink: 0;
@@ -47,7 +47,7 @@ flex-shrink: 0;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-@media (max-width: 414px) {
+@media screen and (max-width: 420px) {
   width: 334px;
 height: 50px;
 flex-shrink: 0;
@@ -67,7 +67,7 @@ flex-shrink: 0;
   border: none;
   padding-left: 10px;
   margin-top: 10px;
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     width: 334px;
   height: 50px;
   flex-shrink: 0;
@@ -141,7 +141,7 @@ flex-shrink: 0;
   line-height: normal;
   border: none;
   margin-top: 20px;
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     width: 334px;
   height: 50px;
   flex-shrink: 0;
@@ -219,7 +219,7 @@ line-height: normal;
   font-weight: 700;
   line-height: normal;
   margin-top: 15px;
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     width: 334px;
   height: 50px;
   flex-shrink: 0;

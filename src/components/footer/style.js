@@ -17,6 +17,10 @@ export const Footerdiv = styled.div`
     color: #ffffff;
     cursor: pointer;
   }
+  @media (max-width: 850px){
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 export const Servicesdiv = styled.div`
   display: flex;
@@ -36,7 +40,7 @@ export const Servicesdiv = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 830px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -62,7 +66,7 @@ export const Contact = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 830px) {
+  @media (max-width: 850px) {
     h1 {
       display: none;
     }
@@ -75,7 +79,7 @@ export const SocialMedia = styled.div`
   display: flex;
   flex-direction: row;
   gap: 40px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   a {
     display: flex;

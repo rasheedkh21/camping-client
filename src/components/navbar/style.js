@@ -33,18 +33,18 @@ export const Navdiv = styled.div`
 export const Hamburger = styled.div`
   display: none;
 
-  @media (max-width: 830px) {
+  @media (max-width: 850px) {
     display: flex;
     cursor: pointer;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     display: none;
   }
 `;
 export const HamburgerRight = styled.div`
   display: none;
 
-  @media (max-width: 414px) {
+  @media (max-width: 420px){
     display: flex;
   }
 `;
@@ -72,7 +72,7 @@ export const Infos = styled.div`
     background: rgba(0, 109, 171, 0.05);
     border-radius: 10px;
   }
-  @media (max-width: 830px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -87,7 +87,7 @@ export const Selection = styled.div`
     border: none;
     cursor: pointer;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     select {
       display: none;
     }
@@ -104,20 +104,45 @@ export const Dropmenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: safe;
   height: 400px;
   width: 100%;
-  div {
-    display: flex;
-    justify-content: space-evenly;
-  }
 
   button {
     width: 230px;
     height: 40px;
-    background: #006dab;
     border-radius: 10px;
+    background-color: white;
+    color: #006dab;
+    border: 1px #006dab snow;
+    margin-bottom: 70px;
+    margin-left: 650px;
+  }
+  button:hover{
+    background: #006dab;
     cursor: pointer;
     color: white;
-    border: none;
   }
 `;
+export const DropdownShow=styled.div`
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #006dab;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+`

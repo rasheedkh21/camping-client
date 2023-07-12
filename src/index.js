@@ -7,6 +7,7 @@ import Footer from "./components/footer/footer";
 import Login from "./components/navbar/loginpage/login";
 import Register from "./components/navbar/regiterfom/register";
 import Aidal from "./components/pages/Aidal/Aidal";
+import Motors from "./components/pages/motors/Motors";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ return (
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="aidal" element={<Aidal/>} />
+      <Route path="motors" element={<Motors/>}/>
     </Routes>
     {!isLoginPage && !isRegisterPage && <Footer />}
   </React.StrictMode>

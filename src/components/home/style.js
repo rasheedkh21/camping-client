@@ -26,8 +26,8 @@ export const Videodiv = styled.div`
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border-radius: 20px;
   }
-  @media (max-width: 830px){
-    display: flexbox;
+  @media (max-width: 850px){
+    display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
     align-items: center;
@@ -37,7 +37,7 @@ export const Videodiv = styled.div`
 height: 359.888916015625px;
 border-radius: 20px;
   }
-  @media (max-width:414px) {
+  @media (max-width:420px) {
     display: grid;
     grid-template-columns: auto;
     justify-content: space-evenly;
@@ -60,7 +60,7 @@ export const Blogscontainer = styled.div`
   width: 100%;
   height: fit-content;
 
-  @media (max-width: 830px ) {
+  @media (max-width: 850px ) {
     margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
@@ -128,7 +128,7 @@ export const Imagecontainer = styled.div`
       border-radius: 20px;
     }
   }
-  @media (max-width: 414px) {
+  @media (max-width: 420px) {
     display: grid;
     grid-template-columns: auto;
     img{

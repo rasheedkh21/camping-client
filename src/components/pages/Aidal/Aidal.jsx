@@ -9,6 +9,7 @@ import Heating from "../../../assets/heating.png";
 import {
   AdditionalInfos,
   Buttondiv,
+  Buttondivseconnd,
   ComfortAllDivLorem,
   ComfortImage,
   FirstAidalDiv,
@@ -17,6 +18,7 @@ import {
   LineAidal,
   PriceAidal,
 } from "./style";
+// import Comment from "./comment";
 
 const Aidal = () => {
   return (
@@ -68,7 +70,7 @@ const Aidal = () => {
           <img src={Tyding} alt="tyding" />
         </ComfortImage>
         <ComfortAllDivLorem>
-          <h1>Tidying away is child’s play!</h1>
+          <h1>Tidying away is child's play!</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh
             urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id
@@ -127,6 +129,10 @@ const Aidal = () => {
         <ComfortImage>
           <img src={Heating} alt="heeating" />
         </ComfortImage>
+        <Buttondivseconnd>
+            <button>Add to Card</button>
+            <button>Compare</button>
+          </Buttondivseconnd>
       </PriceAidal>
       <AdditionalInfos>
         <div>Item reviews</div>
@@ -134,6 +140,7 @@ const Aidal = () => {
         <div>FAQ</div>
         <div>Contact</div>
       </AdditionalInfos>
+      {/* <Comment/> */}
     </div>
   );
 };
