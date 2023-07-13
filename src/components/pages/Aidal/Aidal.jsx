@@ -18,7 +18,7 @@ import {
   LineAidal,
   PriceAidal,
 } from "./style";
-// import Comment from "./comment";
+import Comment from "./comment";
 
 const Aidal = () => {
   return (
@@ -140,7 +140,7 @@ const Aidal = () => {
         <div>FAQ</div>
         <div>Contact</div>
       </AdditionalInfos>
-      {/* <Comment/> */}
+      <Comment/>
     </div>
   );
 };

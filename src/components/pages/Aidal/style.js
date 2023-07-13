@@ -46,8 +46,10 @@ export const InfoDiv = styled.div`
     /* btn sh */
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   @media (max-width: 850px) {
-    width: 674px;
-    height: 425.09px;
+    display: flex;
+    
+    /* width: 674px;
+    height: 425.09px; */
     flex-shrink: 0;
   }
   @media (max-width: 420px) {
