@@ -6,6 +6,7 @@ import Tyding from "../../../assets/tyding.png";
 import Ventiled from "../../../assets/ventiled.png";
 import Access from "../../../assets/access.png";
 import Heating from "../../../assets/heating.png";
+import Zoom from "react-reveal/Zoom";
 import {
   AdditionalInfos,
   Buttondiv,
@@ -26,7 +27,9 @@ const Aidal = () => {
       <Example />
       <PriceAidal>
         <ImageDivCar>
-          <img src={imagecarback} alt="vcar" />
+          <Zoom left>
+            <img src={imagecarback} alt="vcar" />
+          </Zoom>
         </ImageDivCar>
         <InfoDiv>
           <FirstAidalDiv>
@@ -50,7 +53,9 @@ const Aidal = () => {
       </PriceAidal>
       <PriceAidal>
         <ComfortAllDivLorem>
-          <h1>Comfort</h1>
+          <Zoom>
+            <h1>Comfort</h1>
+          </Zoom>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh
             urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id
@@ -62,15 +67,21 @@ const Aidal = () => {
           </p>
         </ComfortAllDivLorem>
         <ComfortImage>
-          <img src={Comfort} alt="Comfort" />
+          <Zoom right>
+            <img src={Comfort} alt="Comfort" />
+          </Zoom>
         </ComfortImage>
       </PriceAidal>
       <PriceAidal>
         <ComfortImage>
-          <img src={Tyding} alt="tyding" />
+          <Zoom left>
+            <img src={Tyding} alt="tyding" />
+          </Zoom>
         </ComfortImage>
         <ComfortAllDivLorem>
-          <h1>Tidying away is child's play!</h1>
+          <Zoom>
+            <h1>Tidying away is child's play!</h1>
+          </Zoom>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum nibh
             urna sagittis arcu natoque lectus cursus felis. Nec, felis risus, id
@@ -84,7 +95,9 @@ const Aidal = () => {
       </PriceAidal>
       <PriceAidal>
         <ComfortAllDivLorem>
-          <h1>Ventilated , Lit up</h1>
+          <Zoom>
+            <h1>Ventilated , Lit up</h1>
+          </Zoom>
           <p>
             In our vans and motorhomes, all our body lighting is 100% LED: a
             guarantee of energy efficiency and durability. As for ventilation,
@@ -96,15 +109,21 @@ const Aidal = () => {
           </p>
         </ComfortAllDivLorem>
         <ComfortImage>
-          <img src={Ventiled} alt="Ventiled" />
+          <Zoom right>
+            <img src={Ventiled} alt="Ventiled" />
+          </Zoom>
         </ComfortImage>
       </PriceAidal>
       <PriceAidal>
         <ComfortImage>
-          <img src={Access} alt="Access" />
+          <Zoom left>
+            <img src={Access} alt="Access" />
+          </Zoom>
         </ComfortImage>
         <ComfortAllDivLorem>
-          <h1>Easy Access</h1>
+          <Zoom>
+            <h1>Easy Access</h1>
+          </Zoom>
           <p>
             We add little touches that your joints will thank you for… All our
             motorhomes are equipped with a built-in step to facilitate entry to
@@ -114,7 +133,9 @@ const Aidal = () => {
       </PriceAidal>
       <PriceAidal>
         <ComfortAllDivLorem>
-          <h1>Heating when driving</h1>
+          <Zoom>
+            <h1>Heating when driving</h1>
+          </Zoom>
           <p>
             Fuel heating is now very popular in the industry, but this was not
             always the case; Camper (once again) led the way in this area over
@@ -127,12 +148,14 @@ const Aidal = () => {
           </Buttondiv>
         </ComfortAllDivLorem>
         <ComfortImage>
-          <img src={Heating} alt="heeating" />
+          <Zoom right>
+            <img src={Heating} alt="heeating" />
+          </Zoom>
         </ComfortImage>
         <Buttondivseconnd>
-            <button>Add to Card</button>
-            <button>Compare</button>
-          </Buttondivseconnd>
+          <button>Add to Card</button>
+          <button>Compare</button>
+        </Buttondivseconnd>
       </PriceAidal>
       <AdditionalInfos>
         <div>Item reviews</div>
@@ -140,7 +163,7 @@ const Aidal = () => {
         <div>FAQ</div>
         <div>Contact</div>
       </AdditionalInfos>
-      <Comment/>
+      <Comment />
     </div>
   );
 };

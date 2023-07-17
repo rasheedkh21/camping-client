@@ -11,11 +11,11 @@
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  width: 100%;
 height: 614px;
 flex-shrink: 0;
 @media (max-width: 420px)  {
-  width: 384px;
+  width: 100%;
   height: 626px;
   flex-shrink: 0;
 }
@@ -25,7 +25,7 @@ flex-shrink: 0;
   flex-direction: column;
 }
 .email input {
-  width: 434px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -35,7 +35,7 @@ flex-shrink: 0;
   margin-top: 10px;
 
   @media  screen and(max-width: 414px)  {
-    width: 334px;
+    width: 100%;
     height: 50px;
     flex-shrink: 0;
   }
@@ -48,7 +48,7 @@ flex-shrink: 0;
   font-weight: 600;
   line-height: normal;
 @media screen and (max-width: 420px) {
-  width: 334px;
+  width: 100%;
 height: 50px;
 flex-shrink: 0;
 
@@ -59,7 +59,7 @@ flex-shrink: 0;
   flex-direction: column;
 }
 .password input {
-  width: 434px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -68,7 +68,7 @@ flex-shrink: 0;
   padding-left: 10px;
   margin-top: 10px;
   @media (max-width: 420px) {
-    width: 334px;
+    width: 100%;
   height: 50px;
   flex-shrink: 0;
   }
@@ -82,7 +82,7 @@ flex-shrink: 0;
   line-height: normal;
   margin-top: 15px;
   @media (max-width: 414px) {
-    width: 334px;
+    width: 100%;
   height: 50px;
   flex-shrink: 0;
   }
@@ -111,7 +111,7 @@ flex-shrink: 0;
   gap: 10px;
 }
 .check input {
-  width: 23px;
+  width: 100%;
   height: 22px;
   flex-shrink: 0;
   border-radius: 5px;
@@ -128,7 +128,7 @@ flex-shrink: 0;
 
 }
 .signin {
-  width: 434px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -142,7 +142,7 @@ flex-shrink: 0;
   border: none;
   margin-top: 20px;
   @media (max-width: 420px) {
-    width: 334px;
+    width: 100%;
   height: 50px;
   flex-shrink: 0;
   }
@@ -180,7 +180,7 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
+  width: 100%;
   height: 46px;
   flex-shrink: 0;
   border-radius: 46px;
@@ -200,27 +200,27 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
+  width: 100%;
   height: 46px;
   flex-shrink: 0;
   border-radius: 46px;
   background: #ffc700;
 }
 .register {
-  width: 434px;
+  width: 100%;
   height: 50px;
   flex-shrink: 0;
   border-radius: 10px;
   border: 2px solid var(--blue, #006dab);
   color: var(--blue, #006dab);
   font-size: 15px;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-top: 15px;
   @media (max-width: 420px) {
-    width: 334px;
+    width: 100%;
   height: 50px;
   flex-shrink: 0;
   }

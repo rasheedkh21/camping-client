@@ -19,32 +19,36 @@ export const Videodiv = styled.div`
   gap: 30px;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  height: fit-content;
   video {
     margin-top: 30px;
-    width: 291px;
+    padding: 40px;
     height: 292px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     border-radius: 20px;
   }
   @media (max-width: 850px){
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
     align-items: center;
   }
   video{
-    width: 326.989990234375px;
-height: 359.888916015625px;
+    width: 100%;
+height: 359px;
 border-radius: 20px;
   }
   @media (max-width:420px) {
+    width: 100%;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-evenly;
     align-items: center;
     video{
-      width: 326.9825439453125px;
-height: 391.857421875px;
+      width: 100%;
+height: 391px;
 border-radius: 20px;
 
     }
@@ -65,7 +69,7 @@ export const Blogscontainer = styled.div`
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: fit-content;
@@ -77,6 +81,8 @@ export const Loremcontainer = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1;
+  width: 100%;
+  height: fit-content;
   h1 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: normal;
@@ -94,8 +100,8 @@ export const Loremcontainer = styled.div`
     color: #ff7a00;
   }
   p {
-    width: 380px;
-    height: 107px;
+    width: 50%;
+    height: fit-content;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -110,8 +116,10 @@ export const Imagecontainer = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
+  width: 100%;
+  height: fit-content;
   img {
-    width: 258px;
+    width: 100%;
     height: 258px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -121,7 +129,7 @@ export const Imagecontainer = styled.div`
     display: grid;
     grid-template-columns: auto auto;
     img {
-      width: 326.91px;
+      width: 100%;
       height: 326.43px;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -132,7 +140,7 @@ export const Imagecontainer = styled.div`
     display: grid;
     grid-template-columns: auto;
     img{
-      width: 354px;
+      width: 100%;
 height: 354px;
 border-radius: 20px;
     }

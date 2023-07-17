@@ -76,6 +76,7 @@ export const Contact = styled.div`
   }
 `;
 export const SocialMedia = styled.div`
+width: 100%;
   display: flex;
   flex-direction: row;
   gap: 40px;

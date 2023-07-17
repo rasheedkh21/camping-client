@@ -1,23 +1,22 @@
-
 import styled from "styled-components";
 
 export const Navdiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
-  p{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
+  padding: 50px;
+  p {
+    font-family: serif;
     font-style: normal;
     font-weight: 600;
     font-size: 38px;
     line-height: 46px;
     color: #006dab;
     cursor: pointer;
+   
   }
 
   @media (max-width: 420px) {
@@ -27,6 +26,7 @@ export const Navdiv = styled.div`
       line-height: 37px;
       letter-spacing: 0em;
       text-align: left;
+      width: 100%;
     }
   }
 `;
@@ -44,7 +44,7 @@ export const Hamburger = styled.div`
 export const HamburgerRight = styled.div`
   display: none;
 
-  @media (max-width: 420px){
+  @media (max-width: 420px) {
     display: flex;
   }
 `;
@@ -53,7 +53,7 @@ export const Infos = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 40px;
+  width: 100%;
   p {
     font-family: monospace;
     font-style: normal;
@@ -61,6 +61,7 @@ export const Infos = styled.div`
     font-size: 20px;
     line-height: 20px;
     color: #373737;
+    
   }
   p:hover {
     display: flex;
@@ -71,6 +72,7 @@ export const Infos = styled.div`
     height: 40px;
     background: rgba(0, 109, 171, 0.05);
     border-radius: 10px;
+  
   }
   @media (max-width: 850px) {
     display: none;
@@ -104,45 +106,44 @@ export const Dropmenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: safe;
+  align-items: center;
   height: 400px;
   width: 100%;
 
   button {
-    width: 230px;
+    width: 50%;
     height: 40px;
     border-radius: 10px;
     background-color: white;
     color: #006dab;
     border: 1px #006dab snow;
     margin-bottom: 70px;
-    margin-left: 650px;
   }
-  button:hover{
+  button:hover {
     background: #006dab;
     cursor: pointer;
     color: white;
   }
 `;
-export const DropdownShow=styled.div`
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-div{
+export const DropdownShow = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-
-  p{
-
+  div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    color: #006dab;
-    height: 40px;
-    border-radius: 10px;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: #006dab;
+      height: 40px;
+      border-radius: 10px;
+      width: 100%;
+    }
   }
-}
-`
+`;
