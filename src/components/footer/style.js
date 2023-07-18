@@ -10,6 +10,7 @@ export const Footerdiv = styled.div`
   background: #006dab;
   width: 100%;
   h1 {
+    font-family: monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -34,6 +35,7 @@ export const Servicesdiv = styled.div`
     font-size: 20px;
     line-height: 24px;
     color: #ffffff;
+    font-family: monospace;
   }
   h1:hover {
     color: black;
@@ -51,6 +53,7 @@ export const Writings = styled.div`
   align-items: center;
   margin-top: 40px;
   p {
+    font-family: monospace;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -83,6 +86,7 @@ width: 100%;
   justify-content: space-around;
   align-items: center;
   a {
+    font-family: monospace;
     display: flex;
     gap: 60px;
     cursor: pointer;

@@ -84,7 +84,7 @@ export const Loremcontainer = styled.div`
   width: 100%;
   height: fit-content;
   h1 {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: monospace;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -92,7 +92,7 @@ export const Loremcontainer = styled.div`
     color: #000000;
   }
   h3 {
-    font-family: "Courier New", Courier, monospace;
+    font-family: monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -101,6 +101,7 @@ export const Loremcontainer = styled.div`
   }
   p {
     width: 50%;
+    font-family: monospace;
     height: fit-content;
     font-style: normal;
     font-weight: 400;
@@ -130,7 +131,7 @@ export const Imagecontainer = styled.div`
     grid-template-columns: auto auto;
     img {
       width: 100%;
-      height: 326.43px;
+      height: 326px;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
       border-radius: 20px;

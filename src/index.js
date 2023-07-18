@@ -8,6 +8,8 @@ import Login from "./components/navbar/loginpage/login";
 import Register from "./components/navbar/regiterfom/register";
 import Aidal from "./components/pages/Aidal/Aidal";
 import Motors from "./components/pages/motors/Motors";
+import Places from "./components/pages/CampingPlaces/Places";
+import Location from "./components/pages/Location/Location";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ return (
       <Route path="register" element={<Register />} />
       <Route path="aidal" element={<Aidal/>} />
       <Route path="motors" element={<Motors/>}/>
+      <Route path="places" element={<Places/>}/>
+      <Route path="location" element={<Location/>}/>
     </Routes>
     {!isLoginPage && !isRegisterPage && <Footer />}
   </React.StrictMode>

@@ -1,5 +1,57 @@
 import styled from "styled-components";
+import backimg from "../../../assets/aidalback.png"
 
+export const AidalBack=styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image: url(${backimg});
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 100vh;
+h1{
+  color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+div{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+border: 2px solid #FFF;
+width: 200px;
+height:50px;
+background: none;
+color: #FFF;
+font-family: monospace;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+font-size: 100%;
+}
+button:hover{
+  border-radius: 10px;
+background: var(--blue, #006DAB);
+
+}
+`
 export const PriceAidal = styled.div`
   height: fit-content;
   width: 100%;

@@ -1,5 +1,4 @@
 import React from "react";
-import Example from "../../home/carouselcomp/carousel";
 import imagecarback from "../../../assets/carbackground.png";
 import Comfort from "../../../assets/comfort.png";
 import Tyding from "../../../assets/tyding.png";
@@ -9,6 +8,7 @@ import Heating from "../../../assets/heating.png";
 import Zoom from "react-reveal/Zoom";
 import {
   AdditionalInfos,
+  AidalBack,
   Buttondiv,
   Buttondivseconnd,
   ComfortAllDivLorem,
@@ -24,7 +24,13 @@ import Comment from "./comment";
 const Aidal = () => {
   return (
     <div>
-      <Example />
+      <AidalBack>
+        <h1>Aidal</h1>
+        <div>
+          <button>Add to Card</button>
+          <button>Compare</button>
+        </div>
+      </AidalBack>
       <PriceAidal>
         <ImageDivCar>
           <Zoom left>

@@ -2,49 +2,55 @@ import styled from "styled-components";
 import slidercar from "../../../assets/slidecar.png";
 import Car from "../../../assets/offercar1.png";
 import BackCar from "../../../assets/car1.png";
+
+
+
+
 export const MotorsBack = styled.div`
   background-image: url(${BackCar});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1{
-        color: #FFF;
-font-family: Montserrat;
-font-size: 80px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-    }
-h2{
-    color: #FFF;
-font-family: Montserrat;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-h3{
-    color: #FFF;
-font-family: Montserrat;
-font-size: 27px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  h2 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  h3 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 `;
 
 export const Bigcontainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: fit-content;
   gap: 15px;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   margin-top: 40px;
   margin-bottom: 40px;
 `;
@@ -55,14 +61,18 @@ export const CostContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: fit-content;
+  width: 100%;
   flex: 1;
   h1 {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+  }
+  @media (max-width: 850px) {
+    display: none;
   }
 `;
 export const ItemContainer = styled.div`
@@ -71,14 +81,16 @@ export const ItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: fit-content;
+  width: 100%;
   flex: 4;
 `;
 export const ItemSort = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 500px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: fit-content;
   h1 {
     color: #373737;
     font-family: monospace;
@@ -94,9 +106,11 @@ export const SelectionDiv = styled.div`
   justify-content: center;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  height: fit-content;
   label {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -104,13 +118,12 @@ export const SelectionDiv = styled.div`
   }
 `;
 export const SelectionCars = styled.select`
-  width: 227px;
+  width: 50%;
   height: 30px;
-  flex-shrink: 0;
   border-radius: 5px;
   border: 1px solid rgba(55, 55, 55, 0.3);
   color: rgba(55, 55, 55, 0.6);
-  font-family: Montserrat;
+  font-family: monospace;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -119,9 +132,8 @@ export const SelectionCars = styled.select`
 export const SelectionNumbers = styled.select`
   width: 80px;
   height: 30px;
-  flex-shrink: 0;
   color: rgba(55, 55, 55, 0.6);
-  font-family: Montserrat;
+  font-family: monospace;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -131,38 +143,44 @@ export const ThinLine = styled.div`
   width: 100%;
   height: 1px;
   background: rgba(55, 55, 55, 0.5);
-  margin-top: 10px;
+  /* margin-top: 10px; */
 `;
 export const OrderSort = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   width: 100%;
   height: fit-content;
+  gap: 20px;
+  @media (max-width: 850px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: fit-content;
+  }
 `;
 export const Orders = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 223px;
+  width: 100%;
   height: 307px;
-  flex-shrink: 0;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
   h1 {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-left: -100px;
+    /* margin-left: -100px; */
   }
   h2 {
     color: var(--blue, #006dab);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -171,7 +189,7 @@ export const Orders = styled.div`
   }
   p {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -217,7 +235,7 @@ export const Adressdiv = styled.div`
   }
   label {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -235,7 +253,10 @@ export const OptionsCheck = styled.div`
   /* margin-top: 30px; */
   display: flex;
   flex-direction: column;
+  width: 100%;
   div {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -258,7 +279,7 @@ export const ChoicesCheck = styled.div`
   }
   label {
     color: var(--text, #373737);
-    font-family: Montserrat;
+    font-family: monospace;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -295,7 +316,7 @@ export const CancelButton = styled.div`
     /* btn sh */
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
     color: #fff;
-    font-family: Open Sans;
+    font-family: monospace;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -334,7 +355,7 @@ export const ComapreCars = styled.div`
   }
   h1 {
     color: var(--blue, #006dab);
-    font-family: Open Sans;
+    font-family: monospace;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;

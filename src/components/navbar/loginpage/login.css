@@ -13,14 +13,14 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
 height: 614px;
-flex-shrink: 0;
 @media (max-width: 420px)  {
   width: 100%;
   height: 626px;
-  flex-shrink: 0;
 }
 }
 .email {
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -55,6 +55,8 @@ flex-shrink: 0;
 }
 }
 .password {
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
@@ -74,6 +76,7 @@ flex-shrink: 0;
   }
 }
 .password label {
+  width: 100%;
   color: rgba(55, 55, 55, 0.8);
   font-size: 16px;
   font-family: Open Sans;
@@ -111,7 +114,6 @@ flex-shrink: 0;
   gap: 10px;
 }
 .check input {
-  width: 100%;
   height: 22px;
   flex-shrink: 0;
   border-radius: 5px;
@@ -121,7 +123,7 @@ flex-shrink: 0;
 .check label {
   color: #373737;
   font-size: 14px;
-  font-family: Open Sans;
+  font-family: monospace;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -130,7 +132,6 @@ flex-shrink: 0;
 .signin {
   width: 100%;
   height: 50px;
-  flex-shrink: 0;
   border-radius: 10px;
   background: var(--blue, #006dab);
   color: #fff;
@@ -156,7 +157,7 @@ flex-shrink: 0;
 .or h3{
     color: #6D6D6D;
 font-size: 14px;
-font-family: Open Sans;
+font-family: monospace;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -180,7 +181,7 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 46px;
   height: 46px;
   flex-shrink: 0;
   border-radius: 46px;
@@ -200,7 +201,7 @@ line-height: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 46px;
   height: 46px;
   flex-shrink: 0;
   border-radius: 46px;
@@ -209,16 +210,16 @@ line-height: normal;
 .register {
   width: 100%;
   height: 50px;
-  flex-shrink: 0;
   border-radius: 10px;
-  border: 2px solid var(--blue, #006dab);
-  color: var(--blue, #006dab);
+  background: var(--blue, #006dab);
+  color: #fff;
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: Open Sans;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 15px;
+  border: none;
+  margin-top: 20px;
   @media (max-width: 420px) {
     width: 100%;
   height: 50px;

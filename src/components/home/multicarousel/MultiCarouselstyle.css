@@ -23,7 +23,7 @@
     color: var(--text, #373737);
 text-align: center;
 font-size: 18px;
-font-family: Montserrat;
+font-family: monospace;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -34,7 +34,7 @@ height: 45px;
 background: #006dab;
 color: #FFF;
 font-size: 18px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: monospace;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -44,7 +44,7 @@ border: none;
 .box a{
     color: var(--text, #373737);
     font-size: 16px;
-    font-family: Montserrat;
+    font-family: monospace;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

@@ -9,18 +9,20 @@ export const Navdiv = styled.div`
   height: 100px;
   padding: 50px;
   p {
-    font-family: serif;
+    font-family: monospace;
     font-style: normal;
     font-weight: 600;
     font-size: 38px;
     line-height: 46px;
     color: #006dab;
     cursor: pointer;
+    text-decoration: none;
    
   }
 
   @media (max-width: 420px) {
     h1 {
+      font-family: monospace;
       font-size: 30px;
       font-weight: 600;
       line-height: 37px;
@@ -72,6 +74,7 @@ export const Infos = styled.div`
     height: 40px;
     background: rgba(0, 109, 171, 0.05);
     border-radius: 10px;
+    font-family: monospace;
   
   }
   @media (max-width: 850px) {
@@ -118,6 +121,7 @@ export const Dropmenu = styled.div`
     color: #006dab;
     border: 1px #006dab snow;
     margin-bottom: 70px;
+    font-family: monospace;
   }
   button:hover {
     background: #006dab;
@@ -144,6 +148,7 @@ export const DropdownShow = styled.div`
       height: 40px;
       border-radius: 10px;
       width: 100%;
+      font-family: monospace;
     }
   }
 `;

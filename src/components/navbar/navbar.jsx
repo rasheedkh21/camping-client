@@ -35,7 +35,7 @@ const Navbar = () => {
         </a>
       </Hamburger>
       <Link to="/">
-        <p>Camper</p>
+        <p >Camper</p>
       </Link>
       <Infos>
         <p
