@@ -86,7 +86,7 @@ const Login = () => {
           </div>
         </div>
         <Link to="/register">
-          <button className="register" style={{padding:"30 30 0 0"}}>CREATE ACCOUNT</button>
+          <button className="register">CREATE ACCOUNT</button>
         </Link>
       </div>
     </body>

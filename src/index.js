@@ -10,6 +10,11 @@ import Aidal from "./components/pages/Aidal/Aidal";
 import Motors from "./components/pages/motors/Motors";
 import Places from "./components/pages/CampingPlaces/Places";
 import Location from "./components/pages/Location/Location";
+import "./index.css"
+import AddToCard from "./components/pages/AddToCard/AddToCard";
+import CompareModels from "./components/pages/CompareModels/CompareModels";
+
+
 
 function App() {
   return (
@@ -36,6 +41,8 @@ return (
       <Route path="motors" element={<Motors/>}/>
       <Route path="places" element={<Places/>}/>
       <Route path="location" element={<Location/>}/>
+      <Route path="card" element={<AddToCard/>}/>
+      <Route path="comparemodels" element={<CompareModels/>}/>
     </Routes>
     {!isLoginPage && !isRegisterPage && <Footer />}
   </React.StrictMode>

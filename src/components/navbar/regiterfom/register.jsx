@@ -29,7 +29,7 @@ const Register = () => {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      // Form is valid, you can submit the data here
+      // Form is valid, we can submit the data here
       // For this example, we'll just log the values
       console.log('Form submitted:', { email, password });
     }

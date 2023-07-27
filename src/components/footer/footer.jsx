@@ -37,16 +37,16 @@ const Footer = () => {
           <h1 style={{ fontSize: `20xp`, fontFamily: `monospace` }}>Contact</h1>
           <SocialMedia>
             <a href="https://www.instagram.com/rasheedkh_/">
-              {" "}
-              <img src={youtube}  alt="none" />{" "}
+            
+              <img src={youtube}  alt="none" />
             </a>
             <a href="">
-              {" "}
-              <img src={insta} alt="none" />{" "}
+           
+              <img src={insta} alt="none" />
             </a>
             <a href="">
-              {" "}
-              <img src={naver} alt="none" />{" "}
+        
+              <img src={naver} alt="none" />
             </a>
           </SocialMedia>
           <p style={{ color: `white` }}>021 Korea Seul, LA</p>

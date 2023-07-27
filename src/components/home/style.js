@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backimg from "../../assets/car33.png";
 
 export const Homecontainer = styled.div`
   display: flex;
@@ -19,41 +20,55 @@ export const Videodiv = styled.div`
   gap: 30px;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: max-content;
   height: fit-content;
-  video {
-    margin-top: 30px;
-    padding: 40px;
-    height: 292px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    border-radius: 20px;
-  }
-  @media (max-width: 850px){
+  padding: 0 60px 0 60px;
+
+
+
+
+ 
+  @media (max-width: 850px) {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
     align-items: center;
   }
-  video{
-    width: 100%;
-height: 359px;
-border-radius: 20px;
-  }
-  @media (max-width:420px) {
+
+  @media (max-width: 420px) {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-evenly;
     align-items: center;
-    video{
-      width: 100%;
-height: 391px;
-border-radius: 20px;
-
-    }
   }
 `;
+export const VideoPlayer=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 150px;
+    height: 292px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+    background-image: url(${backimg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+`
+
+
 export const Blogscontainer = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
@@ -64,16 +79,15 @@ export const Blogscontainer = styled.div`
   width: 100%;
   height: fit-content;
 
-  @media (max-width: 850px ) {
+  @media (max-width: 850px) {
     margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
   }
 `;
 export const Loremcontainer = styled.div`
@@ -109,7 +123,7 @@ export const Loremcontainer = styled.div`
     line-height: 20px;
     color: #000000;
   }
-`
+`;
 export const Imagecontainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
@@ -119,6 +133,7 @@ export const Imagecontainer = styled.div`
   flex: 1;
   width: 100%;
   height: fit-content;
+  padding: 0 60px 0 60px;
   img {
     width: 100%;
     height: 258px;
@@ -140,10 +155,10 @@ export const Imagecontainer = styled.div`
   @media (max-width: 420px) {
     display: grid;
     grid-template-columns: auto;
-    img{
+    img {
       width: 100%;
-height: 354px;
-border-radius: 20px;
+      height: 354px;
+      border-radius: 20px;
     }
   }
 `;

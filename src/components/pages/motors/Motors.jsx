@@ -1,5 +1,5 @@
 import React from "react";
-import Example from "../../home/carouselcomp/carousel";
+import Example from "../carouselcomp/carousel";
 import {
   Adressdiv,
   Bigcontainer,

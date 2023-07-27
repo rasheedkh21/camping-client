@@ -1,0 +1,100 @@
+
+.registerform{
+    display: flex;
+    flex-direction: column;
+}
+.sum{
+    color: var(--blue, #006DAB);
+font-family: monospace;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.carname{
+  color: var(--text, #373737);
+  font-family: monospace;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+p{
+  color: rgba(55, 55, 55, 0.70);
+font-family: monospace;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+/* Basic styling for the form container */
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for headings */
+  h1 {
+    margin-bottom: 10px;
+    color: #000;
+font-family: monospace;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  
+  /* Style for form labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(55, 55, 55, 0.80);
+font-family: monospace;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  
+  /* Style for input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    /* border: 1px solid #ccc;
+    border-radius: 4px; */
+    border-radius: 10px;
+background: rgba(55, 55, 55, 0.10);
+border: none;
+  }
+  
+  /* Style for error messages */
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Style for submit button */
+  button[type="submit"] {
+    color: white;
+    font-family: monospace;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+background: var(--blue, #006DAB);
+width: 100%;
+height: 45px;
+margin-top: 20px;
+
+/* btn sh */
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  

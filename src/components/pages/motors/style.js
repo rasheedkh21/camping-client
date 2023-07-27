@@ -12,7 +12,7 @@ export const MotorsBack = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +20,11 @@ export const MotorsBack = styled.div`
   h1 {
     color: #fff;
     font-family: monospace;
-    font-size: 80px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
   }
   h2 {
     color: #fff;
@@ -32,6 +33,7 @@ export const MotorsBack = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-align: center;
   }
   h3 {
     color: #fff;
@@ -40,6 +42,7 @@ export const MotorsBack = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
   }
 `;
 

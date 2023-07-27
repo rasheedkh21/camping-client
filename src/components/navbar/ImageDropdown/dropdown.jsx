@@ -6,7 +6,7 @@ const ImageWithDropdown = () => {
   return (
     <div className="container1"> 
       <div className="dropdown">
-        <img src={message} className='dropbtn' alt="" />
+        <img src={message} className='dropbtn' alt="none" />
         <div className="dropdown-content">
           <a href="#">My orders</a>
           <a href="#">Settings</a>

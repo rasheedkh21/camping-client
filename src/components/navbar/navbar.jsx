@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <Navdiv>
       <Hamburger>
-        <a href="">
+        <a href="none">
           <img src={hamburger} />
         </a>
       </Hamburger>
@@ -49,23 +49,23 @@ const Navbar = () => {
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} />
+                <img src={car}  alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car}  alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -83,23 +83,23 @@ const Navbar = () => {
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} />
+                <img src={car}  alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car}  alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -117,23 +117,23 @@ const Navbar = () => {
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -151,23 +151,23 @@ const Navbar = () => {
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -185,23 +185,23 @@ const Navbar = () => {
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car}  alt="car"/>
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} />
+                <img src={car} alt="car"/>
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -210,15 +210,15 @@ const Navbar = () => {
         )}
       </Infos>
       <Selection>
-        <a href="">
+        <a href="none">
           <ImageWithDropdown className="message" />
         </a>
         <Link to="login">
           <img src={people} className="people" />
         </Link>
         <HamburgerRight>
-          <a href="">
-            <img src={hamburger} alt="" />
+          <a href="none">
+            <img src={hamburger} alt="humburger" />
           </a>
         </HamburgerRight>
         <select name="Language">

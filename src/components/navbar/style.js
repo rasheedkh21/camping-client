@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Navdiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100px;
+  gap: 10px;
   padding: 50px;
   p {
     font-family: monospace;
@@ -55,7 +56,10 @@ export const Infos = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
   width: 100%;
+  height: fit-content;
+  
   p {
     font-family: monospace;
     font-style: normal;
@@ -102,19 +106,20 @@ export const Selection = styled.div`
   }
 `;
 export const Dropmenu = styled.div`
+display: block;
   background-color: white;
   z-index: 100;
   position: absolute;
   top: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 400px;
   width: 100%;
-
+:hover{}
   button {
-    width: 50%;
+    width: 230px;
     height: 40px;
     border-radius: 10px;
     background-color: white;
@@ -124,15 +129,18 @@ export const Dropmenu = styled.div`
     font-family: monospace;
   }
   button:hover {
+    display: flex;
     background: #006dab;
     cursor: pointer;
     color: white;
   }
 `;
 export const DropdownShow = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
   justify-content: space-evenly;
   align-items: center;
+  gap: 90px;
   div {
     display: flex;
     flex-direction: column;
