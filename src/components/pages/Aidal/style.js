@@ -29,14 +29,14 @@ div{
   align-items: center;
   width: 20%;
 }
-button{
+a{
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
 border: 2px solid #FFF;
-width: 200px;
-height:50px;
+width: 150px;
+height:60px;
 background: none;
 color: #FFF;
 font-family: monospace;
@@ -45,8 +45,9 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 font-size: 100%;
+text-decoration: none;
 }
-button:hover{
+a:hover{
   border-radius: 10px;
 background: var(--blue, #006DAB);
 
@@ -150,7 +151,7 @@ export const FirstAidalDiv = styled.div`
 `;
 export const LineAidal = styled.div`
   display: flex;
-  width: 100%px;
+  width: 100%;
   height: 1px;
   background: rgba(55, 55, 55, 0.3);
 `;
@@ -284,38 +285,5 @@ export const Buttondivseconnd = styled.div`
       border-radius: 10px;
       background: var(--blue, #006dab);
     }
-  }
-`;
-export const AdditionalInfos = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  height: 60px;
-  background: rgba(0, 109, 171, 0.2);
-  div {
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  div:hover {
-    cursor: pointer;
-    color: #fff;
-    font-family: monospace;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    height: 60px;
-    background-color: #006dab;
   }
 `;

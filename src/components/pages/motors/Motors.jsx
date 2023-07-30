@@ -1,10 +1,9 @@
 import React from "react";
-import Example from "../carouselcomp/carousel";
+
 import {
   Adressdiv,
   Bigcontainer,
   CancelButton,
-  Choices,
   ChoicesCheck,
   ComapreCars,
   CostContainer,
@@ -12,7 +11,6 @@ import {
   ItemContainer,
   ItemSort,
   MotorsBack,
-  Options,
   OptionsCheck,
   OrderSort,
   Orders,
@@ -21,12 +19,21 @@ import {
   SelectionNumbers,
   ThinLine,
 } from "./style";
+import  {card} from "../../test/poducts.js"
+
+const handleClick=()=>{
+  
+}
+
 
 const Motors = () => {
   return (
     <div>
       <MotorsBack>
-        <h2>Home / Motors</h2>
+        <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+          <a href="/">Home /</a>
+          <a href="/motors">Motors</a>
+        </div>
         <h3>Our Ranges</h3>
         <h1>Motors</h1>
       </MotorsBack>
@@ -124,7 +131,7 @@ const Motors = () => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" />
+              <input type="checkbox" name="check" id="" onClick={handleClick} />
               <label htmlFor="">Aidal</label>
             </div>
             <div>
@@ -277,346 +284,30 @@ const Motors = () => {
           </ItemSort>
           <ThinLine />
           <OrderSort>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
+          
+              {card.yangi.map((data)=>{
+                return(
+                  <Orders key={data.id}>
+                        <ImageOfOffer />
+              <h1>{data.car.name}</h1>
               <div
                 style={{ display: "flex", flexDirection: "row", gap: "40px" }}
               >
-                <p>Brand name</p>
-                <p>icons</p>
+                <p>{data.car.company}</p>
+                <p>{data.car.date}</p>
               </div>
-              <h2>250$</h2>
+              <h2>{data.car.cost}</h2>
               <div
                 style={{ display: "flex", flexDirection: "row", gap: "10px" }}
               >
                 <button>Oreder</button>
                 <button>Compare</button>
               </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
-            <Orders>
-              <ImageOfOffer />
-              <h1>Name of the car</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>Brand name</p>
-                <p>icons</p>
-              </div>
-              <h2>250$</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <button>Oreder</button>
-                <button>Compare</button>
-              </div>
-            </Orders>
+                  </Orders>
+                )
+              })}
+            
+
           </OrderSort>
         </ItemContainer>
       </Bigcontainer>

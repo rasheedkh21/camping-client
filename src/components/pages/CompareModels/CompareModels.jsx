@@ -7,7 +7,11 @@ const CompareModels = () => {
   return (
     <div>
         <CompCArsBAck>
-        <h2>Home / Motors / Compare</h2>
+        <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+        <a href="/">Home /</a>
+        <a href="/motors">Motors /</a>
+        <a href="/comparemodels">Compare</a>
+        </div>
         <h1>Compare our models</h1>
         </CompCArsBAck>
       <AddButtonDiv>

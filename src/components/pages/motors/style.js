@@ -26,7 +26,8 @@ export const MotorsBack = styled.div`
     line-height: normal;
     text-align: center;
   }
-  h2 {
+  a {
+    text-decoration: none;
     color: #fff;
     font-family: monospace;
     font-size: 16px;
@@ -157,6 +158,12 @@ export const OrderSort = styled.div`
   @media (max-width: 850px) {
     display: grid;
     grid-template-columns: auto auto;
+    width: 100%;
+    height: fit-content;
+  }
+  @media (max-width: 450px) {
+    display: grid;
+    grid-template-columns: auto;
     width: 100%;
     height: fit-content;
   }

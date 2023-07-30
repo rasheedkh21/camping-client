@@ -7,7 +7,6 @@ import Access from "../../../assets/access.png";
 import Heating from "../../../assets/heating.png";
 import Zoom from "react-reveal/Zoom";
 import {
-  AdditionalInfos,
   AidalBack,
   Buttondiv,
   Buttondivseconnd,
@@ -21,14 +20,16 @@ import {
 } from "./style";
 import Comment from "./comment";
 
+
+
 const Aidal = () => {
   return (
     <div>
       <AidalBack>
         <h1>Aidal</h1>
         <div>
-          <button>Add to Card</button>
-          <button>Compare</button>
+          <a href="/card">Add to Card</a>
+          <a href="/comparemodels">Compare</a>
         </div>
       </AidalBack>
       <PriceAidal>
@@ -163,12 +164,7 @@ const Aidal = () => {
           <button>Compare</button>
         </Buttondivseconnd>
       </PriceAidal>
-      <AdditionalInfos>
-        <div>Item reviews</div>
-        <div>Q&A</div>
-        <div>FAQ</div>
-        <div>Contact</div>
-      </AdditionalInfos>
+
       <Comment />
     </div>
   );

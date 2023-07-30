@@ -13,6 +13,7 @@ import Location from "./components/pages/Location/Location";
 import "./index.css"
 import AddToCard from "./components/pages/AddToCard/AddToCard";
 import CompareModels from "./components/pages/CompareModels/CompareModels";
+import Orders from "./components/pages/myOrders/orders";
 
 
 
@@ -43,6 +44,7 @@ return (
       <Route path="location" element={<Location/>}/>
       <Route path="card" element={<AddToCard/>}/>
       <Route path="comparemodels" element={<CompareModels/>}/>
+      <Route path="orders" element={<Orders/>}/>
     </Routes>
     {!isLoginPage && !isRegisterPage && <Footer />}
   </React.StrictMode>

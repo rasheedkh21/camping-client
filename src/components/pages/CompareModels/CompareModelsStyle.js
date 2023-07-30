@@ -23,7 +23,8 @@ font-weight: 700;
 line-height: normal;
 text-align: center;
   }
-  h2{
+  a{
+    text-decoration: none;
     color: #FFF;
 font-family: monospace;
 font-size: 16px;
