@@ -100,7 +100,7 @@ export default function Comment() {
     <Box
       sx={{
         bgcolor: 'background.paper',
-        width: 500,
+        width: `100%`,
         position: 'relative',
         minHeight: 200,
       }}

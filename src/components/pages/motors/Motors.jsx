@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Adressdiv,
@@ -21,12 +21,25 @@ import {
 } from "./style";
 import  {card} from "../../test/poducts.js"
 
-const handleClick=()=>{
-  
-}
 
 
-const Motors = () => {
+const Motors = () => { 
+  const [filteredData, setFilteredData] = useState(card.yangi);
+
+  const handleClick = () => {
+    const sortedCars = [...card.yangi];
+    sortedCars.sort((a, b) => {
+      const nameA = a.car.name.toLowerCase();
+      const nameB = b.car.name.toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
+
+    const filteredCars = sortedCars.filter((data) =>
+      data.car.name.startsWith("르벤투스")
+    );
+
+    setFilteredData(filteredCars);
+  };
   return (
     <div>
       <MotorsBack>
@@ -132,7 +145,7 @@ const Motors = () => {
           <ChoicesCheck>
             <div>
               <input type="checkbox" name="check" id="" onClick={handleClick} />
-              <label htmlFor="">Aidal</label>
+              <label htmlFor="">르벤투스S+</label>
             </div>
             <div>
               <input type="checkbox" name="check" id="" />
@@ -176,12 +189,12 @@ const Motors = () => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" />
-              <label htmlFor="">5</label>
+              <input type="checkbox" name="check" id="" onClick={handleClick}/>
+              <label htmlFor="">5인</label>
             </div>
             <div>
               <input type="checkbox" name="check" id="" />
-              <label htmlFor="">10</label>
+              <label htmlFor="">4인</label>
             </div>
             <div>
               <input type="checkbox" name="check" id="" />
@@ -285,7 +298,7 @@ const Motors = () => {
           <ThinLine />
           <OrderSort>
           
-              {card.yangi.map((data)=>{
+              {filteredData.map((data)=>{
                 return(
                   <Orders key={data.id}>
                         <ImageOfOffer />
