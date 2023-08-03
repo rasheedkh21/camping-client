@@ -13,6 +13,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { green } from '@mui/material/colors';
 import Box from '@mui/material/Box';
+import Items from './Items';
+import Question from './question';
+import FAQ from './FAQ';
+import Contact from './Contact';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -99,14 +103,19 @@ export default function Comment() {
   return (
     <Box
       sx={{
-        bgcolor: 'background.paper',
+        bgcolor: 'background: rgba(0, 109, 171, 0.20)',
         width: `100%`,
         position: 'relative',
         minHeight: 200,
+
       }}
     >
       <AppBar position="static" color="default">
         <Tabs
+        sx={{
+          bgcolor: `rgba(0, 109, 171, 0.20)`,
+          fontStyle: `italic`
+        }}
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
@@ -114,9 +123,10 @@ export default function Comment() {
           variant="fullWidth"
           aria-label="action tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Item reviews" {...a11yProps(0)} />
+          <Tab label="Q&A" {...a11yProps(1)} />
+          <Tab label="FAQ" {...a11yProps(2)} />
+          <Tab label="Contact" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -125,13 +135,16 @@ export default function Comment() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Item reviews
+          <Items/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+        <Question/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+        <FAQ/>
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
+        <Contact/>
         </TabPanel>
       </SwipeableViews>
       {fabs.map((fab, index) => (
