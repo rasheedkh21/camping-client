@@ -442,92 +442,91 @@ export const Linediv = styled.div`
   margin-top: 10px;
 `;
 
-
 //For only questions
-export const FrequentAsked=styled.div`
-display: flex;
-flex-direction: column;
-flex: 1;
-justify-content: space-evenly;
-align-items: center;
-width: 100%;
-height: fit-content;
-gap: 15px;
-details{
-  border-radius: 10px;
-background: #FFF;
-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
-height: 60px;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}
-summary{
-  color: var(--text, #373737);
-font-family: monospace;
-font-size: 17px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-}
-`
-
-//CONTACTS
-export const SearchMap=styled.div`
-display: flex;
-flex-direction: column;
-width: 100%;
-height: fit-content;
-justify-content: center;
-align-items: center;
-flex: 1;
-img{
-  width: 100%;
-  height: 300px;
-}
-`
-export const Contacts=styled.div`
-display: grid;
-grid-template-columns: auto auto;
-justify-content: space-around;
-align-items: center;
-width: 100%;
-gap: 30px;
-@media (max-width: 420px) {
-  display: grid;
-  grid-template-columns: auto;
-}
-div{
+export const FrequentAsked = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 110px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 109, 171, 0.1);
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  gap: 15px;
+  details {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  summary {
+    color: var(--text, #373737);
+    font-family: monospace;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+`;
 
-  padding: 0 60px 0 60px;
-  margin-top: 30px;
-}
-p{
-  color: #666;
-font-family: monospace;
-font-size: 8px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 18.2px */
-}
-h2{
-  color: var(--txt-color, #1E1C1C);
-font-family: monospace;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 130%; /* 23.4px */
-}
-`
+//CONTACTS
+export const SearchMap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  img {
+    width: 100%;
+    height: 300px;
+  }
+`;
+export const Contacts = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  @media (max-width: 420px) {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 109, 171, 0.1);
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+
+    padding: 0 60px 0 60px;
+    margin-top: 30px;
+  }
+  p {
+    color: #666;
+    font-family: monospace;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 18.2px */
+  }
+  h2 {
+    color: var(--txt-color, #1e1c1c);
+    font-family: monospace;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+  }
+`;
