@@ -33,9 +33,10 @@ const FAQ = () => {
         </FrequentAsked>
         <SendQuestion>
         <h1>Have you got a Question</h1>
-            <input type="text" name="" id="" placeholder='Your name' />
-            <input type="text" name="" id="" placeholder='Your email' />
-            <input type="text" name="" id="" placeholder='Your question'
+            <input type="text" placeholder='Your name' required />
+            <input type="text" placeholder='Your email'  required/>
+            <input type="text" placeholder='Your question '
+            required
             style={{padding:"50px"}}
             />
             <button>Send Question</button>

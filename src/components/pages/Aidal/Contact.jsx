@@ -21,9 +21,9 @@ const Contact = () => {
         </SearchMap>
         <SendQuestion>
         <h1>Have you got a Question</h1>
-            <input type="text"  id="name" placeholder='Your name' />
-            <input type="text"  id="email" placeholder='Your email' />
-            <input type="text"  id="question" placeholder='Your question'
+            <input type="text"  id="name" placeholder='Your name' required />
+            <input type="text"  id="email" placeholder='Your email'  required/>
+            <input type="text"  id="question" placeholder='Your question' required
             style={{padding:"50px"}}
             />
             <button>Send Question</button>

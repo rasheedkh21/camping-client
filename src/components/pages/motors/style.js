@@ -205,7 +205,13 @@ export const Orders = styled.div`
     font-weight: 400;
     line-height: normal;
   }
-  button {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
     border-radius: 10px;
     border: 1px solid var(--blue, #006dab);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -218,7 +224,7 @@ export const Orders = styled.div`
     font-weight: 700;
     line-height: normal;
   }
-  button:hover {
+  a:hover {
     cursor: pointer;
     background-color: #006dab;
     color: white;

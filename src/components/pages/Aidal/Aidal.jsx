@@ -20,8 +20,6 @@ import {
 } from "./style";
 import Comment from "./comment";
 
-
-
 const Aidal = () => {
   return (
     <div>
@@ -150,8 +148,8 @@ const Aidal = () => {
             your vehicle while you drive, for a more comfortable arrival.
           </p>
           <Buttondiv>
-            <button>Add to Card</button>
-            <button>Compare</button>
+            <a href="/card">Add to Card</a>
+            <a href="/comparemodels">Compare</a>
           </Buttondiv>
         </ComfortAllDivLorem>
         <ComfortImage>
@@ -160,8 +158,8 @@ const Aidal = () => {
           </Zoom>
         </ComfortImage>
         <Buttondivseconnd>
-          <button>Add to Card</button>
-          <button>Compare</button>
+          <a href="/card">Add to Card</a>
+          <a href="/comparemodels">Compare</a>
         </Buttondivseconnd>
       </PriceAidal>
 

@@ -58,7 +58,7 @@ const Motors = () => {
           <ThinLine />
           <Adressdiv>
             <div>
-              <label htmlFor="">From</label>
+              <label >From</label>
               <input type="text" />
             </div>
             <div>
@@ -313,8 +313,8 @@ const Motors = () => {
               <div
                 style={{ display: "flex", flexDirection: "row", gap: "10px" }}
               >
-                <button>Oreder</button>
-                <button>Compare</button>
+                <a href="/orders">Oreder</a>
+                <a href="comparemodels">Compare</a>
               </div>
                   </Orders>
                 )

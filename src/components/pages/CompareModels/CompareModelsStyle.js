@@ -41,12 +41,20 @@ export const AddButtonDiv = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 420px) {
+    display: flex;
+    flex-direction: column;
+  }
   div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    @media (max-width: 420px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   p {
     color: var(--text, #373737);

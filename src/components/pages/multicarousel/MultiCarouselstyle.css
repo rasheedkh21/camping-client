@@ -40,6 +40,9 @@ font-weight: 700;
 line-height: normal;
 cursor: pointer;
 border: none;
+
+border-top-right-radius: 50px;
+border-bottom-left-radius: 50px;
 }
 .box a{
     color: var(--text, #373737);

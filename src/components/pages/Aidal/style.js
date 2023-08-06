@@ -234,7 +234,12 @@ export const Buttondiv = styled.data`
   gap: 10px;
   justify-content: space-evenly;
   align-items: center;
-  button {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 300px;
     height: 50px;
     border-radius: 10px;
@@ -247,7 +252,7 @@ export const Buttondiv = styled.data`
     line-height: normal;
     cursor: pointer;
   }
-  button:hover {
+  a:hover {
     color: white;
     border-radius: 10px;
     background: var(--blue, #006dab);
@@ -266,7 +271,13 @@ export const Buttondivseconnd = styled.div`
     gap: 20px;
     justify-content: center;
     align-items: center;
-    button {
+    margin-bottom: 30px;
+    a {
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
       width: 100%;
       height: 50px;
       border-radius: 10px;
@@ -279,7 +290,7 @@ export const Buttondivseconnd = styled.div`
       line-height: normal;
       cursor: pointer;
     }
-    button:hover {
+    a:hover {
       color: white;
       border-radius: 10px;
       background: var(--blue, #006dab);
