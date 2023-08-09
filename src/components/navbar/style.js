@@ -9,7 +9,7 @@ export const Navdiv = styled.div`
   height: 100px;
   gap: 10px;
   padding: 50px;
-  p {
+  a {
     font-family: monospace;
     font-style: normal;
     font-weight: 600;
@@ -60,7 +60,7 @@ export const Infos = styled.div`
   width: 100%;
   height: fit-content;
   
-  p {
+  a {
     font-family: monospace;
     font-style: normal;
     font-weight: 600;
@@ -69,7 +69,7 @@ export const Infos = styled.div`
     color: #373737;
     
   }
-  p:hover {
+  a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,9 +148,6 @@ export const DropdownShow = styled.div`
     align-items: center;
 
     p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       cursor: pointer;
       color: #006dab;
       height: 40px;

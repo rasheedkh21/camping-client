@@ -38,7 +38,7 @@ return (
       <Route path="/" element={<MainComponents />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
-      <Route path="aidal" element={<Aidal/>} />
+      <Route path="aidal/:id" element={<Aidal/>} />
       <Route path="motors" element={<Motors/>}/>
       <Route path="places" element={<Places/>}/>
       <Route path="location" element={<Location/>}/>

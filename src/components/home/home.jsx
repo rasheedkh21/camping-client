@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Blogscontainer,
   Homecontainer,
@@ -15,12 +14,9 @@ import image1 from "../../assets/car33.png";
 import image2 from "../../assets/imag3car.png";
 import MultiCarousel from "../pages/multicarousel/multicarousel";
 import Flip from "react-reveal/Flip";
-import Bounce from 'react-reveal/Bounce';
-import "./home.css"
+import TransitionsModal from "../popup/pupup";
 
 const Home = () => {
- 
-
   return (
     <div style={{ width: "100vw" }}>
       <Example />
@@ -32,188 +28,9 @@ const Home = () => {
           <h1>Videos</h1>
           <Linediv></Linediv>
           <Videodiv>
-            <Bounce bottom>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce top>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce bottom>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce top>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce bottom>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce top>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-            <Bounce bottom>
-            <VideoPlayer>
-              <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-              >
-                <path
-                  d="M22.3333 12.9533L6.20834 3.60085C5.99081 3.48394 5.75152 3.432 5.51226 3.44975C5.273 3.46751 5.04137 3.5544 4.83845 3.70252C4.63553 3.85063 4.46777 4.05527 4.35045 4.2978C4.23312 4.54033 4.16994 4.81305 4.16667 5.09113V23.7881C4.16464 24.0735 4.22613 24.3548 4.34518 24.6046C4.46424 24.8544 4.63684 25.0644 4.8463 25.2142C5.05576 25.3641 5.295 25.4487 5.5409 25.4599C5.7868 25.4712 6.03104 25.4086 6.25001 25.2783L22.3333 15.9258C22.5716 15.7871 22.7719 15.5743 22.9118 15.3111C23.0518 15.0479 23.1259 14.7448 23.1259 14.4356C23.1259 14.1263 23.0518 13.8232 22.9118 13.56C22.7719 13.2969 22.5716 13.084 22.3333 12.9453V12.9533Z"
-                  fill="white"
-                />
-              </svg>
-              </div>
-            </VideoPlayer>
-            </Bounce>
-
-
-
-
             <div>
-     <Popup
-    trigger={<button className="button"> Open Modal </button>}
-    modal
-    nested
-  >
-    {close => (
-      <div className="modal">
-        <button className="close" onClick={close}>
-          &times;
-        </button>
-        <div className="header"> Modal Title </div>
-        <div className="content">
-          {' '}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-          Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-          delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
-        </div>
-        <div className="actions">
-          <Popup
-            trigger={<button className="button"> Trigger </button>}
-            position="top center"
-            nested
-          >
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              magni omnis delectus nemo, maxime molestiae dolorem numquam
-              mollitia, voluptate ea, accusamus excepturi deleniti ratione
-              sapiente! Laudantium, aperiam doloribus. Odit, aut.
-            </span>
-          </Popup>
-          <button
-            className="button"
-            onClick={() => {
-              console.log('modal closed ');
-              close();
-            }}
-          >
-            close modal
-          </button>
-        </div>
-      </div>
-    )}
-  </Popup>
-    </div>
-
-
-
+              <TransitionsModal />
+            </div>
           </Videodiv>
           <h1>Blogs</h1>
           <Linediv></Linediv>

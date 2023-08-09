@@ -8,9 +8,9 @@ const ImageWithDropdown = () => {
       <div className="dropdown">
         <img src={message} className='dropbtn' alt="none" />
         <div className="dropdown-content">
-          <a href="/orders">My orders</a>
-          <a href="#">Settings</a>
-          <a href="#">Log out</a>
+          <a href="/orders" style={{color:"black", fontSize:"20px"}}>My orders</a>
+          <a href="#" style={{color:"black", fontSize:"20px"}}>Settings</a>
+          <a href="#" style={{color:"black", fontSize:"20px"}}>Log out</a>
         </div>
       </div>
     </div>

@@ -20,6 +20,7 @@ import {
   ThinLine,
 } from "./style";
 import  {card} from "../../test/poducts.js"
+import { Link } from "react-router-dom";
 
 
 
@@ -35,8 +36,9 @@ const Motors = () => {
     });
 
     const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스")
+      data.car.name.startsWith("르벤투스") 
     );
+    
 
     setFilteredData(filteredCars);
   };
@@ -300,6 +302,7 @@ const Motors = () => {
           
               {filteredData.map((data)=>{
                 return(
+                  <Link to={`/aidal/${data.id}`} >
                   <Orders key={data.id}>
                         <ImageOfOffer />
               <h1>{data.car.name}</h1>
@@ -317,6 +320,7 @@ const Motors = () => {
                 <a href="comparemodels">Compare</a>
               </div>
                   </Orders>
+                  </Link>
                 )
               })}
             

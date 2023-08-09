@@ -19,12 +19,19 @@ import {
   PriceAidal,
 } from "./style";
 import Comment from "./comment";
+import { useParams } from "react-router-dom";
+import { card } from "../../test/poducts";
 
 const Aidal = () => {
+const {id}= useParams();
+const carInfo=card.yangi;
+
+const openInfo=carInfo.find((item)=>item.id=== parseInt(id));
+console.log(openInfo)
   return (
     <div>
       <AidalBack>
-        <h1>Aidal</h1>
+        <h1>{openInfo.car.name}</h1>
         <div>
           <a href="/card">Add to Card</a>
           <a href="/comparemodels">Compare</a>
@@ -38,7 +45,7 @@ const Aidal = () => {
         </ImageDivCar>
         <InfoDiv>
           <FirstAidalDiv>
-            <h2>Aidal</h2>
+            <h2>{openInfo.car.name}</h2>
             <h1>50.000$</h1>
           </FirstAidalDiv>
           <LineAidal></LineAidal>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./login.css";
 import naver from "../../../assets/naver logo.png";
 import google from "../../../assets/google-ion.png";
