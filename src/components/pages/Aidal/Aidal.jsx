@@ -29,7 +29,7 @@ const carInfo=card.yangi;
 const openInfo=carInfo.find((item)=>item.id=== parseInt(id));
 console.log(openInfo)
   return (
-    <div>
+    <div style={{background:"#fafafa"}}>
       <AidalBack>
         <h1>{openInfo.car.name}</h1>
         <div>
@@ -46,20 +46,20 @@ console.log(openInfo)
         <InfoDiv>
           <FirstAidalDiv>
             <h2>{openInfo.car.name}</h2>
-            <h1>50.000$</h1>
+            <h1>{openInfo.car.cost}</h1>
           </FirstAidalDiv>
           <LineAidal></LineAidal>
           <FirstAidalDiv>
             <p>Company</p>
-            <p>Aidal</p>
+            <p>{openInfo.car.name}</p>
           </FirstAidalDiv>
           <FirstAidalDiv>
             <p>People</p>
-            <p>12</p>
+            <p>{openInfo.car.people}</p>
           </FirstAidalDiv>
           <FirstAidalDiv>
             <p>License type</p>
-            <p>License type</p>
+            <p>{openInfo.car.type}</p>
           </FirstAidalDiv>
         </InfoDiv>
       </PriceAidal>

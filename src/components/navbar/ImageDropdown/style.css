@@ -5,6 +5,7 @@
 }
 .container{
   display: flex;
+  background-color: #fafafa;
 }
 @media (max-width: 414px){
   .container {

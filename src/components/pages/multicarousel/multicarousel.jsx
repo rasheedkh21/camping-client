@@ -70,7 +70,7 @@ const MultiCarousel = () => {
             />
           </div>
           <h1>Cranus</h1>
-          <Link to="/aidal">
+          <Link to="/motors">
             <div
               style={{
                 display: "flex",
@@ -82,7 +82,7 @@ const MultiCarousel = () => {
             </div>
           </Link>
           <a
-            href="/aidal"
+            href="/motors"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -111,7 +111,7 @@ const MultiCarousel = () => {
             />
           </div>
           <h1>Aidal</h1>
-          <Link to="/aidal">
+          <Link to="/motors">
             <div
               style={{
                 display: "flex",
@@ -123,7 +123,7 @@ const MultiCarousel = () => {
             </div>
           </Link>
           <a
-            href="/aidal"
+            href="/motors"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -146,7 +146,7 @@ const MultiCarousel = () => {
             />
           </div>
           <h1>Escape</h1>
-          <Link to="/aidal">
+          <Link to="/motors">
             <div
               style={{
                 display: "flex",
@@ -158,7 +158,7 @@ const MultiCarousel = () => {
             </div>
           </Link>
           <a
-            href="/aidal"
+            href="/motors"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -181,7 +181,7 @@ const MultiCarousel = () => {
             />
           </div>
           <h1>Lyseo</h1>
-          <Link to="/aidal">
+          <Link to="/motors">
             <div
               style={{
                 display: "flex",
@@ -193,7 +193,7 @@ const MultiCarousel = () => {
             </div>
           </Link>
           <a
-            href="/aidal"
+            href="/motors"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -214,7 +214,7 @@ const MultiCarousel = () => {
             }}
           />
           <h1>Cranus</h1>
-          <Link to="/aidal">
+          <Link to="/motors">
             <div
               style={{
                 display: "flex",
@@ -226,7 +226,7 @@ const MultiCarousel = () => {
             </div>
           </Link>
           <a
-            href="/aidal"
+            href="/motors"
             style={{
               display: "flex",
               justifyContent: "center",

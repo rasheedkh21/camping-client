@@ -12,7 +12,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: "75vw",
+  width: "80vw",
+  height: "70vh",
   bgcolor: 'background.paper',
   border: '20px #fff',
   boxShadow: 24,
@@ -56,14 +57,12 @@ export default function TransitionsModal() {
         <Fade in={open}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2" style={{fontSize:"20px", textAlign:"left"}}>
-            Name of the video
+            Vocation? CAMPER is the best option
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-             <div>
-             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EuXXC0DWHoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-             {/* <video controls width="100%" style={{borderRadius:"20px"}} 
-            </video> */}
-             </div>
+             <div >
+             <iframe width="100%" height="vh" src="https://www.youtube.com/embed/qff2gy_glxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           </div>
             </Typography>
           </Box>
         </Fade>

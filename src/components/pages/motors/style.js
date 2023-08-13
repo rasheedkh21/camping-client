@@ -155,6 +155,7 @@ export const OrderSort = styled.div`
   width: 100%;
   height: fit-content;
   gap: 20px;
+  padding: 0 30px;
   @media (max-width: 850px) {
     display: grid;
     grid-template-columns: auto auto;
@@ -171,7 +172,7 @@ export const OrderSort = styled.div`
 export const Orders = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 307px;

@@ -1,4 +1,4 @@
-import React, { useReducer,} from "react";
+import React, { useReducer } from "react";
 import {
   DropdownShow,
   Dropmenu,
@@ -31,31 +31,42 @@ const Navbar = () => {
   return (
     <Navdiv>
       <Hamburger>
-          <Header/>
+        <Header />
       </Hamburger>
-        <a href="/" >Camper</a>
+      <a href="/">Camper</a>
       <Infos>
-        <div style={{display:"flex", flexDirection:"row",justifyContent:"center", alignItems:"center", gap:"7px"}}>
-        <a href="/motors">
-          Motor
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none" 
-        style={{cursor:"pointer"}}
-        onClick={() => {
-            dispatch({ type: "toggleShowText" });
-          }}>
-  <path d="M11.25 6.125L7.5 9.875L3.75 6.125" stroke="#373737" stroke-width="2"/>
-
-</svg>
-</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          <a href="/motors">Motor</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="16"
+            viewBox="0 0 15 16"
+            fill="none"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch({ type: "toggleShowText" });
+            }}
+          >
+            <path
+              d="M11.25 6.125L7.5 9.875L3.75 6.125"
+              stroke="#373737"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
         {state.showText && (
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car}  alt="car"/>
-                <p>Car name</p>
-              </div>
-              <div>
                 <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
@@ -64,7 +75,11 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car}  alt="car"/>
+                <img src={car} alt="car" />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -75,28 +90,39 @@ const Navbar = () => {
             <button>See all</button>
           </Dropmenu>
         )}
-              <div style={{display:"flex", flexDirection:"row",justifyContent:"center", alignItems:"center", gap:"7px"}}>
-        <a href="/motors">
-          Carvan
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none" 
-        style={{cursor:"pointer"}}
-        onClick={() => {
-            dispatch({ type: "toggleShowText" });
-          }}>
-  <path d="M11.25 6.125L7.5 9.875L3.75 6.125" stroke="#373737" stroke-width="2"/>
-
-</svg>
-</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          <a href="/motors">Carvan</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="16"
+            viewBox="0 0 15 16"
+            fill="none"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch({ type: "toggleShowText" });
+            }}
+          >
+            <path
+              d="M11.25 6.125L7.5 9.875L3.75 6.125"
+              stroke="#373737"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
         {state.showText && (
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car}  alt="car"/>
-                <p>Car name</p>
-              </div>
-              <div>
-                <img src={car}  alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -104,7 +130,11 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -115,19 +145,34 @@ const Navbar = () => {
             <button>See all</button>
           </Dropmenu>
         )}
-              <div style={{display:"flex", flexDirection:"row",justifyContent:"center", alignItems:"center", gap:"7px"}}>
-        <a href="/motors">
-          Tuning
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none" 
-        style={{cursor:"pointer"}}
-        onClick={() => {
-            dispatch({ type: "toggleShowText" });
-          }}>
-  <path d="M11.25 6.125L7.5 9.875L3.75 6.125" stroke="#373737" stroke-width="2"/>
-
-</svg>
-</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          <a href="/motors">Tuning</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="16"
+            viewBox="0 0 15 16"
+            fill="none"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch({ type: "toggleShowText" });
+            }}
+          >
+            <path
+              d="M11.25 6.125L7.5 9.875L3.75 6.125"
+              stroke="#373737"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
         {state.showText && (
           <Dropmenu>
             <DropdownShow>
@@ -136,15 +181,15 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -155,28 +200,39 @@ const Navbar = () => {
             <button>See all</button>
           </Dropmenu>
         )}
-               <div style={{display:"flex", flexDirection:"row",justifyContent:"center", alignItems:"center", gap:"7px"}}>
-        <a href="/motors">
-          Used Car
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none" 
-        style={{cursor:"pointer"}}
-        onClick={() => {
-            dispatch({ type: "toggleShowText" });
-          }}>
-  <path d="M11.25 6.125L7.5 9.875L3.75 6.125" stroke="#373737" stroke-width="2"/>
-
-</svg>
-</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          <a href="/motors">Used Car</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="16"
+            viewBox="0 0 15 16"
+            fill="none"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch({ type: "toggleShowText" });
+            }}
+          >
+            <path
+              d="M11.25 6.125L7.5 9.875L3.75 6.125"
+              stroke="#373737"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
         {state.showText && (
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} alt="car"/>
-                <p>Car name</p>
-              </div>
-              <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -184,35 +240,54 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
+                <p>Car name</p>
+              </div>
+              <div>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
             </DropdownShow>
             <button>See all</button>
           </Dropmenu>
         )}
-               <div style={{display:"flex", flexDirection:"row",justifyContent:"center", alignItems:"center", gap:"7px"}}>
-        <a href="/places">
-          Camping Places
-        </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none" 
-        style={{cursor:"pointer"}}
-        onClick={() => {
-            dispatch({ type: "toggleShowText" });
-          }}>
-  <path d="M11.25 6.125L7.5 9.875L3.75 6.125" stroke="#373737" stroke-width="2"/>
-
-</svg>
-</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          <a href="/places">Camping Places</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="16"
+            viewBox="0 0 15 16"
+            fill="none"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              dispatch({ type: "toggleShowText" });
+            }}
+          >
+            <path
+              d="M11.25 6.125L7.5 9.875L3.75 6.125"
+              stroke="#373737"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
         {state.showText && (
           <Dropmenu>
             <DropdownShow>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -220,7 +295,7 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car}  alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
               <div>
@@ -228,7 +303,7 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
               <div>
-                <img src={car} alt="car"/>
+                <img src={car} alt="car" />
                 <p>Car name</p>
               </div>
             </DropdownShow>
@@ -237,14 +312,12 @@ const Navbar = () => {
         )}
       </Infos>
       <Selection>
-          <ImageWithDropdown />
+        <ImageWithDropdown />
         <Link to="login">
-          <img src={people} className="people" alt="people"/>
+          <img src={people} className="people" alt="people" />
         </Link>
         <HamburgerRight>
-            {/* <img src={hamburger} alt="humburger"  /> */}
-            <Header/>
-          
+          <Header />
         </HamburgerRight>
         <select name="Language">
           <option value="eng">ENG</option>

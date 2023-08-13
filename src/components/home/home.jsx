@@ -68,15 +68,6 @@ const Home = () => {
           </Blogscontainer>
         </Homecontainer>
       </div>
-      {/* <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <div style={{ zIndex: "10" }}>
- 
-
-          <video controls>
-            <source src="https://youtu.be/K4r6nw6aeg4" type="video/mp4" />
-          </video>
-        </div>
-      </Popup> */}
     </div>
   );
 };

@@ -25,9 +25,9 @@ export const AidalBack = styled.div`
     display: flex;
     flex-direction: row;
     gap: 30px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 100%;
   }
   a {
     display: flex;
@@ -104,6 +104,8 @@ export const InfoDiv = styled.div`
   background: #fff;
   width: 100%;
   height: 360px;
+  justify-content: space-evenly;
+  align-items: start;
   /* btn sh */
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   @media (max-width: 850px) {
@@ -118,10 +120,10 @@ export const InfoDiv = styled.div`
 `;
 export const FirstAidalDiv = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  align-items:start;
 
   h2 {
     color: #000;
@@ -232,6 +234,9 @@ export const Buttondiv = styled.data`
   display: flex;
   flex-direction: row;
   gap: 10px;
+  width: 100%;
+  margin: 30px 0 30px;
+  padding: 0 30px 0 30px;
   justify-content: space-evenly;
   align-items: center;
   a {
@@ -264,7 +269,7 @@ export const Buttondiv = styled.data`
 export const Buttondivseconnd = styled.div`
   display: none;
   @media (max-width: 850px) {
-    width: 400px;
+    width: 100%;
     margin-top: 50px;
     display: flex;
     flex-direction: row;

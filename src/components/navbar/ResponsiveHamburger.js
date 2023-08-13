@@ -95,7 +95,9 @@ export default function Header() {
           height: 100%
           top: 0;
           left: 0;
-          background: white;
+          right:0
+          bottom:0;
+          background: #fafafa;
           z-index: 10;
           display: flex;
           flex-direction: column;

@@ -43,7 +43,7 @@ const Motors = () => {
     setFilteredData(filteredCars);
   };
   return (
-    <div>
+    <div style={{background:"#fafafa"}}>
       <MotorsBack>
         <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
           <a href="/">Home /</a>

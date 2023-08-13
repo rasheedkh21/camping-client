@@ -108,7 +108,7 @@ export const Selection = styled.div`
 export const Dropmenu = styled.div`
 display: block;
   background-color: white;
-  z-index: 100;
+  z-index: 1;
   position: absolute;
   top: 100px;
   display: flex;
@@ -117,9 +117,8 @@ display: block;
   align-items: center;
   height: 400px;
   width: 100%;
-:hover{}
+
   button {
-    width: 230px;
     height: 40px;
     border-radius: 10px;
     background-color: white;
@@ -127,9 +126,9 @@ display: block;
     border: 1px #006dab snow;
     margin-bottom: 70px;
     font-family: monospace;
+    padding: 0 60px 0 60px;
   }
   button:hover {
-    display: flex;
     background: #006dab;
     cursor: pointer;
     color: white;

@@ -10,8 +10,9 @@
   color: fff;
   width: 100%;
 }
+
 .box img{
-  width: 250px;
+  width: 100%;
 }
 .box{
     display: flex;
