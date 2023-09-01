@@ -19,14 +19,13 @@ import {
   SelectionNumbers,
   ThinLine,
 } from "./style";
-import  {card} from "../../test/poducts.js"
+import { card } from "../../test/poducts.js";
 import { Link } from "react-router-dom";
+import VMenu from "../../controller/vMenu";
 
-
-
-const Motors = () => { 
+const Motors = ({onClick}) => {
   const [filteredData, setFilteredData] = useState(card.yangi);
-
+  const [on, setOn] = useState(true);
   const handleClick = () => {
     const sortedCars = [...card.yangi];
     sortedCars.sort((a, b) => {
@@ -36,16 +35,15 @@ const Motors = () => {
     });
 
     const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스") 
+      data.car.name.startsWith("르벤투스")
     );
-    
 
     setFilteredData(filteredCars);
   };
   return (
-    <div style={{background:"#fafafa"}}>
+    <div style={{ background: "#fafafa" }}>
       <MotorsBack>
-        <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+        <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           <a href="/">Home /</a>
           <a href="/motors">Motors</a>
         </div>
@@ -53,14 +51,14 @@ const Motors = () => {
         <h1>Motors</h1>
       </MotorsBack>
       <Bigcontainer>
-        <CostContainer>
+        {/* <CostContainer>
           <div>
             <h1>Cost of cars</h1>
           </div>
           <ThinLine />
           <Adressdiv>
             <div>
-              <label >From</label>
+              <label>From</label>
               <input type="text" />
             </div>
             <div>
@@ -191,7 +189,7 @@ const Motors = () => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick}/>
+              <input type="checkbox" name="check" id="" onClick={handleClick} />
               <label htmlFor="">5인</label>
             </div>
             <div>
@@ -262,7 +260,7 @@ const Motors = () => {
               <span></span>
             </div>
           </ComapreCars>
-        </CostContainer>
+        </CostContainer> */}
 
         <ItemContainer>
           <ItemSort>
@@ -293,39 +291,59 @@ const Motors = () => {
                   border: "1px solid black",
                 }}
               >
-                Icons
+                Vmenu
+              </div>
+              <div
+                style={{
+                  width: "80px",
+                  height: "30px",
+                  border: "1px solid black",
+                }}
+                active={!on}
+                onClick={()=>{
+                  onClick(false);
+                  setOn(false);
+                }}
+              >
+                hMeu
               </div>
             </SelectionDiv>
           </ItemSort>
+          {/* <VMenu/> */}
           <ThinLine />
-          <OrderSort>
-          
-              {filteredData.map((data)=>{
-                return(
-                  <Link to={`/aidal/${data.id}`} >
+          {/* <OrderSort>
+            {filteredData.map((data) => {
+              return (
+                <Link to={`/aidal/${data.id}`}>
                   <Orders key={data.id}>
-                        <ImageOfOffer />
-              <h1>{data.car.name}</h1>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "40px" }}
-              >
-                <p>{data.car.company}</p>
-                <p>{data.car.date}</p>
-              </div>
-              <h2>{data.car.cost}</h2>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-              >
-                <a href="/orders">Oreder</a>
-                <a href="comparemodels">Compare</a>
-              </div>
+                    <ImageOfOffer />
+                    <h1>{data.car.name}</h1>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "40px",
+                      }}
+                    >
+                      <p>{data.car.company}</p>
+                      <p>{data.car.date}</p>
+                    </div>
+                    <h2>{data.car.cost}</h2>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "10px",
+                      }}
+                    >
+                      <a href="/orders">Oreder</a>
+                      <a href="comparemodels">Compare</a>
+                    </div>
                   </Orders>
-                  </Link>
-                )
-              })}
-            
-
-          </OrderSort>
+                </Link>
+              );
+            })}
+          </OrderSort> */}
         </ItemContainer>
       </Bigcontainer>
     </div>

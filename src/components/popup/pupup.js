@@ -60,9 +60,7 @@ export default function TransitionsModal() {
             Vocation? CAMPER is the best option
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-             <div >
-             <iframe width="100%" height="vh" src="https://www.youtube.com/embed/qff2gy_glxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           </div>
+             <iframe width="100%" src="https://www.youtube.com/embed/qff2gy_glxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </Typography>
           </Box>
         </Fade>
