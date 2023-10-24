@@ -44,14 +44,14 @@ const Motors = ({onClick}) => {
     <div style={{ background: "#fafafa" }}>
       <MotorsBack>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-          <a href="/">Home /</a>
-          <a href="/motors">Motors</a>
+          <Link to="/">Home /</Link>
+          <Link to="/motors">Motors</Link>
         </div>
         <h3>Our Ranges</h3>
         <h1>Motors</h1>
       </MotorsBack>
       <Bigcontainer>
-        {/* <CostContainer>
+        <CostContainer>
           <div>
             <h1>Cost of cars</h1>
           </div>
@@ -260,7 +260,7 @@ const Motors = ({onClick}) => {
               <span></span>
             </div>
           </ComapreCars>
-        </CostContainer> */}
+        </CostContainer>
 
         <ItemContainer>
           <ItemSort>
@@ -311,7 +311,7 @@ const Motors = ({onClick}) => {
           </ItemSort>
           {/* <VMenu/> */}
           <ThinLine />
-          {/* <OrderSort>
+          <OrderSort>
             {filteredData.map((data) => {
               return (
                 <Link to={`/aidal/${data.id}`}>
@@ -336,14 +336,14 @@ const Motors = ({onClick}) => {
                         gap: "10px",
                       }}
                     >
-                      <a href="/orders">Oreder</a>
-                      <a href="comparemodels">Compare</a>
+                      <Link to="/orders">Oreder</Link>
+                      <Link to="comparemodels">Compare</Link>
                     </div>
                   </Orders>
                 </Link>
               );
             })}
-          </OrderSort> */}
+          </OrderSort>
         </ItemContainer>
       </Bigcontainer>
     </div>

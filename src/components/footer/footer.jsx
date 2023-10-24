@@ -9,6 +9,7 @@ import {
 import youtube from "../../assets/youteube.png";
 import insta from "../../assets/insta.png";
 import naver from "../../assets/naver.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -36,18 +37,18 @@ const Footer = () => {
         <Contact>
           <h1 style={{ fontSize: `20xp`, fontFamily: `monospace` }}>Contact</h1>
           <SocialMedia>
-            <a href="https://www.instagram.com/rasheedkh_/">
+            <Link to="https://www.instagram.com/rasheedkh_/">
             
               <img src={youtube}  alt="none" />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="">
            
               <img src={insta} alt="none" />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="">
         
               <img src={naver} alt="none" />
-            </a>
+            </Link>
           </SocialMedia>
           <p style={{ color: `white` }}>021 Korea Seul, LA</p>
           <p style={{ color: `white` }}>Camper@example.com</p>

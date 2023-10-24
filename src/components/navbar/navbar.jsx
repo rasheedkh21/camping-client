@@ -44,7 +44,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <a href="/motors">Motor</a>
+          <Link to= "/motors">Motor</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -99,7 +99,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <a href="/motors">Carvan</a>
+          <Link to="/motors">Carvan</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -154,7 +154,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <a href="/motors">Tuning</a>
+          <Link to="/motors">Tuning</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -209,7 +209,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <a href="/motors">Used Car</a>
+          <Link to="/motors">Used Car</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -264,7 +264,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <a href="/places">Camping Places</a>
+          <Link to="/places">Camping Places</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"

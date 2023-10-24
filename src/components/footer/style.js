@@ -85,7 +85,7 @@ width: 100%;
   gap: 40px;
   justify-content: space-around;
   align-items: center;
-  a {
+  Link {
     font-family: monospace;
     display: flex;
     gap: 60px;

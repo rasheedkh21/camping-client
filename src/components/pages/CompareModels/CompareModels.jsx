@@ -2,15 +2,16 @@ import React from "react";
 import { AddButtonDiv, CarModels, CompCArsBAck, OrderCars } from "./CompareModelsStyle";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import car from "../../../assets/offercar1.png";
+import { Link } from "react-router-dom";
 
 const CompareModels = () => {
   return (
     <div>
         <CompCArsBAck>
         <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
-        <a href="/">Home /</a>
-        <a href="/motors">Motors /</a>
-        <a href="/comparemodels">Compare</a>
+        <Link to="/">Home /</Link>
+        <Link to="/motors">Motors /</Link>
+        <Link to="/comparemodels">Compare</Link>
         </div>
         <h1>Compare our models</h1>
         </CompCArsBAck>

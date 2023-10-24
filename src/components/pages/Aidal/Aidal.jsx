@@ -19,7 +19,7 @@ import {
   PriceAidal,
 } from "./style";
 import Comment from "./comment";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { card } from "../../test/poducts";
 
 const Aidal = () => {
@@ -33,8 +33,8 @@ console.log(openInfo)
       <AidalBack>
         <h1>{openInfo.car.name}</h1>
         <div>
-          <a href="/card">Add to Card</a>
-          <a href="/comparemodels">Compare</a>
+          <Link to="/card">Add to Card</Link>
+          <Link to="/comparemodels">Compare</Link>
         </div>
       </AidalBack>
       <PriceAidal>
@@ -155,8 +155,8 @@ console.log(openInfo)
             your vehicle while you drive, for a more comfortable arrival.
           </p>
           <Buttondiv>
-            <a href="/card">Add to Card</a>
-            <a href="/comparemodels">Compare</a>
+            <Link to="/card">Add to Card</Link>
+            <Link to="/comparemodels">Compare</Link>
           </Buttondiv>
         </ComfortAllDivLorem>
         <ComfortImage>
@@ -165,8 +165,8 @@ console.log(openInfo)
           </Zoom>
         </ComfortImage>
         <Buttondivseconnd>
-          <a href="/card">Add to Card</a>
-          <a href="/comparemodels">Compare</a>
+          <Link to="/card">Add to Card</Link>
+          <Link to="/comparemodels">Compare</Link>
         </Buttondivseconnd>
       </PriceAidal>
 
