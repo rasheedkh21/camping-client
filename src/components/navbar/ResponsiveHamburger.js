@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
@@ -36,49 +37,49 @@ export default function Header() {
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="border-b border-gray-400 my-8 text-black">
-                <a href="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
                   Motors
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
                   Caravan
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
                   Tuning
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
                   Second Hand
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/places" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/places" style={{ color: "black", fontSize: "20px" }}>
                   Camping places
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/login" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/login" style={{ color: "black", fontSize: "20px" }}>
                   Sign in
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="/orders" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/orders" style={{ color: "black", fontSize: "20px" }}>
                   My orders
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="#" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="#" style={{ color: "black", fontSize: "20px" }}>
                   Log out
-                </a>
+                </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <a href="#" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="#" style={{ color: "black", fontSize: "20px" }}>
                   Settings
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
