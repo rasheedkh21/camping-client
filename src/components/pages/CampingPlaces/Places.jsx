@@ -19,7 +19,7 @@ const Places = () => {
             <img src={placeone} alt="place" />
             <div>
               <p>Camping place name</p>
-              <Link href="/location">Location</Link>
+              <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
           <PlaceOffers>

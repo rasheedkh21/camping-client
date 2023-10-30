@@ -93,7 +93,7 @@ export default function Header() {
           display: block;
           position: fixed;
           width: 50%;
-          height: 100%
+          height: 100%;
           top: 0;
           left: 0;
           right:0
