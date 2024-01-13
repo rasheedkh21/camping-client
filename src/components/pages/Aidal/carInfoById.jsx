@@ -18,18 +18,18 @@ import {
   LineAidal,
   PriceAidal,
 } from "./style";
-import Comment from "./comment";
+import Comment from "./swipableMenu";
 import { Link, useParams } from "react-router-dom";
-import { card } from "../../test/poducts";
+import {motorsCarCard } from "../../test/motorsCarData";
 
 const Aidal = () => {
-const {id}= useParams();
-const carInfo=card.yangi;
+  const { id } = useParams();
+  const carInfo = motorsCarCard.CarInfo;
 
-const openInfo=carInfo.find((item)=>item.id=== parseInt(id));
-console.log(openInfo)
+  const openInfo = carInfo.find((item) => item.id === parseInt(id));
+  console.log(openInfo);
   return (
-    <div style={{background:"#fafafa"}}>
+    <div style={{ background: "#fafafa" }}>
       <AidalBack>
         <h1>{openInfo.car.name}</h1>
         <div>

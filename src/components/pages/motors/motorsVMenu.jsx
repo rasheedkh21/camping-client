@@ -1,9 +1,12 @@
 import React from "react";
-import { ImageOfOffer, OrderSort, Orders } from "../pages/motors/style";
-import {card} from "../test/poducts";
+import { ImageOfOffer, OrderSort, Orders } from "./style";
+import { motorsCarCard } from "../../test/motorsCarData";
 import { Link } from "react-router-dom";
-const VMenu = () => {
-  const datas = card.yangi;
+
+
+
+const MotorsVMenu = () => {
+  const datas = motorsCarCard.CarInfo;
   return (
     <OrderSort>
       {datas.map((data) => {
@@ -41,4 +44,4 @@ const VMenu = () => {
   );
 };
 
-export default VMenu;
+export default MotorsVMenu;

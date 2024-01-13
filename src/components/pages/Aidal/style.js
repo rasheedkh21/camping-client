@@ -313,68 +313,60 @@ export const Optionsdiv = styled.div`
   width: 100%;
   height: fit-content;
 
-  select {
-    border-radius: 5px;
-    border: 1px solid rgba(55, 55, 55, 0.3);
-    background: #fff;
-    width: 177px;
-    height: 35px;
-    flex-shrink: 0;
-    color: var(--blue, #006dab);
-    font-family: monospace;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 14px */
-  }
-  h1 {
-    color: var(--blue, #006dab);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
+ 
 `;
 export const Review = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items:center;
+gap: 30px;
+  width: 100vw;
   height: fit-content;
-  margin-top: 20px;
+ 
   @media (max-width: 420px) {
     display: flex;
     flex-direction: column;
     height: fit-content;
     width: 100%;
   }
+
 `;
+export const ReviewsCard =styled.div`
+display: grid;
+grid-template-columns: auto auto;
+align-items:center;
+justify-content: space-evenly;
+border-bottom: solid 1px rgba(55, 55, 55, 0.15);
+width: 100vw;
+height: fit-content;
+.ReviewsData{
+display: flex;
+flex-direction: column;
+padding-right:10px;
+gap:5px;
+}
+`
+export const ReviewsDataRight = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+gap: 30px;
+@media (max-width: 420px) {
+  display: flex;
+  flex-direction: column;
+}
+`
 
 export const Carname = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+ display: flex;
+align-items:center;
+width: 100%;
+height: 100%;
+justify-content: space-between;
+padding: 0px 40px;
 `;
-export const CArID = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  h1 {
-    color: rgba(55, 55, 55, 0.7);
-    font-family: sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-`;
+
 
 //Questiom and Answers
 export const QuestionContainer = styled.div`
@@ -389,7 +381,7 @@ export const QuestionContainer = styled.div`
     display: flex;
     flex-direction: column;
   }
-  @media (max-width: 425.09px) {
+  @media (max-width: 430px) {
     display: flex;
     flex-direction: column;
   }
@@ -400,12 +392,12 @@ export const SendQuestion = styled.div`
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 430px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 2;
   h1 {
     color: var(--text-color, #023047);
     font-family: sans-serif;
@@ -417,7 +409,6 @@ export const SendQuestion = styled.div`
   input {
     height: 50px;
     width: 70%;
-
     font-family: monospace;
     font-size: 14px;
     font-style: normal;
@@ -435,6 +426,13 @@ export const SendQuestion = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 16px */
+  }
+  textarea{
+    padding: 30px;
+    width: 70%;
+border-radius: 8px;
+border: 1px solid #e8eced;
+background: #e8eced;
   }
 `;
 export const AskedQuestions = styled.div`
@@ -510,9 +508,19 @@ export const Contacts = styled.div`
   align-items: center;
   width: 100%;
   gap: 30px;
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: grid;
     grid-template-columns: auto;
+  }
+  .contactNumber{
+    border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+width: 340px;
+height: 109px;
+flex-shrink: 0;
+padding:10px;
+padding-left:40px;
   }
   div {
     display: flex;
@@ -521,13 +529,14 @@ export const Contacts = styled.div`
     align-items: center;
     width: 100%;
     height: 110px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 109, 171, 0.1);
-    background: #fff;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-
-    padding: 0 60px 0 60px;
-    margin-top: 30px;
+    border-radius: 8px;
+background: #FFF;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+width: 340px;
+height: 109px;
+flex-shrink: 0;
+padding:10px;
+padding-left:40px;
   }
   p {
     color: #666;
@@ -543,6 +552,6 @@ export const Contacts = styled.div`
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%; /* 23.4px */
+    line-height: 130%; 
   }
 `;

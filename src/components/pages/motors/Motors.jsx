@@ -19,15 +19,18 @@ import {
   SelectionNumbers,
   ThinLine,
 } from "./style";
-import { card } from "../../test/poducts.js";
+import { motorsCarCard } from "../../test/motorsCarData.js";
 import { Link } from "react-router-dom";
-import VMenu from "../../controller/vMenu";
+import MotorController from "./motorController";
+import MenuController from "./motorsMenuController";
+import MenuSwitchController from "./motorsMenuController";
 
-const Motors = ({onClick}) => {
-  const [filteredData, setFilteredData] = useState(card.yangi);
+const Motors = ({ onClick }) => {
+  const[active, setActive]= useState(true)
+  const [filteredData, setFilteredData] = useState(motorsCarCard.CarInfo);
   const [on, setOn] = useState(true);
   const handleClick = () => {
-    const sortedCars = [...card.yangi];
+    const sortedCars = [...motorsCarCard.CarInfo];
     sortedCars.sort((a, b) => {
       const nameA = a.car.name.toLowerCase();
       const nameB = b.car.name.toLowerCase();
@@ -262,8 +265,15 @@ const Motors = ({onClick}) => {
           </ComapreCars>
         </CostContainer>
 
+
+
+
+
+
+
         <ItemContainer>
           <ItemSort>
+            
             <div>
               <h1>Item 250000</h1>
             </div>
@@ -284,66 +294,17 @@ const Motors = ({onClick}) => {
                   <option value="">1</option>
                 </SelectionNumbers>
               </div>
-              <div
-                style={{
-                  width: "80px",
-                  height: "30px",
-                  border: "1px solid black",
-                }}
-              >
-                Vmenu
-              </div>
-              <div
-                style={{
-                  width: "80px",
-                  height: "30px",
-                  border: "1px solid black",
-                }}
-                active={!on}
-                onClick={()=>{
-                  onClick(false);
-                  setOn(false);
-                }}
-              >
-                hMeu
-              </div>
             </SelectionDiv>
+            
+            <MotorController onClick={(state)=>{
+              setActive(state)
+             }}/> 
           </ItemSort>
-          {/* <VMenu/> */}
           <ThinLine />
-          <OrderSort>
-            {filteredData.map((data) => {
-              return (
-                <Link to={`/aidal/${data.id}`}>
-                  <Orders key={data.id}>
-                    <ImageOfOffer />
-                    <h1>{data.car.name}</h1>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "40px",
-                      }}
-                    >
-                      <p>{data.car.company}</p>
-                      <p>{data.car.date}</p>
-                    </div>
-                    <h2>{data.car.cost}</h2>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "10px",
-                      }}
-                    >
-                      <Link to="/orders">Oreder</Link>
-                      <Link to="comparemodels">Compare</Link>
-                    </div>
-                  </Orders>
-                </Link>
-              );
-            })}
-          </OrderSort>
+          {/* <MotorController onClick={(state)=>{
+              setActive(state)
+             }}/> */}
+             <MenuSwitchController active={active}/>
         </ItemContainer>
       </Bigcontainer>
     </div>

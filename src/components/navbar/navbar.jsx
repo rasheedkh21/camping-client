@@ -99,7 +99,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <Link to="/motors">Carvan</Link>
+          <Link to="/caravan">Carvan</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"

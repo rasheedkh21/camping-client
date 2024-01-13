@@ -13,8 +13,8 @@ const Contact = () => {
               <h2>+7 237 181 181</h2>
               <h2>+7 237 181 181</h2>
             </div>
-            <div>
-              <p>email</p>
+            <div  >
+              <p>E-mail</p>
               <h2>logo.uz</h2>
             </div>
           </Contacts>
@@ -23,9 +23,7 @@ const Contact = () => {
         <h1>Have you got a Question</h1>
             <input type="text"  id="name" placeholder='Your name' required />
             <input type="text"  id="email" placeholder='Your email'  required/>
-            <input type="text"  id="question" placeholder='Your question' required
-            style={{padding:"50px"}}
-            />
+            <textarea name="message" placeholder="Your Question" cols={10} rows={5} />
             <button>Send Question</button>
         </SendQuestion>
       </QuestionContainer>

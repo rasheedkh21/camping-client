@@ -95,6 +95,7 @@ export const ItemSort = styled.div`
   align-items: center;
   width: 100%;
   height: fit-content;
+  border: 4px solid red;
   h1 {
     color: #373737;
     font-family: monospace;

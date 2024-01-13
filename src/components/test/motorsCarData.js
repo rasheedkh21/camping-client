@@ -1,5 +1,5 @@
-export const card = {
-  yangi: [
+export const motorsCarCard = {
+  CarInfo: [
     {
       id: 1,
       car: {
