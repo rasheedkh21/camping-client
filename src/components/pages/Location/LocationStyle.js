@@ -22,7 +22,7 @@ export const ImageCont = styled.div`
     grid-template-columns: auto auto auto;
     
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: grid;
     grid-template-columns: auto auto;
   }

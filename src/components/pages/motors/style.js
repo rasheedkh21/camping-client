@@ -91,11 +91,12 @@ export const ItemContainer = styled.div`
 export const ItemSort = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: fit-content;
-  border: 4px solid red;
+  border-bottom: 1px solid  rgba(55, 55, 55, 0.5);
+ 
   h1 {
     color: #373737;
     font-family: monospace;
@@ -120,6 +121,9 @@ export const SelectionDiv = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
+  }
+  @media (max-width: 430px){
+    display: none;
   }
 `;
 export const SelectionCars = styled.select`
@@ -148,7 +152,6 @@ export const ThinLine = styled.div`
   width: 100%;
   height: 1px;
   background: rgba(55, 55, 55, 0.5);
-  /* margin-top: 10px; */
 `;
 export const OrderSort = styled.div`
   display: grid;
@@ -163,7 +166,7 @@ export const OrderSort = styled.div`
     width: 100%;
     height: fit-content;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 430px) {
     display: grid;
     grid-template-columns: auto;
     width: 100%;
@@ -188,7 +191,6 @@ export const Orders = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    /* margin-left: -100px; */
   }
   h2 {
     color: var(--blue, #006dab);
@@ -197,7 +199,6 @@ export const Orders = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-left: -150px;
   }
   p {
     color: var(--text, #373737);
@@ -268,7 +269,6 @@ export const Adressdiv = styled.div`
   }
 `;
 export const OptionsCheck = styled.div`
-  /* margin-top: 30px; */
   display: flex;
   flex-direction: column;
   width: 100%;

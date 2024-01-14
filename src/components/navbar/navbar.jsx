@@ -154,7 +154,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <Link to="/motors">Tuning</Link>
+          <Link to="/tuning">Tuning</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -209,7 +209,7 @@ const Navbar = () => {
             gap: "7px",
           }}
         >
-          <Link to="/motors">Used Car</Link>
+          <Link to="/usedCar">Used Car</Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -288,23 +288,23 @@ const Navbar = () => {
             <DropdownShow>
               <div>
                 <img src={car} alt="car" />
-                <p>Car name</p>
+                <p>Seoul</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Car name</p>
+                <p>Busan</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Car name</p>
+                <p>Gwangju</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Car name</p>
+                <p>Daegu</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Car name</p>
+                <p>Incheon</p>
               </div>
             </DropdownShow>
             <button>See all</button>

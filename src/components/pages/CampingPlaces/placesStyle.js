@@ -8,7 +8,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
-height: 100vh;
+height: 60vh;
 background-image: url(${placeimg});
 background-position: center;
 background-repeat: no-repeat;
@@ -34,7 +34,7 @@ font-weight: 700;
 line-height: normal;
 text-align: center;
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     p{
         text-align: center;
         font-size: 50px;
@@ -55,7 +55,7 @@ gap: 30px;
     grid-template-columns: auto auto;
     width: 100%;
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     display: grid;
     grid-template-columns: auto;
     width: 100%;

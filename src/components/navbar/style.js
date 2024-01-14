@@ -21,7 +21,7 @@ export const Navdiv = styled.div`
    
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     h1 {
       font-family: monospace;
       font-size: 30px;
@@ -40,14 +40,14 @@ export const Hamburger = styled.div`
     display: flex;
     cursor: pointer;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: none;
   }
 `;
 export const HamburgerRight = styled.div`
   display: none;
 
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: flex;
   }
 `;
@@ -96,7 +96,7 @@ export const Selection = styled.div`
     border: none;
     cursor: pointer;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     select {
       display: none;
     }

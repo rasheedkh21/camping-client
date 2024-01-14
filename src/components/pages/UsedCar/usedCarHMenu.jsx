@@ -1,11 +1,11 @@
 import React from 'react'
-import { HMenuDesign, Order, OrderButton, OrderLeft,OrderRight, Writings } from '../myOrders/style';
-import { CaravanCarCard } from '../../test/caravanCarData';
-import { Link } from 'react-router-dom';
+import { UsedCarCard } from '../../test/usedCarData'
+import { HMenuDesign, Order, OrderButton, OrderLeft, OrderRight, Writings } from '../myOrders/style'
+import hmenuimg from "../../../assets/hmenu.webp"
+import { Link } from 'react-router-dom'
 
-
-const CaravanHMenu = () => {
-  const datas = CaravanCarCard.CarInfo
+const UsedCarHMenu = () => {
+  const datas = UsedCarCard.carList
   return (
     <Order>
       {datas.map((data)=>{
@@ -13,7 +13,7 @@ const CaravanHMenu = () => {
           <Link to={`/aidal/${data.id}`}>
           <HMenuDesign>
           <OrderLeft>
-              {/* <img src={hmenuimg} alt="order" /> */}
+              <img src={hmenuimg} alt="order" />
           </OrderLeft>
           <OrderRight>
               <Writings>
@@ -36,4 +36,4 @@ const CaravanHMenu = () => {
       })}
 </Order>
   )}
-export default CaravanHMenu;
+export default UsedCarHMenu;

@@ -17,17 +17,16 @@ import {
   ThinLine,
 } from "../motors/style";
 import { Link } from "react-router-dom";
-import { UsedCarCard } from "../../test/usedCarData";
-import MenuSwitchController from "./motorsMenuController";
-import MotorController from "./motorController";
+import TuningController from "./TuningController";
+import TuningSwitchControl from "../caravan/caravanSwitchController";
+import { TunedCarCard } from "../../test/tuningCarData";
 
 
-
-const Motors = ({ onClick }) => {
+const Tuning = ({ onClick }) => {
   const [active, setActive] = useState(true);
-  const [filteredData, setFilteredData] = useState(UsedCarCard.carList);
+  const [filteredData, setFilteredData] = useState(TunedCarCard.carList);
   const handleClick = () => {
-    const sortedCars = [...UsedCarCard.carList];
+    const sortedCars = [...TunedCarCard.carList];
     sortedCars.sort((a, b) => {
       const nameA = a.car.name.toLowerCase();
       const nameB = b.car.name.toLowerCase();
@@ -45,10 +44,10 @@ const Motors = ({ onClick }) => {
       <MotorsBack>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           <Link to="/">Home /</Link>
-          <Link to="/caravan">Caravan</Link>
+          <Link to="/usedCar">Used Cars</Link>
         </div>
         <h3>Our Ranges</h3>
-        <h1>Motors</h1>
+        <h1>Tuning</h1>
       </MotorsBack>
       <Bigcontainer>
         <CostContainer>
@@ -270,9 +269,9 @@ const Motors = ({ onClick }) => {
             <SelectionDiv>
               <label htmlFor="input">Sort by</label>
               <SelectionCars placeholder="select">
-                <option value="">Used Car Standart</option>
-                <option value="">Used Car Premium</option>
-                <option value="">Used Car Gold</option>
+                <option value="">Tuning Standart</option>
+                <option value="">Tuning Premium</option>
+                <option value="">Tuning Gold</option>
               </SelectionCars>
               <div>
                 <SelectionNumbers name="" id="">
@@ -282,16 +281,15 @@ const Motors = ({ onClick }) => {
                 </SelectionNumbers>
               </div>
             </SelectionDiv>
-          
-            <MotorController onClick={(state)=>{
-              setActive(state)
+            <TuningController onClick={(state)=>{
+                setActive(state)
             }}/>
           </ItemSort>
-          <MenuSwitchController active={active}/>
+          <TuningSwitchControl active={active}/>
         </ItemContainer>
       </Bigcontainer>
     </div>
   );
 };
 
-export default Motors;
+export default Tuning;

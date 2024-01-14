@@ -22,7 +22,7 @@ export const Videodiv = styled.div`
   align-items: center;
   width: max-content;
   height: fit-content;
-  padding: 0 60px 0 60px;
+  /* padding: 0 60px 0 60px; */
 
 
 
@@ -36,7 +36,7 @@ export const Videodiv = styled.div`
     align-items: center;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -152,7 +152,7 @@ export const Imagecontainer = styled.div`
       border-radius: 20px;
     }
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: grid;
     grid-template-columns: auto;
     img {

@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageOfOffer, OrderSort, Orders } from "./style";
+import {ImageOfOffer, OrderSort, Orders} from "./style";
 import { motorsCarCard } from "../../test/motorsCarData";
 import { Link } from "react-router-dom";
 
@@ -41,6 +41,7 @@ const MotorsVMenu = () => {
         );
       })}
     </OrderSort>
+    
   );
 };
 

@@ -33,7 +33,7 @@ height: 180px;
 border-radius: 20px;
 background: #FFF;
 box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -96,4 +96,40 @@ justify-content: space-around;
 align-items: center;
 gap: 30px;
 margin-top: 30px;
+`
+
+//H Menu Design
+export const HMenuDesign=styled.div`
+margin-top: 40px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+width: 100%;
+height: 180px;
+border-radius: 20px;
+background: #FFF;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+`
+export const OrderButton = styled.div`
+border-radius: 10px;
+border: 1px solid var(--blue, #006DAB);
+height: 35px;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+display: flex;
+justify-content:center ;
+align-items: center;
+width: 30vw;
+cursor: pointer;
+color: var(--blue, #006DAB);
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+:hover{
+    background-color: #006DAB;
+    color: white;
+   
+}
 `

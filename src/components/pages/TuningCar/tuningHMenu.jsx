@@ -1,11 +1,11 @@
 import React from 'react'
-import { HMenuDesign, Order, OrderButton, OrderLeft,OrderRight, Writings } from '../myOrders/style';
-import { CaravanCarCard } from '../../test/caravanCarData';
-import { Link } from 'react-router-dom';
+import { TunedCarCard } from '../../test/tuningCarData'
+import { HMenuDesign, Order, OrderLeft, OrderRight, Writings,OrderLeft, OrderButton} from '../myOrders/style'
 
+import { Link } from 'react-router-dom'
 
-const CaravanHMenu = () => {
-  const datas = CaravanCarCard.CarInfo
+const TuningHMenu = () => {
+  const datas = TunedCarCard.carList
   return (
     <Order>
       {datas.map((data)=>{
@@ -36,4 +36,4 @@ const CaravanHMenu = () => {
       })}
 </Order>
   )}
-export default CaravanHMenu;
+export default TuningHMenu;

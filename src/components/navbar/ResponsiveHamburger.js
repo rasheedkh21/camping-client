@@ -42,17 +42,17 @@ export default function Header() {
                 </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/caravan" style={{ color: "black", fontSize: "20px" }}>
                   Caravan
                 </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/tuning" style={{ color: "black", fontSize: "20px" }}>
                   Tuning
                 </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <Link to="/motors" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/usedCar" style={{ color: "black", fontSize: "20px" }}>
                   Second Hand
                 </Link>
               </li>

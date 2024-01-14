@@ -6,7 +6,6 @@ const Orders = () => {
     <Order>
         <h1>My Orders</h1>
         <Linediv/>
-
         <OrderList>
             <OrderLeft>
                 <img src={order} alt="order" />
@@ -63,4 +62,4 @@ const Orders = () => {
   )
 }
 
-export default Orders
+export default Orders;

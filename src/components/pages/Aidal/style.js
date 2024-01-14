@@ -88,7 +88,7 @@ export const ImageDivCar = styled.div`
       height: 425.09px;
     }
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     img {
       flex: 1;
       width: 100%;
@@ -113,7 +113,7 @@ export const InfoDiv = styled.div`
     width: 100%;
     height: 425px;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     width: 100%;
     height: 309px;
   }
@@ -193,7 +193,7 @@ export const ComfortAllDivLorem = styled.div`
     justify-content: center;
     align-items: center;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +223,7 @@ export const ComfortImage = styled.div`
     height: 477px;
     flex-shrink: 0;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     img {
       width: 100%;
       height: 309px;
@@ -323,7 +323,7 @@ gap: 30px;
   width: 100vw;
   height: fit-content;
  
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -352,7 +352,7 @@ flex-direction: row;
 justify-content: space-around;
 align-items: center;
 gap: 30px;
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   display: flex;
   flex-direction: column;
 }

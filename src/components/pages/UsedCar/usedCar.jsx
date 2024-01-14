@@ -18,12 +18,12 @@ import {
 } from "../motors/style";
 import { Link } from "react-router-dom";
 import { UsedCarCard } from "../../test/usedCarData";
-import MenuSwitchController from "./motorsMenuController";
-import MotorController from "./motorController";
+import UsedCarSwitchControl from "./usedCarSwitchController";
+import UsedCarController from "./UsedCarController";
 
 
 
-const Motors = ({ onClick }) => {
+const UsedCar = ({ onClick }) => {
   const [active, setActive] = useState(true);
   const [filteredData, setFilteredData] = useState(UsedCarCard.carList);
   const handleClick = () => {
@@ -45,10 +45,10 @@ const Motors = ({ onClick }) => {
       <MotorsBack>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           <Link to="/">Home /</Link>
-          <Link to="/caravan">Caravan</Link>
+          <Link to="/tuning">Tuning</Link>
         </div>
         <h3>Our Ranges</h3>
-        <h1>Motors</h1>
+        <h1>Used Cars</h1>
       </MotorsBack>
       <Bigcontainer>
         <CostContainer>
@@ -282,16 +282,16 @@ const Motors = ({ onClick }) => {
                 </SelectionNumbers>
               </div>
             </SelectionDiv>
-          
-            <MotorController onClick={(state)=>{
-              setActive(state)
+            <UsedCarController onClick={(state)=>{
+                setActive(state)
             }}/>
           </ItemSort>
-          <MenuSwitchController active={active}/>
+  
+          <UsedCarSwitchControl active={active}/>
         </ItemContainer>
       </Bigcontainer>
     </div>
   );
 };
 
-export default Motors;
+export default UsedCar;

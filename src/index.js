@@ -16,6 +16,8 @@ import CompareModels from "./components/pages/CompareModels/CompareModels";
 import Orders from "./components/pages/myOrders/orders";
 import CV from "./components/pages/cvDownland/cv";
 import Caravan from "./components/pages/caravan/caravan";
+import Tuning from "./components/pages/TuningCar/tuning";
+import UsedCar from "./components/pages/UsedCar/usedCar";
 
 function App() {
   return (
@@ -39,8 +41,10 @@ function MainRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="aidal/:id" element={<Aidal />} />
-        <Route path="motors" element={<Motors />} />
+        <Route path="motors" element={<Motors/>} />
         <Route path="caravan" element={< Caravan/>} />
+        <Route path="tuning" element={< Tuning/>} />
+        <Route path="usedCar" element={< UsedCar/>} />
         <Route path="places" element={<Places />} />
         <Route path="location" element={<Location />} />
         <Route path="card" element={<AddToCard />} />
