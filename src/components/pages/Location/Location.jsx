@@ -10,6 +10,7 @@ import {
 import imagecamping from "../../../assets/place1.png";
 import locationimg from "../../../assets/location.png";
 import Fade from 'react-reveal/Fade';
+import KakaoMap from "../kakaomap/kakao";
 
 const Location = () => {
   return (
@@ -153,7 +154,8 @@ const Location = () => {
         </p>
       </Description>
       <MapImg>
-        <img src={locationimg} alt="" />
+        {/* <KakaoMap/> */}
+        <img src={locationimg} alt="img" />
       </MapImg>
     </>
   );

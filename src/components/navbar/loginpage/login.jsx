@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./login.css";
 import naver from "../../../assets/naver logo.png";
 import google from "../../../assets/google-ion.png";
@@ -60,9 +60,11 @@ const Login = () => {
             </div>
           </div>
           <div>
+            <Link to="/">
             <button className="signin" type="submit">
               Sign In
             </button>
+            </Link>
           </div>
         </form>
         <div className="or">

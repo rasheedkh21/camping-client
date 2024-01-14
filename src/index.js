@@ -14,10 +14,10 @@ import "./index.css";
 import AddToCard from "./components/pages/AddToCard/AddToCard";
 import CompareModels from "./components/pages/CompareModels/CompareModels";
 import Orders from "./components/pages/myOrders/orders";
-import CV from "./components/pages/cvDownland/cv";
 import Caravan from "./components/pages/caravan/caravan";
 import Tuning from "./components/pages/TuningCar/tuning";
 import UsedCar from "./components/pages/UsedCar/usedCar";
+import DisplayNavbar from "./components/navbar/disolayNavbar";
 
 function App() {
   return (
@@ -34,9 +34,11 @@ function MainRoutes() {
 
   return (
     <React.StrictMode>
-      {!isLoginPage && !isRegisterPage && <Navbar />}
+      <DisplayNavbar>
+       {!isLoginPage && !isRegisterPage && <Navbar />}
+      </DisplayNavbar>
+      {/* {!isLoginPage && !isRegisterPage && <Navbar />} */}
       <Routes>
-        <Route path="test" element={<CV />} />
         <Route path="/" element={<MainComponents />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
