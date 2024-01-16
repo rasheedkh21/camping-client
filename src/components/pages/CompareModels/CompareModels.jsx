@@ -9,7 +9,7 @@ const CompareModels = () => {
     <div>
         <CompCArsBAck>
         <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
-        <Link to="/">Home /</Link>
+        <Link to="/home">Home /</Link>
         <Link to="/motors">Motors /</Link>
         <Link to="/comparemodels">Compare</Link>
         </div>

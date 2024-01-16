@@ -1,17 +1,29 @@
 import React from "react";
 import { HMenuDesign, Order, OrderButton, OrderLeft, OrderRight, Writings } from "../myOrders/style";
-
-import { motorsCarCard } from "../../test/motorsCarData";
 import { Link } from "react-router-dom";
+
+const BASEURL = "http://localhost:5050/api/v1/";
 
 
 const HMenu = () => {
-  const datas = motorsCarCard.CarInfo
+  const [allData, setAllData] = React.useState([]);
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASEURL}motors/getAllMotors`);
+        const motors = await response.json();
+        setAllData(motors.data);
+      } catch (error) {
+        console.log("Motor data is wrong:", error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <Order>
-      {datas.map((data)=>{
+      {allData.map((data)=>{
         return(
-          <Link to={`/aidal/${data.id}`}>
+          <Link to={`/aidal/${data._id}`}>
           <HMenuDesign>
           <OrderLeft>
               {/* <img src={hmenuimg} alt="order" /> */}
@@ -19,11 +31,11 @@ const HMenu = () => {
           <OrderRight>
               <Writings>
               <div>
-                <h1>{data.car.name}</h1>
-                  <p>{data.car.company}</p>
+                <h1>{data.name}</h1>
+                  <p>{data.company}</p>
                 </div>
                 <div>
-                  <h2>{data.car.cost}</h2>
+                  <h2>{data.cost}</h2>
                 </div>
               </Writings>
               <Writings>

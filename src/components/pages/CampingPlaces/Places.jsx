@@ -10,7 +10,7 @@ const Places = () => {
   return (
     <div>
       <PlacesBack>
-        <Link to="/">Home / Camping place</Link>
+        <Link to="/home">Home / Camping place</Link>
         <p>Camping places</p>
       </PlacesBack>
       <Reveal>

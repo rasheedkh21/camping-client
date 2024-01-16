@@ -8,7 +8,7 @@ const DisplayNavbar = ({ children }) => {
     useEffect(() => {
         if (location.pathname === '/') {
             setShowNavbar(false);
-        } else if (location.pathname === '/login') {
+        } else if (location.pathname === '/register') {
             setShowNavbar(false);
         } else {
             setShowNavbar(true);

@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MainComponents from "./script";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import Login from "./components/navbar/loginpage/login";
@@ -18,44 +17,31 @@ import Caravan from "./components/pages/caravan/caravan";
 import Tuning from "./components/pages/TuningCar/tuning";
 import UsedCar from "./components/pages/UsedCar/usedCar";
 import DisplayNavbar from "./components/navbar/disolayNavbar";
+import Home from "./components/home/home";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <MainRoutes />
-    </BrowserRouter>
-  );
-}
-
-function MainRoutes() {
-  const location = useLocation();
-  const isLoginPage = location.pathname === `/login`;
-  const isRegisterPage = location.pathname === `/register`;
-
-  return (
-    <React.StrictMode>
-      <DisplayNavbar>
-       {!isLoginPage && !isRegisterPage && <Navbar />}
-      </DisplayNavbar>
-      {/* {!isLoginPage && !isRegisterPage && <Navbar />} */}
-      <Routes>
-        <Route path="/" element={<MainComponents />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="aidal/:id" element={<Aidal />} />
-        <Route path="motors" element={<Motors/>} />
-        <Route path="caravan" element={< Caravan/>} />
-        <Route path="tuning" element={< Tuning/>} />
-        <Route path="usedCar" element={< UsedCar/>} />
-        <Route path="places" element={<Places />} />
-        <Route path="location" element={<Location />} />
-        <Route path="card" element={<AddToCard />} />
-        <Route path="comparemodels" element={<CompareModels />} />
-        <Route path="orders" element={<Orders />} />
-      </Routes>
-      {!isLoginPage && !isRegisterPage && <Footer />}
-    </React.StrictMode>
-  );
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <BrowserRouter>
+    <DisplayNavbar>
+      <Navbar />
+    </DisplayNavbar>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="aidal/:id" element={<Aidal />} />
+      <Route path="motors" element={<Motors />} />
+      <Route path="caravan" element={<Caravan />} />
+      <Route path="tuning" element={<Tuning />} />
+      <Route path="usedCar" element={<UsedCar />} />
+      <Route path="places" element={<Places />} />
+      <Route path="location" element={<Location />} />
+      <Route path="card" element={<AddToCard />} />
+      <Route path="comparemodels" element={<CompareModels />} />
+      <Route path="orders/:id" element={<Orders />} />
+    </Routes>
+    <DisplayNavbar>
+      <Footer />
+    </DisplayNavbar>
+  </BrowserRouter>
+);

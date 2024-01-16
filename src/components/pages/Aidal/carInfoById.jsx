@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import imagecarback from "../../../assets/carbackground.png";
 import Comfort from "../../../assets/comfort.png";
 import Tyding from "../../../assets/tyding.png";
@@ -20,18 +20,31 @@ import {
 } from "./style";
 import Comment from "./swipableMenu";
 import { Link, useParams } from "react-router-dom";
-import {motorsCarCard } from "../../test/motorsCarData";
+
+const BASEURL = "http://localhost:5050/api/v1/";
+
 
 const Aidal = () => {
   const { id } = useParams();
-  const carInfo = motorsCarCard.CarInfo;
+const [dataByID, setDataByID] = useState("");
+useEffect(() => {
+  const fetchMotor = async () => {
+      try {
+          const response = await fetch(`${BASEURL}motors/${id}`);
+          const motorData = await response.json();
+          setDataByID(motorData);
+      } catch (error) {
+          console.error("Error fetching motor:", error);
+          // Handle error gracefully, e.g., display an error message
+      }
+  };
+  fetchMotor();
+}, [id]);
 
-  const openInfo = carInfo.find((item) => item.id === parseInt(id));
-  console.log(openInfo);
   return (
     <div style={{ background: "#fafafa" }}>
       <AidalBack>
-        <h1>{openInfo.car.name}</h1>
+        <h1>{dataByID.name}</h1>
         <div>
           <Link to="/card">Add to Card</Link>
           <Link to="/comparemodels">Compare</Link>
@@ -45,21 +58,21 @@ const Aidal = () => {
         </ImageDivCar>
         <InfoDiv>
           <FirstAidalDiv>
-            <h2>{openInfo.car.name}</h2>
-            <h1>{openInfo.car.cost}</h1>
+            <h2>{dataByID.name}</h2>
+            <h1>{dataByID.cost}</h1>
           </FirstAidalDiv>
           <LineAidal></LineAidal>
           <FirstAidalDiv>
             <p>Company</p>
-            <p>{openInfo.car.name}</p>
+            <p>{dataByID.name}</p>
           </FirstAidalDiv>
           <FirstAidalDiv>
             <p>People</p>
-            <p>{openInfo.car.people}</p>
+            <p>{dataByID.people}</p>
           </FirstAidalDiv>
           <FirstAidalDiv>
             <p>License type</p>
-            <p>{openInfo.car.type}</p>
+            <p>{dataByID.licence}</p>
           </FirstAidalDiv>
         </InfoDiv>
       </PriceAidal>

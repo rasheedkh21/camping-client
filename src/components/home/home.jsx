@@ -7,7 +7,6 @@ import {
   VideoPlayer,
   Videodiv,
 } from "./style";
-import Popup from "reactjs-popup";
 import Example from "../pages/carouselcomp/carousel";
 import image from "../../assets/car22.png";
 import image1 from "../../assets/car33.png";

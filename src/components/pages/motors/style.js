@@ -287,6 +287,14 @@ export const ChoicesCheck = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
+  .options {
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    margin-left: 5%;
+  }
   div {
     display: flex;
     flex-direction: row;

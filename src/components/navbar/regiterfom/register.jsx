@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   // Create state variables to hold the form field values and errors
@@ -79,9 +80,11 @@ const Register = () => {
               <label>Keep me logged in</label>
             </div>
           </div>
+          <Link to="/home">
           <button className="register" type="submit">
             Registrate
           </button>
+          </Link>
         </form>
       </div>
     </div>

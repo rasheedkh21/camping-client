@@ -62,7 +62,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="border-b border-gray-400 my-8 ">
-                <Link to="/login" style={{ color: "black", fontSize: "20px" }}>
+                <Link to="/" style={{ color: "black", fontSize: "20px" }}>
                   Sign in
                 </Link>
               </li>

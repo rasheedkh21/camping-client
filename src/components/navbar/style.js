@@ -9,6 +9,9 @@ export const Navdiv = styled.div`
   height: 100px;
   gap: 10px;
   padding: 50px;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
   a {
     font-family: monospace;
     font-style: normal;

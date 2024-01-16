@@ -1,16 +1,29 @@
 import React from 'react'
-import { TunedCarCard } from '../../test/tuningCarData'
-import { HMenuDesign, Order, OrderLeft, OrderRight, Writings,OrderLeft, OrderButton} from '../myOrders/style'
+import { HMenuDesign, Order, OrderLeft, OrderRight, Writings, OrderButton} from '../myOrders/style'
 
 import { Link } from 'react-router-dom'
+const BASEURL = "http://localhost:5050/api/v1/";
 
 const TuningHMenu = () => {
-  const datas = TunedCarCard.carList
+  const [allData, setAllData] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASEURL}tuning/getAllTuning`);
+        const tuning = await response.json();
+        setAllData(tuning.data);
+      } catch (error) {
+        console.log("Tuning data is wrong:", error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <Order>
-      {datas.map((data)=>{
+      {allData.map((data)=>{
         return(
-          <Link to={`/aidal/${data.id}`}>
+          <Link to={`/aidal/${allData.id}`}>
           <HMenuDesign>
           <OrderLeft>
               {/* <img src={hmenuimg} alt="order" /> */}
@@ -18,11 +31,11 @@ const TuningHMenu = () => {
           <OrderRight>
               <Writings>
               <div>
-                <h1>{data.car.name}</h1>
-                  <p>{data.car.company}</p>
+                <h1>{data.name}</h1>
+                  <p>{data.company}</p>
                 </div>
                 <div>
-                  <h2>{data.car.cost}</h2>
+                  <h2>{data.cost}</h2>
                 </div>
               </Writings>
               <Writings>

@@ -33,7 +33,7 @@ const Navbar = () => {
       <Hamburger>
         <Header />
       </Hamburger>
-      <a href="/">Camper</a>
+      <a href="/home">Camper</a>
       <Infos>
         <div
           style={{
@@ -313,7 +313,7 @@ const Navbar = () => {
       </Infos>
       <Selection>
         <ImageWithDropdown />
-        <Link to="login">
+        <Link to="/">
           <img src={people} className="people" alt="people" />
         </Link>
         <HamburgerRight>

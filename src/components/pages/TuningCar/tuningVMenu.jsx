@@ -1,18 +1,31 @@
 import React from 'react'
-import { TunedCarCard } from '../../test/tuningCarData';
 import { ImageOfOffer, OrderSort, Orders } from '../motors/style';
 import { Link } from 'react-router-dom';
+const BASEURL = "http://localhost:5050/api/v1/";
 
 const TuningVMenu = () => {
-    const datas = TunedCarCard.carList;
+  const [allData, setAllData] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASEURL}tuning/getAllTuning`);
+        const tuning = await response.json();
+        setAllData(tuning.data);
+      } catch (error) {
+        console.log("Tuning data is wrong:", error);
+      }
+    };
+    fetchData();
+  }, []);
     return (
       <OrderSort>
-        {datas.map((data) => {
+        {allData.map((data) => {
           return (
             <Link to={`/aidal/${data.id}`}>
               <Orders key={data.id}>
                 <ImageOfOffer />
-                <h1>{data.car.name}</h1>
+                <h1>{data.name}</h1>
                 <div
                   style={{
                     display: "flex",
@@ -20,10 +33,10 @@ const TuningVMenu = () => {
                     gap: "40px",
                   }}
                 >
-                  <p>{data.car.company}</p>
-                  <p>{data.car.date}</p>
+                  <p>{data.company}</p>
+                  <p>{data.date}</p>
                 </div>
-                <h2>{data.car.cost}</h2>
+                <h2>{data.cost}</h2>
                 <div
                   style={{
                     display: "flex",

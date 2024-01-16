@@ -1,20 +1,31 @@
 import React from "react";
 import {ImageOfOffer, OrderSort, Orders} from "./style";
-import { motorsCarCard } from "../../test/motorsCarData";
 import { Link } from "react-router-dom";
 
-
+const BASEURL = "http://localhost:5050/api/v1/";
 
 const MotorsVMenu = () => {
-  const datas = motorsCarCard.CarInfo;
+  const [allData, setAllData] = React.useState([]);
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASEURL}motors/getAllMotors`);
+        const motors = await response.json();
+        setAllData(motors.data);
+      } catch (error) {
+        console.log("Motor data is wrong:", error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <OrderSort>
-      {datas.map((data) => {
+      {allData.map((data) => {
         return (
-          <Link to={`/aidal/${data.id}`}>
+          <Link to={`/aidal/${data._id}`}>
             <Orders key={data.id}>
               <ImageOfOffer />
-              <h1>{data.car.name}</h1>
+              <h1>{data.name}</h1>
               <div
                 style={{
                   display: "flex",
@@ -22,10 +33,10 @@ const MotorsVMenu = () => {
                   gap: "40px",
                 }}
               >
-                <p>{data.car.company}</p>
-                <p>{data.car.date}</p>
+                <p>{data.company}</p>
+                <p>{data.date}</p>
               </div>
-              <h2>{data.car.cost}</h2>
+              <h2>{data.cost}</h2>
               <div
                 style={{
                   display: "flex",

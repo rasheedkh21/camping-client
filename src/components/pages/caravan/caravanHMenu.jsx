@@ -1,14 +1,26 @@
 import React from 'react'
 import { HMenuDesign, Order, OrderButton, OrderLeft,OrderRight, Writings } from '../myOrders/style';
-import { CaravanCarCard } from '../../test/caravanCarData';
 import { Link } from 'react-router-dom';
-
+const BASEURL = "http://localhost:5050/api/v1/";
 
 const CaravanHMenu = () => {
-  const datas = CaravanCarCard.CarInfo
+  const [allData, setAllData] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASEURL}caravan/getAllCaravan`);
+        const caravan = await response.json();
+        setAllData(caravan.data);
+      } catch (error) {
+        console.log("Caravan data is wrong:", error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <Order>
-      {datas.map((data)=>{
+      {allData.map((data)=>{
         return(
           <Link to={`/aidal/${data.id}`}>
           <HMenuDesign>
@@ -18,11 +30,11 @@ const CaravanHMenu = () => {
           <OrderRight>
               <Writings>
               <div>
-                <h1>{data.car.name}</h1>
-                  <p>{data.car.company}</p>
+                <h1>{data.name}</h1>
+                  <p>{data.company}</p>
                 </div>
                 <div>
-                  <h2>{data.car.cost}</h2>
+                  <h2>{data.cost}</h2>
                 </div>
               </Writings>
               <Writings>
