@@ -17,29 +17,62 @@ import {
   ThinLine,
 } from "../motors/style";
 import { Link } from "react-router-dom";
-import { UsedCarCard } from "../../test/usedCarData";
 import MenuSwitchController from "./motorsMenuController";
 import MotorController from "./motorController";
-
+import HMenu from "./mototrsHmenu";
+import { HMenuDesign, Order, OrderButton, OrderLeft, OrderRight, Writings } from "../myOrders/style";
+const BASEURL = "http://localhost:5050/api/v1/";
 
 
 const Motors = ({ onClick }) => {
   const [active, setActive] = useState(true);
-  const [filteredData, setFilteredData] = useState(UsedCarCard.carList);
-  const handleClick = () => {
-    const sortedCars = [...UsedCarCard.carList];
-    sortedCars.sort((a, b) => {
-      const nameA = a.car.name.toLowerCase();
-      const nameB = b.car.name.toLowerCase();
-      return nameA.localeCompare(nameB);
+  const [companyCheckboxes, setCompanyCheckboxes] = useState({});
+  const [allData, setAllData] = React.useState([]);
+  const [filteredMotors, setFilteredMotors] = useState([]);
+  
+    //getting datas
+    React.useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`${BASEURL}motors/getAllMotors`);
+          const motor = await response.json();
+          setAllData(motor.data);
+          setFilteredMotors(motor.data)
+        } catch (error) {
+          console.log("Motor data is wrong:", error);
+        }
+      };
+      fetchData();
+    }, []);
+
+    React.useEffect(() => {
+    // Update filtered motors whenever checkboxes change
+    const filtered = allData.filter((motor) => {
+      return (
+        (!companyCheckboxes[motor.company] || companyCheckboxes[motor.company]) );
     });
+    setFilteredMotors(filtered);
+  },[companyCheckboxes]);
 
-    const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스")
-    );
+  const handleCompanyCheckboxChange = () => {
+    if (allData.company == `UzDaewoo`) {
+console.log(allData.company)
+      // setCompanyCheckboxes((prevCheckboxes) => ({
+      //   ...prevCheckboxes,
+      //   [company]: !prevCheckboxes[company],
+      // }));
+  
+    } else{
+      console.log(`error`)
+    }
+    } 
+  //   setCompanyCheckboxes((prevCheckboxes) => ({
+  //     ...prevCheckboxes,
+  //     [company]: !prevCheckboxes[company],
+  //   }));
+  //   console.log(companyCheckboxes)
+  // };
 
-    setFilteredData(filteredCars);
-  };
   return (
     <div style={{ background: "#fafafa" }}>
       <MotorsBack>
@@ -73,7 +106,7 @@ const Motors = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" />
+              <input type="checkbox" name="check" id="" onClick={handleCompanyCheckboxChange} />
               <label htmlFor="">Aidal</label>
             </div>
             <div>
@@ -93,7 +126,7 @@ const Motors = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id=""/>
               <label htmlFor="">르벤투스S+</label>
             </div>
             <div>
@@ -113,7 +146,7 @@ const Motors = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id="" />
               <label htmlFor="">5인</label>
             </div>
             <div>
@@ -189,7 +222,35 @@ const Motors = ({ onClick }) => {
               setActive(state)
             }}/>
           </ItemSort>
-          <MenuSwitchController active={active}/>
+          <Order>
+      {filteredMotors.map((data)=>{
+        return(
+          <Link to={`/aidal/${data._id}`} key={data._id}>
+          <HMenuDesign>
+          <OrderLeft>
+              {/* <img src={hmenuimg} alt="order" /> */}
+          </OrderLeft>
+          <OrderRight>
+              <Writings>
+              <div>
+                <h1>{data.name}</h1>
+                  <p>{data.company}</p>
+                </div>
+                <div>
+                  <h2>{data.cost}</h2>
+                </div>
+              </Writings>
+              <Writings>
+              <OrderButton>Order</OrderButton>
+              <OrderButton>Compare</OrderButton>
+              </Writings>
+          </OrderRight>
+      </HMenuDesign>
+      </Link>
+        )
+      })}
+</Order>
+          {/* <MenuSwitchController active={active}/> */}
         </ItemContainer>
       </Bigcontainer>
     </div>

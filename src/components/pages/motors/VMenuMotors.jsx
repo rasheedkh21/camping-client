@@ -1,5 +1,5 @@
 import React from "react";
-import {ImageOfOffer, OrderSort, Orders} from "./style";
+import { ImageOfOffer, OrderSort, Orders } from "./style";
 import { Link } from "react-router-dom";
 
 const BASEURL = "http://localhost:5050/api/v1/";
@@ -52,7 +52,6 @@ const MotorsVMenu = () => {
         );
       })}
     </OrderSort>
-    
   );
 };
 

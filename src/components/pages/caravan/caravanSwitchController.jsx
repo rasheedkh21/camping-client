@@ -4,7 +4,7 @@ import CaravanHMenu from "./caravanHMenu";
 import CaravanVMenu from "./caravanVMenu";
 
 const CaravanSwitchControl = ({ active }) => {
-  return <>{active ? <CaravanHMenu/> : <CaravanVMenu />}</>;
+  return <>{active ? <CaravanVMenu/> : <CaravanHMenu />}</>;
 };
 
 export default CaravanSwitchControl;

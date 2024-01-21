@@ -17,7 +17,7 @@ import {
   ThinLine,
 } from "../motors/style";
 import { Link } from "react-router-dom";
-import { UsedCarCard } from "../../test/usedCarData";
+
 import UsedCarSwitchControl from "./usedCarSwitchController";
 import UsedCarController from "./UsedCarController";
 
@@ -25,21 +25,7 @@ import UsedCarController from "./UsedCarController";
 
 const UsedCar = ({ onClick }) => {
   const [active, setActive] = useState(true);
-  const [filteredData, setFilteredData] = useState(UsedCarCard.carList);
-  const handleClick = () => {
-    const sortedCars = [...UsedCarCard.carList];
-    sortedCars.sort((a, b) => {
-      const nameA = a.car.name.toLowerCase();
-      const nameB = b.car.name.toLowerCase();
-      return nameA.localeCompare(nameB);
-    });
 
-    const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스")
-    );
-
-    setFilteredData(filteredCars);
-  };
   return (
     <div style={{ background: "#fafafa" }}>
       <MotorsBack>
@@ -93,7 +79,7 @@ const UsedCar = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id="" />
               <label htmlFor="">르벤투스S+</label>
             </div>
             <div>
@@ -113,7 +99,7 @@ const UsedCar = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id="" />
               <label htmlFor="">5인</label>
             </div>
             <div>

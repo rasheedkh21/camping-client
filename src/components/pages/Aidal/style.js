@@ -11,7 +11,7 @@ export const AidalBack = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   h1 {
     color: #fff;
     text-align: center;
@@ -167,7 +167,7 @@ export const ComfortAllDivLorem = styled.div`
   flex: 1;
   p {
     display: flex;
-    width: 50%;
+    width: 80%;
     height: fit-content;
     flex-direction: column;
     color: #373737;
@@ -207,7 +207,7 @@ export const ComfortAllDivLorem = styled.div`
       line-height: normal;
     }
     p {
-      width: 50%;
+      width: 90%;
       height: fit-content;
     }
   }
@@ -392,7 +392,7 @@ export const SendQuestion = styled.div`
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -404,7 +404,6 @@ export const SendQuestion = styled.div`
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 130%; /* 31.2px */
   }
   input {
     height: 50px;
@@ -413,7 +412,7 @@ export const SendQuestion = styled.div`
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 14px */
+    line-height: 100%;
   }
   button {
     border-radius: 10px;
@@ -425,7 +424,8 @@ export const SendQuestion = styled.div`
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 16px */
+    line-height: 100%;
+    margin: 20px 0 20px 0 ;
   }
   textarea{
     padding: 30px;
@@ -434,10 +434,16 @@ border-radius: 8px;
 border: 1px solid #e8eced;
 background: #e8eced;
   }
+  @media (max-width: 430px) {
+    h1{
+      font-size: 18px;
+    }
+  }
 `;
 export const AskedQuestions = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   flex: 1;
   details {
     color: #373737;

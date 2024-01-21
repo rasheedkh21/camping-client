@@ -18,27 +18,11 @@ import {
 } from "../motors/style";
 import { Link } from "react-router-dom";
 import TuningController from "./TuningController";
-import { TunedCarCard } from "../../test/tuningCarData";
 import TuningSwitch from "./tuningSwitchConroller";
 
 
 const Tuning = ({ onClick }) => {
   const [active, setActive] = useState(true);
-  const [filteredData, setFilteredData] = useState(TunedCarCard.carList);
-  const handleClick = () => {
-    const sortedCars = [...TunedCarCard.carList];
-    sortedCars.sort((a, b) => {
-      const nameA = a.car.name.toLowerCase();
-      const nameB = b.car.name.toLowerCase();
-      return nameA.localeCompare(nameB);
-    });
-
-    const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스")
-    );
-
-    setFilteredData(filteredCars);
-  };
   return (
     <div style={{ background: "#fafafa" }}>
       <MotorsBack>
@@ -92,7 +76,7 @@ const Tuning = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id="" />
               <label htmlFor="">르벤투스S+</label>
             </div>
             <div>
@@ -112,7 +96,7 @@ const Tuning = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id=""/>
               <label htmlFor="">5인</label>
             </div>
             <div>

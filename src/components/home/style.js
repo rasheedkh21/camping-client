@@ -76,7 +76,7 @@ export const Blogscontainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: fit-content;
 
   @media (max-width: 850px) {
@@ -114,7 +114,7 @@ export const Loremcontainer = styled.div`
     color: #ff7a00;
   }
   p {
-    width: 50%;
+    width: 80%;
     font-family: monospace;
     height: fit-content;
     font-style: normal;

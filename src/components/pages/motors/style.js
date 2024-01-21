@@ -12,7 +12,7 @@ export const MotorsBack = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,6 +184,21 @@ export const Orders = styled.div`
   background: #fff;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
+  :hover{
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  :hover::before, div:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
   h1 {
     color: var(--text, #373737);
     font-family: monospace;
@@ -386,5 +401,25 @@ export const ComapreCars = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+  }
+`;
+export const VMenuDesign = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+  height: fit-content;
+  gap: 50px;
+  padding: 50px;
+  @media (max-width: 850px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: fit-content;
+  }
+  @media (max-width: 430px) {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    height: fit-content;
   }
 `;

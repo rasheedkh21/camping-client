@@ -1,35 +1,46 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import naver from "../../../assets/naver logo.png";
 import google from "../../../assets/google-ion.png";
 import ktalk from "../../../assets/kakao-talk-fill.png";
+const BASEURL = "http://localhost:5050/api/v1/";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const history = useHistory();
+  const [error, setError] = useState(""); // State to manage error messages
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch(`${BASEURL}auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
 
-    // Validation check
-    if (!email || !password) {
-      alert("Please enter both email and password.");
-      return;
+      const data = await response.json();
+      if (response.ok) {
+        navigate("/home");
+      } else {
+        setError("Invalid email or password"); // Set error message on failure
+      }
+    } catch (error) {
+      setError("Your data is not found");
     }
-
-    console.log(email);
-    console.log(password);
-
-    // history.push("/");
   };
 
   return (
     <body>
       <div className="container">
         <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}>
+        <div>
           <div className="email">
             <label htmlFor="email">Email</label>
             <input
@@ -37,8 +48,12 @@ const Login = () => {
               id="email"
               placeholder="Enter Email..."
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setError(""); // Clear error message when input changes
+              }}
             />
+            <span className="error">{error}</span> {/* Display error message */}
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>
@@ -47,8 +62,12 @@ const Login = () => {
               id="password"
               placeholder="Enter Password..."
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setError(""); // Clear error message when input changes
+              }}
             />
+            <span className="error">{error}</span> {/* Display error message */}
           </div>
           <div className="checkbox">
             <div className="check">
@@ -60,13 +79,11 @@ const Login = () => {
             </div>
           </div>
           <div>
-            <Link to="/">
-            <button className="signin" type="submit">
+            <button className="signin" type="submit" onClick={handleSubmit}>
               Sign In
             </button>
-            </Link>
           </div>
-        </form>
+        </div>
         <div className="or">
           <h3>Or</h3>
         </div>
@@ -96,3 +113,4 @@ const Login = () => {
 };
 
 export default Login;
+

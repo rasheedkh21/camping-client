@@ -16,28 +16,13 @@ import {
   SelectionNumbers,
   ThinLine,
 } from "../motors/style";
-import { motorsCarCard } from "../../test/motorsCarData.js";
 import { Link } from "react-router-dom";
 import CarvanSwitchControl from "./caravanSwitchController";
 import CarvanController from "./CaravanController";
 
 const Caravan = ({ onClick }) => {
   const [active, setActive] = useState(true);
-  const [filteredData, setFilteredData] = useState(motorsCarCard.CarInfo);
-  const handleClick = () => {
-    const sortedCars = [...motorsCarCard.CarInfo];
-    sortedCars.sort((a, b) => {
-      const nameA = a.car.name.toLowerCase();
-      const nameB = b.car.name.toLowerCase();
-      return nameA.localeCompare(nameB);
-    });
 
-    const filteredCars = sortedCars.filter((data) =>
-      data.car.name.startsWith("르벤투스")
-    );
-
-    setFilteredData(filteredCars);
-  };
   return (
     <div style={{ background: "#fafafa" }}>
       <MotorsBack>
@@ -91,7 +76,7 @@ const Caravan = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id=""/>
               <label htmlFor="">르벤투스S+</label>
             </div>
             <div>
@@ -111,7 +96,7 @@ const Caravan = ({ onClick }) => {
           <ThinLine />
           <ChoicesCheck>
             <div>
-              <input type="checkbox" name="check" id="" onClick={handleClick} />
+              <input type="checkbox" name="check" id="" />
               <label htmlFor="">5인</label>
             </div>
             <div>

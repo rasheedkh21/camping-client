@@ -1,38 +1,80 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
+const BASEURL = "http://localhost:5050/api/v1/";
+
+
+
 
 const Register = () => {
-  // Create state variables to hold the form field values and errors
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleRegisterSubmit = async () => {
+    try {
+      const response = await fetch(`${BASEURL}auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        navigate('/home');
+      } else {
+        setErrors('Registration failed');
+      }
+    } catch (error) {
+      setErrors('Data not found');
+    }
+  };
+
+  const validateForm = () => {
     const newErrors = {};
 
-    // Basic validation to check for empty fields and password matching
     if (!email.trim()) {
       newErrors.email = 'Email is required';
     }
 
     if (!password.trim()) {
       newErrors.password = 'Password is required';
+    } else if (password.length < 6) {
+      newErrors.password = 'Password should be at least 6 characters';
     }
 
     if (password !== repeatPassword) {
       newErrors.repeatPassword = 'Passwords do not match';
     }
 
-    // Check if there are any errors before submitting the form
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      handleRegisterSubmit();
+    }
+  };
+
+  const passwordStrength = () => {
+    if (password.length === 0) {
+      return '';
+    } else if (password.length < 6) {
+      return 'Weak';
+    } else if (password.length < 10) {
+      return 'Moderate';
     } else {
-      // Form is valid, we can submit the data here
-      // For this example, we'll just log the values
-      console.log('Form submitted:', { email, password });
+      return 'Strong';
     }
   };
 
@@ -40,7 +82,7 @@ const Register = () => {
     <div>
       <div className="container">
         <h1>Registrate</h1>
-        <form onSubmit={handleSubmit}>
+        <div onSubmit={handleSubmit}>
           <div className="email">
             <label htmlFor="email">Email</label>
             <input
@@ -62,6 +104,7 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             {errors.password && <span style={ {color:'red'}} className="error">{errors.password}</span>}
+            <div className="password-strength">{passwordStrength()}</div>
           </div>
           <div className="password">
             <label htmlFor="repeatpass">Repeat Your Password</label>
@@ -80,12 +123,12 @@ const Register = () => {
               <label>Keep me logged in</label>
             </div>
           </div>
-          <Link to="/home">
-          <button className="register" type="submit">
+          
+          <button className="register" type="submit" onClick={handleSubmit}>
             Registrate
           </button>
-          </Link>
-        </form>
+          
+        </div>
       </div>
     </div>
   );

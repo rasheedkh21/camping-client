@@ -6,7 +6,6 @@ import Footer from "./components/footer/footer";
 import Login from "./components/navbar/loginpage/login";
 import Register from "./components/navbar/regiterfom/register";
 import Aidal from "./components/pages/Aidal/carInfoById";
-import Motors from "./components/pages/motors/Motors";
 import Places from "./components/pages/CampingPlaces/Places";
 import Location from "./components/pages/Location/Location";
 import "./index.css";
@@ -18,6 +17,7 @@ import Tuning from "./components/pages/TuningCar/tuning";
 import UsedCar from "./components/pages/UsedCar/usedCar";
 import DisplayNavbar from "./components/navbar/disolayNavbar";
 import Home from "./components/home/home";
+import Motor from "./components/pages/motors/Motors";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,7 +30,7 @@ root.render(
       <Route path="register" element={<Register />} />
       <Route path="/home" element={<Home />} />
       <Route path="aidal/:id" element={<Aidal />} />
-      <Route path="motors" element={<Motors />} />
+      <Route path="motors" element={<Motor/>} />
       <Route path="caravan" element={<Caravan />} />
       <Route path="tuning" element={<Tuning />} />
       <Route path="usedCar" element={<UsedCar />} />

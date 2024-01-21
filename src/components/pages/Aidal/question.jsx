@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { AskedQuestions, QuestionContainer, SendQuestion } from "./style";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -7,28 +6,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Question = () => {
-  const form = useRef();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_dovp6dg",
-  //       "template_dvri1zr",
-  //       form.current,
-  //       "fBmv9ocdgg6Mhdbeg"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
-
+  
   return (
     <div>
       <QuestionContainer>
@@ -136,14 +114,12 @@ const Question = () => {
             </Accordion>
           </div>
         </AskedQuestions>
-        <SendQuestion>
-          <form ref={form} >
+        <SendQuestion>  
             <h1>Send a question</h1>
             <input type="text" name="" id="" placeholder="Your name" />
             <input type="text" name="" id="" placeholder="Your email" />
             <textarea name="message" placeholder="Your Question" cols={10} rows={5} />
             <button>Send Question</button>
-          </form>
         </SendQuestion>
       </QuestionContainer>
     </div>

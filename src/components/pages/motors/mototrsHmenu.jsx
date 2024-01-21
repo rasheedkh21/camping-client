@@ -7,6 +7,8 @@ const BASEURL = "http://localhost:5050/api/v1/";
 
 const HMenu = () => {
   const [allData, setAllData] = React.useState([]);
+ 
+  //getting datas
   React.useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,11 +21,14 @@ const HMenu = () => {
     };
     fetchData();
   }, []);
+
+
+  
   return (
     <Order>
       {allData.map((data)=>{
         return(
-          <Link to={`/aidal/${data._id}`}>
+          <Link to={`/aidal/${data._id}`} key={data._id}>
           <HMenuDesign>
           <OrderLeft>
               {/* <img src={hmenuimg} alt="order" /> */}

@@ -23,23 +23,24 @@ import { Link, useParams } from "react-router-dom";
 
 const BASEURL = "http://localhost:5050/api/v1/";
 
-
 const Aidal = () => {
   const { id } = useParams();
-const [dataByID, setDataByID] = useState("");
-useEffect(() => {
-  const fetchMotor = async () => {
+  const [dataByID, setDataByID] = useState("");
+
+  useEffect(() => {
+    const fetchMotor = async () => {
       try {
-          const response = await fetch(`${BASEURL}motors/${id}`);
-          const motorData = await response.json();
-          setDataByID(motorData);
+        const response = await fetch(`${BASEURL}motors/${id}`);
+        const motorData = await response.json();
+        setDataByID(motorData.data);
       } catch (error) {
-          console.error("Error fetching motor:", error);
-          // Handle error gracefully, e.g., display an error message
+        console.error("Error fetching motor:", error);
+        // Handle error gracefully, e.g., display an error message
       }
-  };
-  fetchMotor();
-}, [id]);
+    };
+    fetchMotor();
+  }, [id]);
+  console.log(dataByID);
 
   return (
     <div style={{ background: "#fafafa" }}>
@@ -64,7 +65,7 @@ useEffect(() => {
           <LineAidal></LineAidal>
           <FirstAidalDiv>
             <p>Company</p>
-            <p>{dataByID.name}</p>
+            <p>{dataByID.company}</p>
           </FirstAidalDiv>
           <FirstAidalDiv>
             <p>People</p>
