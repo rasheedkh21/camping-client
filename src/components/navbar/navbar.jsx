@@ -13,6 +13,7 @@ import car from "../../assets/car.png";
 import { Link } from "react-router-dom";
 import ImageWithDropdown from "./ImageDropdown/dropdown";
 import Header from "./ResponsiveHamburger";
+import Translate from "../googleTranslate/translate";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -319,12 +320,15 @@ const Navbar = () => {
         <HamburgerRight>
           <Header />
         </HamburgerRight>
-        <select name="Language">
+        {/* <select name="Language">
           <option value="eng">ENG</option>
           <option value="kor">KOR</option>
           <option value="uz">UZ</option>
           <option value="rus">RUS</option>
-        </select>
+        </select> */}
+       {/* <Translate/> */}
+         
+        
       </Selection>
     </Navdiv>
   );

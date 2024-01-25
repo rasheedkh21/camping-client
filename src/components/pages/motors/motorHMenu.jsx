@@ -1,23 +1,42 @@
-import React, { useState } from 'react'
-import { Adressdiv, Bigcontainer, CancelButton, ChoicesCheck, ComapreCars, CostContainer, ImageOfOffer, OptionsCheck, OrderSort, Orders, ThinLine } from '../TuningCar/style';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import {
+  HMenuDesign,
+  Order,
+  OrderButton,
+  OrderLeft,
+  OrderRight,
+  Writings,
+} from "../myOrders/style";
+import { Link } from "react-router-dom";
+import {
+  Adressdiv,
+  Bigcontainer,
+  CancelButton,
+  ChoicesCheck,
+  ComapreCars,
+  CostContainer,
+  OptionsCheck,
+  ThinLine,
+} from "../TuningCar/style";
 const BASEURL = "http://localhost:5050/api/v1/";
 
-const TuningVMenu = () => {
-  const [allData, setAllData] = React.useState([]);
+const MotorHMenu = () => {
   const [checkActive, setCheckActive] = useState(true);
+  const [allData, setAllData] = React.useState([]);
   const [companyCheckboxes, setCompanyCheckboxes] = useState([]);
   const [filteredCaravan, setFilteredCaravan] = useState([]);
+
+  //getting datas
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASEURL}tuning/getAllTuning`);
-        const tuning = await response.json();
-        setAllData(tuning.data);
-        setFilteredCaravan(tuning.data);
-        setCompanyCheckboxes(tuning.data);
+        const response = await fetch(`${BASEURL}motors/getAllMotors`);
+        const motor = await response.json();
+        setAllData(motor.data);
+        setFilteredCaravan(motor.data);
+        setCompanyCheckboxes(motor.data);
       } catch (error) {
-        console.log("Tuning data is wrong:", error);
+        console.log("Motor data is wrong:", error);
       }
     };
     fetchData();
@@ -26,7 +45,7 @@ const TuningVMenu = () => {
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Skoda");
+      const checkedBox = allData.filter((data) => data.name === "Monza");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -141,12 +160,9 @@ const TuningVMenu = () => {
     }
     setCheckActive(!checkActive);
   };
-
-
-
   return (
     <Bigcontainer>
-       <CostContainer>
+      <CostContainer>
         <Adressdiv>
           <div>
             <label>From</label>
@@ -252,41 +268,35 @@ const TuningVMenu = () => {
           </div>
         </ComapreCars>
       </CostContainer>
-      <OrderSort>
+      <Order>
         {filteredCaravan.map((data) => {
           return (
-            <Link to={`/tuningInfo/${data._id}`} key={data._id}>
-              <Orders key={data.id}>
-                <ImageOfOffer />
-                <h1>{data.name}</h1>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "40px",
-                  }}
-                >
-                  <p>{data.company}</p>
-                  <p>{data.date}</p>
-                </div>
-                <h2>{data.cost}</h2>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "10px",
-                  }}
-                >
-                  <a href="/orders">Oreder</a>
-                  <a href="/comparemodels">Compare</a>
-                </div>
-              </Orders>
+            <Link to={`/motorInfo/${data._id}`} key={data._id}>
+              <HMenuDesign>
+                <OrderLeft>
+                  {/* <img src={hmenuimg} alt="order" /> */}
+                </OrderLeft>
+                <OrderRight>
+                  <Writings>
+                    <div>
+                      <h1>{data.name}</h1>
+                      <p>{data.company}</p>
+                    </div>
+                    <div>
+                      <h2>{data.cost}</h2>
+                    </div>
+                  </Writings>
+                  <Writings>
+                    <OrderButton>Order</OrderButton>
+                    <OrderButton>Compare</OrderButton>
+                  </Writings>
+                </OrderRight>
+              </HMenuDesign>
             </Link>
           );
         })}
-      </OrderSort>
+      </Order>
     </Bigcontainer>
   );
 };
-
-export default TuningVMenu;
+export default MotorHMenu;

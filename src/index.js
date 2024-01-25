@@ -17,7 +17,11 @@ import Tuning from "./components/pages/TuningCar/tuning";
 import UsedCar from "./components/pages/UsedCar/usedCar";
 import DisplayNavbar from "./components/navbar/disolayNavbar";
 import Home from "./components/home/home";
-import Motor from "./components/pages/motors/Motors";
+import TunigCarInfo from "./components/pages/Aidal/getTuningById";
+import UsedCarInfo from "./components/pages/Aidal/getUsedCarById";
+import Motors from "./components/pages/Motors/motors";
+import MotorCarInfo from "./components/pages/Aidal/getInfoByMotorId";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,8 +34,11 @@ root.render(
       <Route path="register" element={<Register />} />
       <Route path="/home" element={<Home />} />
       <Route path="aidal/:id" element={<Aidal />} />
-      <Route path="motors" element={<Motor/>} />
+      <Route path="tuningInfo/:id" element={<TunigCarInfo />} />
+      <Route path="usedCarInfo/:id" element={<UsedCarInfo />} />
+      <Route path="motorInfo/:id" element={<MotorCarInfo />} />
       <Route path="caravan" element={<Caravan />} />
+      <Route path="motors" element={<Motors />} />
       <Route path="tuning" element={<Tuning />} />
       <Route path="usedCar" element={<UsedCar />} />
       <Route path="places" element={<Places />} />

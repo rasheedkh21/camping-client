@@ -1,9 +1,21 @@
-import React, { useState } from 'react'
-import { Adressdiv, Bigcontainer, CancelButton, ChoicesCheck, ComapreCars, CostContainer, ImageOfOffer, OptionsCheck, OrderSort, Orders, ThinLine } from '../TuningCar/style';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import {
+  Bigcontainer,
+  ImageOfOffer,
+  OrderSort,
+  Orders,
+  Adressdiv,
+  CancelButton,
+  ChoicesCheck,
+  ComapreCars,
+  CostContainer,
+  OptionsCheck,
+  ThinLine,
+} from "../TuningCar/style";
+import { Link } from "react-router-dom";
 const BASEURL = "http://localhost:5050/api/v1/";
 
-const TuningVMenu = () => {
+const MotorVMenu = () => {
   const [allData, setAllData] = React.useState([]);
   const [checkActive, setCheckActive] = useState(true);
   const [companyCheckboxes, setCompanyCheckboxes] = useState([]);
@@ -11,13 +23,13 @@ const TuningVMenu = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASEURL}tuning/getAllTuning`);
-        const tuning = await response.json();
-        setAllData(tuning.data);
-        setFilteredCaravan(tuning.data);
-        setCompanyCheckboxes(tuning.data);
+        const response = await fetch(`${BASEURL}motors/getAllMotors`);
+        const motor = await response.json();
+        setAllData(motor.data);
+        setFilteredCaravan(motor.data);
+        setCompanyCheckboxes(motor.data);
       } catch (error) {
-        console.log("Tuning data is wrong:", error);
+        console.log("Motor data is wrong:", error);
       }
     };
     fetchData();
@@ -26,7 +38,7 @@ const TuningVMenu = () => {
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Skoda");
+      const checkedBox = allData.filter((data) => data.name === "Nexia");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -255,7 +267,7 @@ const TuningVMenu = () => {
       <OrderSort>
         {filteredCaravan.map((data) => {
           return (
-            <Link to={`/tuningInfo/${data._id}`} key={data._id}>
+            <Link to={`/motorInfo/${data._id}`} key={data._id}>
               <Orders key={data.id}>
                 <ImageOfOffer />
                 <h1>{data.name}</h1>
@@ -289,4 +301,4 @@ const TuningVMenu = () => {
   );
 };
 
-export default TuningVMenu;
+export default MotorVMenu;

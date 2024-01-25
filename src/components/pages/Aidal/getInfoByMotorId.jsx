@@ -23,18 +23,18 @@ import { Link, useParams } from "react-router-dom";
 
 const BASEURL = "http://localhost:5050/api/v1/";
 
-const Aidal = () => {
+    const MotorCarInfo = () => {
   const { id } = useParams();
   const [dataByID, setDataByID] = useState("");
 
   useEffect(() => {
     const fetchMotor = async () => {
       try {
-        const response = await fetch(`${BASEURL}caravan/${id}`);
-        const caravanData = await response.json();
-        setDataByID(caravanData.data);
+        const response = await fetch(`${BASEURL}motors/${id}`);
+        const motorsData = await response.json();
+        setDataByID(motorsData.data);
       } catch (error) {
-        console.error("Error fetching caravan:", error);
+        console.error("Error fetching motor:", error);
         // Handle error gracefully, e.g., display an error message
       }
     };
@@ -189,4 +189,4 @@ const Aidal = () => {
   );
 };
 
-export default Aidal;
+export default MotorCarInfo;
