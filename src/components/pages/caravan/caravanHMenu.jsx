@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import {
   Adressdiv,
   Bigcontainer,
-  CancelButton,
   ChoicesCheck,
   ComapreCars,
   CostContainer,
@@ -25,6 +24,7 @@ const CaravanHMenu = () => {
   const [allData, setAllData] = React.useState([]);
   const [companyCheckboxes, setCompanyCheckboxes] = useState([]);
   const [filteredCaravan, setFilteredCaravan] = useState([]);
+
 
   //getting datas
   React.useEffect(() => {
@@ -41,6 +41,7 @@ const CaravanHMenu = () => {
     };
     fetchData();
   }, []);
+
 
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
@@ -253,12 +254,6 @@ const CaravanHMenu = () => {
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>
-        <CancelButton>
-          <div>
-            <button>Cancel</button>
-            <button>Search</button>
-          </div>
-        </CancelButton>
         <ComapreCars>
           <h1>Compare</h1>
           <div>

@@ -50,7 +50,7 @@ align-items: center;
 width: 100%;
 height: fit-content;
 gap: 30px;
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
     display: grid;
     grid-template-columns: auto auto;
     width: 100%;

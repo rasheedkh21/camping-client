@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import imagecarback from "../../../assets/carbackground.png";
-import Comfort from "../../../assets/comfort.png";
+import imagecarback from "../../../assets/tuningoffer.webp";
+import Comfort from "../../../assets/caravancomfor.jpeg";
 import Tyding from "../../../assets/tyding.png";
-import Ventiled from "../../../assets/ventiled.png";
-import Access from "../../../assets/access.png";
+import Ventiled from "../../../assets/caravanventilate.webp";
+import Access from "../../../assets/caravanaccess.webp";
 import Heating from "../../../assets/heating.png";
 import Zoom from "react-reveal/Zoom";
 import {

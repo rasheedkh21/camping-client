@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import {
   Bigcontainer,
-  ImageOfOffer,
   OrderSort,
   Orders,
   Adressdiv,
-  CancelButton,
   ChoicesCheck,
   ComapreCars,
   CostContainer,
   OptionsCheck,
   ThinLine,
+  CaravanImageOfOffer,
 } from "../TuningCar/style";
 import { Link } from "react-router-dom";
 const BASEURL = "http://localhost:5050/api/v1/";
@@ -249,12 +248,6 @@ const CaravanVMenu = () => {
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>
-        <CancelButton>
-          <div>
-            <button>Cancel</button>
-            <button>Search</button>
-          </div>
-        </CancelButton>
         <ComapreCars>
           <h1>Compare</h1>
           <div>
@@ -269,7 +262,7 @@ const CaravanVMenu = () => {
           return (
             <Link to={`/aidal/${data._id}`} key={data._id}>
               <Orders key={data.id}>
-                <ImageOfOffer />
+              <CaravanImageOfOffer/>
                 <h1>{data.name}</h1>
                 <div
                   style={{

@@ -5,15 +5,36 @@ import {
   ItemContainer,
   ItemSort,
   MotorsBack,
-  SelectionCars,
-  SelectionDiv,
 } from "../TuningCar/style";
 import { Link } from "react-router-dom";
 import MotorSwitchControl from "./motorSwitchController";
 import MotorController from "./MotorController";
+const BASEURL = "http://localhost:5050/api/v1/";
+
 
 const Motors = () => {
   const [active, setActive] = useState(true);
+  const [totalItems, setTotalItems]= useState(0)
+  const [allData, setAllData] = React.useState([]);
+
+    //getting datas
+    React.useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`${BASEURL}motors/getAllMotors`);
+          const caravan = await response.json();
+          setAllData(caravan.data);
+        } catch (error) {
+          console.log("Motors data is wrong:", error);
+        }
+      };
+      fetchData();
+    }, []);
+  
+  React.useEffect(() => {
+    // Calculate total users after data is fetched
+    setTotalItems(allData.length);
+  }, [allData]);
 
   return (
     <div style={{ background: "#fafafa" }}>
@@ -37,16 +58,8 @@ const Motors = () => {
               }}
             >
               <h1>Item</h1>
-              <span style={{ color: "#006DAB", fontSize: "18px" }}>25000</span>
+              <span style={{ color: "#006DAB", fontSize: "18px" }}>{totalItems}</span>
             </div>
-            <SelectionDiv>
-              <label htmlFor="input">Sort by</label>
-              <SelectionCars placeholder="select">
-                <option value="">Motor Standart</option>
-                <option value="">Motor Premium</option>
-                <option value="">Motor Gold</option>
-              </SelectionCars>
-            </SelectionDiv>
             <MotorController
               onClick={(state) => {
                 setActive(state);

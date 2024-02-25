@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import slidercar from "../../../assets/slidecar.png";
+import tunnedcar from "../../../assets/tuningoffer.webp";
+import caravancar from "../../../assets/caravanimg.jpeg";
 import Car from "../../../assets/offercar1.png";
-import BackCar from "../../../assets/car1.png";
+import BackCar from "../../../assets/motors.webp";
+import caravanimg from "../../../assets/caravanImage.jpg";
+import tuningBack from "../../../assets/tuningimg.jpg";
+import usedcar from "../../../assets/usedcar.jpg";
+import usedcaroffer from "../../../assets/usedcarimgoffer.jpeg";
 
 export const MotorsBack = styled.div`
   background-image: url(${BackCar});
@@ -43,7 +49,126 @@ export const MotorsBack = styled.div`
     text-align: center;
   }
 `;
-
+export const CaravanBack = styled.div`
+  background-image: url(${caravanimg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+  h3 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+`;
+export const TuningBack = styled.div`
+  background-image: url(${tuningBack});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+  h3 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+`;
+export const UsedcarBack = styled.div`
+  background-image: url(${usedcar});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+  h3 {
+    color: #fff;
+    font-family: monospace;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+`;
 export const Bigcontainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -93,7 +218,7 @@ export const ItemSort = styled.div`
   width: 100%;
   height: fit-content;
   border-bottom: 1px solid rgba(55, 55, 55, 0.5);
-  padding:  0 30px 0 40px;
+  padding: 0 30px 0 40px;
 
   h1 {
     color: #373737;
@@ -158,7 +283,7 @@ export const OrderSort = styled.div`
   height: fit-content;
   gap: 20px;
   padding: 0 30px;
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     display: grid;
     grid-template-columns: auto auto;
     width: 100%;
@@ -258,6 +383,39 @@ export const ImageOfOffer = styled.div`
   height: 137.433px;
   flex-shrink: 0;
   display: flex;
+`;
+//tuning car offer img
+export const TuningImageOfOffer = styled.div`
+  background-image: url(${tunnedcar});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 202.42px;
+  height: 137.433px;
+  display: flex;
+  background-color: white;
+`;
+//caravan car offer img
+export const CaravanImageOfOffer = styled.div`
+  background-image: url(${caravancar});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 202.42px;
+  height: 137.433px;
+  display: flex;
+  background-color: white;
+`;
+//usedcar car offer img
+export const UsedcarImageOfOffer = styled.div`
+  background-image: url(${usedcaroffer});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 202.42px;
+  height: 137.433px;
+  display: flex;
+  background-color: white;
 `;
 export const Adressdiv = styled.div`
   margin-top: 30px;
@@ -411,7 +569,7 @@ export const VMenuDesign = styled.div`
   height: fit-content;
   gap: 50px;
   padding: 50px;
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     display: grid;
     grid-template-columns: auto auto;
     width: 100%;

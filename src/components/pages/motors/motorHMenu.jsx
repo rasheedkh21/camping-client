@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import {
   Adressdiv,
   Bigcontainer,
-  CancelButton,
   ChoicesCheck,
   ComapreCars,
   CostContainer,
@@ -45,7 +44,7 @@ const MotorHMenu = () => {
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Monza");
+      const checkedBox = allData.filter((data) => data.name === "Clover");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -55,7 +54,7 @@ const MotorHMenu = () => {
 
   const handle르벤투스CheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "르벤투스");
+      const checkedBox = allData.filter((data) => data.name === "Freya");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -65,7 +64,7 @@ const MotorHMenu = () => {
 
   const handleHWCCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "HWC");
+      const checkedBox = allData.filter((data) => data.name === "Vandalf");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -133,27 +132,27 @@ const MotorHMenu = () => {
     setCheckActive(!checkActive);
   };
   //chekboxcheking by car company
-  const handleKnausCheckboxClick = () => {
+  const handleAirstreamCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Knaus");
+      const checkedBox = allData.filter((data) => data.company === "Airstream");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
     }
     setCheckActive(!checkActive);
   };
-  const handleAidalCheckboxClick = () => {
+  const handleBohoCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Aidal");
+      const checkedBox = allData.filter((data) => data.company === "Boho");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
     }
     setCheckActive(!checkActive);
   };
-  const handle한울캠핑카CheckboxClick = () => {
+  const handleVolkswagenCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "한울캠핑카");
+      const checkedBox = allData.filter((data) => data.company === "Volkswagen");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -182,15 +181,15 @@ const MotorHMenu = () => {
         <ChoicesCheck>
           <div>
             <input type="checkbox" onClick={handleCheckboxClick} />
-            <label htmlFor="">트레블라인</label>
+            <label htmlFor="">Clover</label>
           </div>
           <div>
             <input type="checkbox" onClick={handle르벤투스CheckboxClick} />
-            <label htmlFor="">르벤투스</label>
+            <label htmlFor="">Freya</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleHWCCheckboxClick} />
-            <label htmlFor="">HWC</label>
+            <label htmlFor="">Vandalf</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -201,16 +200,16 @@ const MotorHMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox" onClick={handle한울캠핑카CheckboxClick} />
-            <label htmlFor="">한울캠핑카</label>
+            <input type="checkbox" onClick={handleAirstreamCheckboxClick} />
+            <label htmlFor="">Airstream</label>
           </div>
           <div>
-            <input type="checkbox" onClick={handleKnausCheckboxClick} />
-            <label htmlFor="">Knaus</label>
+            <input type="checkbox" onClick={handleBohoCheckboxClick} />
+            <label htmlFor="">Boho</label>
           </div>
           <div>
-            <input type="checkbox" onClick={handleAidalCheckboxClick} />
-            <label htmlFor="">Aidal</label>
+            <input type="checkbox" onClick={handleVolkswagenCheckboxClick} />
+            <label htmlFor="">Volkswagen</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -253,12 +252,6 @@ const MotorHMenu = () => {
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>
-        <CancelButton>
-          <div>
-            <button>Cancel</button>
-            <button>Search</button>
-          </div>
-        </CancelButton>
         <ComapreCars>
           <h1>Compare</h1>
           <div>

@@ -1,13 +1,25 @@
-import React, { useState } from 'react'
-import { HMenuDesign, Order, OrderButton, OrderLeft, OrderRight, Writings } from '../myOrders/style'
-import hmenuimg from "../../../assets/hmenu.webp"
-import { Link } from 'react-router-dom'
-import {  Adressdiv, Bigcontainer, CancelButton, ChoicesCheck, ComapreCars, CostContainer, OptionsCheck, ThinLine } from '../TuningCar/style';
-
-
+import React, { useState } from "react";
+import {
+  HMenuDesign,
+  Order,
+  OrderButton,
+  OrderLeft,
+  OrderRight,
+  Writings,
+} from "../myOrders/style";
+import hmenuimg from "../../../assets/hmenu.webp";
+import { Link } from "react-router-dom";
+import {
+  Adressdiv,
+  Bigcontainer,
+  ChoicesCheck,
+  ComapreCars,
+  CostContainer,
+  OptionsCheck,
+  ThinLine,
+} from "../TuningCar/style";
 
 const BASEURL = "http://localhost:5050/api/v1/";
-
 
 const UsedCarHMenu = () => {
   const [allData, setAllData] = React.useState([]);
@@ -32,7 +44,7 @@ const UsedCarHMenu = () => {
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Tiko");
+      const checkedBox = allData.filter((data) => data.name === "Nova");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -42,7 +54,7 @@ const UsedCarHMenu = () => {
 
   const handle르벤투스CheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Gentra");
+      const checkedBox = allData.filter((data) => data.name === "Regent");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -52,7 +64,7 @@ const UsedCarHMenu = () => {
 
   const handleHWCCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "HWC");
+      const checkedBox = allData.filter((data) => data.name === "Avanti");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -60,8 +72,7 @@ const UsedCarHMenu = () => {
     setCheckActive(!checkActive);
   };
 
-
-//checkbox  cheking by Location
+  //checkbox  cheking by Location
   const handleLocationBusanCheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.location === "Busan");
@@ -90,7 +101,7 @@ const UsedCarHMenu = () => {
     }
     setCheckActive(!checkActive);
   };
-// checkbox checking by number of people
+  // checkbox checking by number of people
   const handlePeople4CheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.people === "4");
@@ -122,7 +133,7 @@ const UsedCarHMenu = () => {
   //chekboxcheking by car company
   const handleKnausCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Knaus");
+      const checkedBox = allData.filter((data) => data.company === "Tonke");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -131,7 +142,9 @@ const UsedCarHMenu = () => {
   };
   const handleAidalCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Aidal");
+      const checkedBox = allData.filter(
+        (data) => data.company === "Glampervan"
+      );
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -140,7 +153,9 @@ const UsedCarHMenu = () => {
   };
   const handle한울캠핑카CheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "한울캠핑카");
+      const checkedBox = allData.filter(
+        (data) => data.company === "Sportsmobile"
+      );
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -148,12 +163,9 @@ const UsedCarHMenu = () => {
     setCheckActive(!checkActive);
   };
 
-
-
-
   return (
     <Bigcontainer>
-           <CostContainer>
+      <CostContainer>
         <Adressdiv>
           <div>
             <label>From</label>
@@ -173,15 +185,15 @@ const UsedCarHMenu = () => {
         <ChoicesCheck>
           <div>
             <input type="checkbox" onClick={handleCheckboxClick} />
-            <label htmlFor="">트레블라인</label>
+            <label htmlFor="">Nova</label>
           </div>
           <div>
             <input type="checkbox" onClick={handle르벤투스CheckboxClick} />
-            <label htmlFor="">르벤투스</label>
+            <label htmlFor="">Regent</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleHWCCheckboxClick} />
-            <label htmlFor="">HWC</label>
+            <label htmlFor="">Avanti</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -193,15 +205,15 @@ const UsedCarHMenu = () => {
         <ChoicesCheck>
           <div>
             <input type="checkbox" onClick={handle한울캠핑카CheckboxClick} />
-            <label htmlFor="">한울캠핑카</label>
+            <label htmlFor="">Sportsmobile</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleKnausCheckboxClick} />
-            <label htmlFor="">Knaus</label>
+            <label htmlFor="">Tonke</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleAidalCheckboxClick} />
-            <label htmlFor="">Aidal</label>
+            <label htmlFor="">Glampervan</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -212,7 +224,7 @@ const UsedCarHMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox" onClick={handlePeople3heckboxClick}/>
+            <input type="checkbox" onClick={handlePeople3heckboxClick} />
             <label htmlFor="">3인</label>
           </div>
           <div>
@@ -220,7 +232,7 @@ const UsedCarHMenu = () => {
             <label htmlFor="">4인</label>
           </div>
           <div>
-            <input type="checkbox"  onClick={handlePeople5CheckboxClick} />
+            <input type="checkbox" onClick={handlePeople5CheckboxClick} />
             <label htmlFor="">5인</label>
           </div>
         </ChoicesCheck>
@@ -232,7 +244,7 @@ const UsedCarHMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox"  onClick={handleLocationSeoulCheckboxClick}/>
+            <input type="checkbox" onClick={handleLocationSeoulCheckboxClick} />
             <label htmlFor="">Seoul</label>
           </div>
           <div>
@@ -240,16 +252,13 @@ const UsedCarHMenu = () => {
             <label htmlFor="">Busan</label>
           </div>
           <div>
-            <input type="checkbox" onClick={handleLocationGwangjuCheckboxClick}/>
+            <input
+              type="checkbox"
+              onClick={handleLocationGwangjuCheckboxClick}
+            />
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>
-        <CancelButton>
-          <div>
-            <button>Cancel</button>
-            <button>Search</button>
-          </div>
-        </CancelButton>
         <ComapreCars>
           <h1>Compare</h1>
           <div>
@@ -259,34 +268,35 @@ const UsedCarHMenu = () => {
           </div>
         </ComapreCars>
       </CostContainer>
-    <Order>
-      {filteredCaravan.map((data)=>{
-        return(
-          <Link to={`/usedCarInfo/${data._id}`} key={data._id}>
-          <HMenuDesign>
-          <OrderLeft>
-              <img src={hmenuimg} alt="order" />
-          </OrderLeft>
-          <OrderRight>
-              <Writings>
-              <div>
-                <h1>{data.name}</h1>
-                  <p>{data.company}</p>
-                </div>
-                <div>
-                  <h2>{data.cost}</h2>
-                </div>
-              </Writings>
-              <Writings>
-              <OrderButton>Order</OrderButton>
-              <OrderButton>Compare</OrderButton>
-              </Writings>
-          </OrderRight>
-      </HMenuDesign>
-      </Link>
-        )
-      })}
-</Order>
-</Bigcontainer>
-  )}
+      <Order>
+        {filteredCaravan.map((data) => {
+          return (
+            <Link to={`/usedCarInfo/${data._id}`} key={data._id}>
+              <HMenuDesign>
+                <OrderLeft>
+                  <img src={hmenuimg} alt="order" />
+                </OrderLeft>
+                <OrderRight>
+                  <Writings>
+                    <div>
+                      <h1>{data.name}</h1>
+                      <p>{data.company}</p>
+                    </div>
+                    <div>
+                      <h2>{data.cost}</h2>
+                    </div>
+                  </Writings>
+                  <Writings>
+                    <OrderButton>Order</OrderButton>
+                    <OrderButton>Compare</OrderButton>
+                  </Writings>
+                </OrderRight>
+              </HMenuDesign>
+            </Link>
+          );
+        })}
+      </Order>
+    </Bigcontainer>
+  );
+};
 export default UsedCarHMenu;

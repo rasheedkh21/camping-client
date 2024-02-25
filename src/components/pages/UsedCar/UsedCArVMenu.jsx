@@ -1,6 +1,17 @@
-import React, { useState } from 'react'
-import { Adressdiv, Bigcontainer, CancelButton, ChoicesCheck, ComapreCars, CostContainer, ImageOfOffer, OptionsCheck, OrderSort, Orders, ThinLine } from '../TuningCar/style';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import {
+  Adressdiv,
+  Bigcontainer,
+  ChoicesCheck,
+  ComapreCars,
+  CostContainer,
+  OptionsCheck,
+  OrderSort,
+  Orders,
+  ThinLine,
+  UsedcarImageOfOffer,
+} from "../TuningCar/style";
+import { Link } from "react-router-dom";
 
 const BASEURL = "http://localhost:5050/api/v1/";
 
@@ -27,7 +38,7 @@ const UsedCArVMenu = () => {
   //ckeckbox cheking BY  car name
   const handleCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "Gentra");
+      const checkedBox = allData.filter((data) => data.name === "Nova");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -37,7 +48,7 @@ const UsedCArVMenu = () => {
 
   const handle르벤투스CheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "르벤투스");
+      const checkedBox = allData.filter((data) => data.name === "Regent");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -47,7 +58,7 @@ const UsedCArVMenu = () => {
 
   const handleHWCCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.name === "HWC");
+      const checkedBox = allData.filter((data) => data.name === "Avanti");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -55,8 +66,7 @@ const UsedCArVMenu = () => {
     setCheckActive(!checkActive);
   };
 
-
-//checkbox  cheking by Location
+  //checkbox  cheking by Location
   const handleLocationBusanCheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.location === "Busan");
@@ -85,7 +95,7 @@ const UsedCArVMenu = () => {
     }
     setCheckActive(!checkActive);
   };
-// checkbox checking by number of people
+  // checkbox checking by number of people
   const handlePeople4CheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.people === "4");
@@ -117,7 +127,7 @@ const UsedCArVMenu = () => {
   //chekboxcheking by car company
   const handleKnausCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Knaus");
+      const checkedBox = allData.filter((data) => data.company === "Tonke");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -126,7 +136,7 @@ const UsedCArVMenu = () => {
   };
   const handleAidalCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Aidal");
+      const checkedBox = allData.filter((data) => data.company === "Glampervan");
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -135,7 +145,9 @@ const UsedCArVMenu = () => {
   };
   const handle한울캠핑카CheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "한울캠핑카");
+      const checkedBox = allData.filter(
+        (data) => data.company === "Sportsmobile"
+      );
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -143,9 +155,9 @@ const UsedCArVMenu = () => {
     setCheckActive(!checkActive);
   };
 
-    return (
-      <Bigcontainer>
-           <CostContainer>
+  return (
+    <Bigcontainer>
+      <CostContainer>
         <Adressdiv>
           <div>
             <label>From</label>
@@ -165,15 +177,15 @@ const UsedCArVMenu = () => {
         <ChoicesCheck>
           <div>
             <input type="checkbox" onClick={handleCheckboxClick} />
-            <label htmlFor="">트레블라인</label>
+            <label htmlFor="">Nova</label>
           </div>
           <div>
             <input type="checkbox" onClick={handle르벤투스CheckboxClick} />
-            <label htmlFor="">르벤투스</label>
+            <label htmlFor="">Regent</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleHWCCheckboxClick} />
-            <label htmlFor="">HWC</label>
+            <label htmlFor="">Avanti</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -185,15 +197,15 @@ const UsedCArVMenu = () => {
         <ChoicesCheck>
           <div>
             <input type="checkbox" onClick={handle한울캠핑카CheckboxClick} />
-            <label htmlFor="">한울캠핑카</label>
+            <label htmlFor="">Sportsmobile</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleKnausCheckboxClick} />
-            <label htmlFor="">Knaus</label>
+            <label htmlFor="">Tonke</label>
           </div>
           <div>
             <input type="checkbox" onClick={handleAidalCheckboxClick} />
-            <label htmlFor="">Aidal</label>
+            <label htmlFor="">Glampervan</label>
           </div>
         </ChoicesCheck>
         <OptionsCheck>
@@ -204,7 +216,7 @@ const UsedCArVMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox" onClick={handlePeople3heckboxClick}/>
+            <input type="checkbox" onClick={handlePeople3heckboxClick} />
             <label htmlFor="">3인</label>
           </div>
           <div>
@@ -212,7 +224,7 @@ const UsedCArVMenu = () => {
             <label htmlFor="">4인</label>
           </div>
           <div>
-            <input type="checkbox"  onClick={handlePeople5CheckboxClick} />
+            <input type="checkbox" onClick={handlePeople5CheckboxClick} />
             <label htmlFor="">5인</label>
           </div>
         </ChoicesCheck>
@@ -224,7 +236,7 @@ const UsedCArVMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox"  onClick={handleLocationSeoulCheckboxClick}/>
+            <input type="checkbox" onClick={handleLocationSeoulCheckboxClick} />
             <label htmlFor="">Seoul</label>
           </div>
           <div>
@@ -232,16 +244,13 @@ const UsedCArVMenu = () => {
             <label htmlFor="">Busan</label>
           </div>
           <div>
-            <input type="checkbox" onClick={handleLocationGwangjuCheckboxClick}/>
+            <input
+              type="checkbox"
+              onClick={handleLocationGwangjuCheckboxClick}
+            />
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>
-        <CancelButton>
-          <div>
-            <button>Cancel</button>
-            <button>Search</button>
-          </div>
-        </CancelButton>
         <ComapreCars>
           <h1>Compare</h1>
           <div>
@@ -256,7 +265,7 @@ const UsedCArVMenu = () => {
           return (
             <Link to={`/usedCarInfo/${data._id}`} key={data._id}>
               <Orders key={data.id}>
-                <ImageOfOffer />
+                <UsedcarImageOfOffer />
                 <h1>{data.name}</h1>
                 <div
                   style={{
@@ -284,9 +293,8 @@ const UsedCArVMenu = () => {
           );
         })}
       </OrderSort>
-      </Bigcontainer>
-    );
-  };
+    </Bigcontainer>
+  );
+};
 
-
-export default UsedCArVMenu
+export default UsedCArVMenu;

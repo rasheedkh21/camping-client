@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import imagecarback from "../../../assets/carbackground.png";
-import Comfort from "../../../assets/comfort.png";
+import imagecarback from "../../../assets/usedcarimgoffer.jpeg";
+import Comfort from "../../../assets/tuningacces.jpeg";
 import Tyding from "../../../assets/tyding.png";
-import Ventiled from "../../../assets/ventiled.png";
-import Access from "../../../assets/access.png";
-import Heating from "../../../assets/heating.png";
+import Ventiled from "../../../assets/tuningventilate.jpeg";
+import Access from "../../../assets/tunigncomfort.jpeg";
+import Heating from "../../../assets/tuningheating.jpeg";
 import Zoom from "react-reveal/Zoom";
 import {
   AidalBack,

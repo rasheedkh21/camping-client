@@ -58,7 +58,7 @@ export const Infos = styled.div`
   justify-content: space-evenly;
   align-items: center;
   gap: 30px;
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   
   a {
@@ -107,17 +107,16 @@ export const Selection = styled.div`
   }
 `;
 export const Dropmenu = styled.div`
-display: block;
-  background-color: white;
+background-color: white;
   z-index: 1;
   position: absolute;
   top: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 400px;
-  width: 100%;
+  width: 120vw;
 
   button {
     height: 40px;
@@ -137,11 +136,13 @@ display: block;
 `;
 export const DropdownShow = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto ;
   justify-content: space-evenly;
   align-items: center;
   gap: 90px;
+  width: 100%;
   div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -303,10 +303,7 @@ const Navbar = () => {
                 <img src={car} alt="car" />
                 <p>Daegu</p>
               </div>
-              <div>
-                <img src={car} alt="car" />
-                <p>Incheon</p>
-              </div>
+           
             </DropdownShow>
             <button>See all</button>
           </Dropmenu>
@@ -326,7 +323,7 @@ const Navbar = () => {
           <option value="uz">UZ</option>
           <option value="rus">RUS</option>
         </select> */}
-       {/* <Translate/> */}
+    {/* <Translate/>    */}
          
         
       </Selection>
