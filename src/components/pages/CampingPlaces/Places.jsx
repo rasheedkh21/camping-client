@@ -15,6 +15,7 @@ const Places = () => {
       </PlacesBack>
       <Reveal>
         <PlaceOptions>
+          <Link to="/location">
           <PlaceOffers>
             <img src={placeone} alt="place" />
             <div>
@@ -22,85 +23,107 @@ const Places = () => {
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placetwo} alt="none" />
+            <img src={placetwo} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placethree} alt="none" />
+            <img src={placethree} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
+          <PlaceOffers>
+            <img src={placetwo} alt="place" />
+            <div>
+              <p>Camping place name</p>
+              <Link to="/location">Location</Link>
+            </div>
+          </PlaceOffers>
+          </Link>
+          <Link to="/location">
+          <PlaceOffers>
+            <img src={placeone} alt="place" />
+            <div>
+              <p>Camping place name</p>
+              <Link to="/location">Location</Link>
+            </div>
+          </PlaceOffers>
+          </Link>
+          <Link to="/location">
+          <PlaceOffers>
+            <img src={placethree} alt="place" />
+            <div>
+              <p>Camping place name</p>
+              <Link to="/location">Location</Link>
+            </div>
+          </PlaceOffers>
+          </Link>
 
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placeone} alt="none" />
+            <img src={placeone} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placetwo} alt="none" />
+            <img src={placethree} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placethree} alt="none" />
+            <img src={placetwo} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
-
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placeone} alt="none" />
+            <img src={placeone} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placetwo} alt="none" />
+            <img src={placetwo} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
+          </Link>
+          <Link to="/location">
           <PlaceOffers>
-            <img src={placethree} alt="none" />
-            <div>
-              <p>Camping place name</p>
-              <a href="/location">Location</a>
-            </div>
-          </PlaceOffers>
-          <PlaceOffers>
-            <img src={placeone} alt="none" />
+            <img src={placethree} alt="place" />
             <div>
               <p>Camping place name</p>
               <Link to="/location">Location</Link>
             </div>
           </PlaceOffers>
-          <PlaceOffers>
-            <img src={placetwo} alt="none" />
-            <div>
-              <p>Camping place name</p>
-              <Link to="/location">Location</Link>
-            </div>
-          </PlaceOffers>
-          <PlaceOffers>
-            <img src={placethree} alt="none" />
-            <div>
-              <p>Camping place name</p>
-              <Link to="/location">Location</Link>
-            </div>
-          </PlaceOffers>
+          </Link>
         </PlaceOptions>
       </Reveal>
     </div>
