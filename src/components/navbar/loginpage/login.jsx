@@ -4,7 +4,7 @@ import "./login.css";
 import naver from "../../../assets/naver logo.png";
 import google from "../../../assets/google-ion.png";
 import ktalk from "../../../assets/kakao-talk-fill.png";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const Login = () => {
   const navigate = useNavigate();
