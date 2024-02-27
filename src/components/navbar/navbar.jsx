@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import ImageWithDropdown from "./ImageDropdown/dropdown";
 import Header from "./ResponsiveHamburger";
 import Translate from "../googleTranslate/translate";
+import Sidebar from "../pages/drawer/Sidebar";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -253,7 +254,9 @@ const Navbar = () => {
                 <p>Car name</p>
               </div>
             </DropdownShow>
+            {/* <Link to="usedCar"> */}
             <button>See all</button>
+            {/* </Link> */}
           </Dropmenu>
         )}
         <div
@@ -289,23 +292,25 @@ const Navbar = () => {
             <DropdownShow>
               <div>
                 <img src={car} alt="car" />
-                <p>Seoul</p>
+                <p>Car name</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Busan</p>
+                <p> Car name</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Gwangju</p>
+                <p>Car name</p>
               </div>
               <div>
                 <img src={car} alt="car" />
-                <p>Daegu</p>
+                <p>Car name</p>
               </div>
            
             </DropdownShow>
+            {/* <Link to="places"> */}
             <button>See all</button>
+            {/* </Link> */}
           </Dropmenu>
         )}
       </Infos>
@@ -315,7 +320,7 @@ const Navbar = () => {
           <img src={people} className="people" alt="people" />
         </Link>
         <HamburgerRight>
-          <Header />
+          <Sidebar/>
         </HamburgerRight>
         {/* <select name="Language">
           <option value="eng">ENG</option>

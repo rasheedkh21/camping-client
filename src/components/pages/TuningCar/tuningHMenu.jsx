@@ -18,7 +18,7 @@ import {
   OptionsCheck,
   ThinLine,
 } from "./style";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const TuningHMenu = () => {
   const [allData, setAllData] = React.useState([]);

@@ -21,7 +21,7 @@ import {
 import Comment from "./swipableMenu";
 import { Link, useParams } from "react-router-dom";
 
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
     const MotorCarInfo = () => {
   const { id } = useParams();

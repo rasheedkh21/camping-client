@@ -17,7 +17,7 @@ import {
   OptionsCheck,
   ThinLine,
 } from "../TuningCar/style";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const CaravanHMenu = () => {
   const [checkActive, setCheckActive] = useState(true);

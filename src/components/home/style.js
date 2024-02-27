@@ -28,7 +28,7 @@ export const Videodiv = styled.div`
 
 
  
-  @media (max-width: 850px) {
+  @media (max-width: 1024px) {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;

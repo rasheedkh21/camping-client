@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Bigcontainer, ItemContainer, ItemSort, TuningBack } from "./style";
+import { Bigcontainer, ItemContainer, ItemSort, SelectionDiv, TuningBack } from "./style";
 import { Link } from "react-router-dom";
 import TuningController from "./TuningController";
 import TuningSwitch from "./tuningSwitchConroller";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const Tuning = () => {
   const [active, setActive] = useState(true);
@@ -55,6 +55,15 @@ const Tuning = () => {
                 {totalItems}
               </span>
             </div>
+            <SelectionDiv>
+            <div class="animation">
+  <h2 class="title">
+    <span class="title-word title-word-1">Camping</span>
+    <span class="title-word title-word-2">with</span>
+    <span class="title-word title-word-3">Camper</span>
+  </h2>
+</div>
+            </SelectionDiv>
             <TuningController
               onClick={(state) => {
                 setActive(state);

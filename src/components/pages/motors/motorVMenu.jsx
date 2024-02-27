@@ -12,7 +12,7 @@ import {
   ThinLine,
 } from "../TuningCar/style";
 import { Link } from "react-router-dom";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const MotorVMenu = () => {
   const [allData, setAllData] = React.useState([]);

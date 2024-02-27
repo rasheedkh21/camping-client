@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import car1 from "../../..//assets/car1.png"
 import car2  from "../../../assets/car2.png"
-import car3 from "../../../assets/car3.png"
 import {
   Carousel,
   CarouselItem,
@@ -14,20 +13,20 @@ import {
 const items = [
   {
     src: `${car1}`,
-    altText: 'CAR1',
-    caption: 'CAR1',
+    altText: 'Camper',
+    caption: 'Comfort',
     key: 1,
   },
   {
     src: `${car2}`,
-    altText: 'CAR2',
-    caption: 'CAR2',
+    altText: 'Camper',
+    caption: 'Safety',
     key: 2,
   },
   {
-    src:`${car3}`,
+    src:`${car1}`,
     altText: 'CAR3',
-    caption: 'CAR3',
+    caption: 'Stability',
     key: 3,
   },
 ];

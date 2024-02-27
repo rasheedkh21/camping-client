@@ -17,7 +17,7 @@ import {
   OptionsCheck,
   ThinLine,
 } from "../TuningCar/style";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const MotorHMenu = () => {
   const [checkActive, setCheckActive] = useState(true);
@@ -72,8 +72,7 @@ const MotorHMenu = () => {
     setCheckActive(!checkActive);
   };
 
-
-//checkbox  cheking by Location
+  //checkbox  cheking by Location
   const handleLocationBusanCheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.location === "Busan");
@@ -102,7 +101,7 @@ const MotorHMenu = () => {
     }
     setCheckActive(!checkActive);
   };
-// checkbox checking by number of people
+  // checkbox checking by number of people
   const handlePeople4CheckboxClick = () => {
     if (checkActive) {
       const checkedBox = allData.filter((data) => data.people === "4");
@@ -152,7 +151,9 @@ const MotorHMenu = () => {
   };
   const handleVolkswagenCheckboxClick = () => {
     if (checkActive) {
-      const checkedBox = allData.filter((data) => data.company === "Volkswagen");
+      const checkedBox = allData.filter(
+        (data) => data.company === "Volkswagen"
+      );
       setFilteredCaravan(checkedBox);
     } else {
       setFilteredCaravan(allData);
@@ -220,7 +221,7 @@ const MotorHMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox" onClick={handlePeople3heckboxClick}/>
+            <input type="checkbox" onClick={handlePeople3heckboxClick} />
             <label htmlFor="">3인</label>
           </div>
           <div>
@@ -228,7 +229,7 @@ const MotorHMenu = () => {
             <label htmlFor="">4인</label>
           </div>
           <div>
-            <input type="checkbox"  onClick={handlePeople5CheckboxClick} />
+            <input type="checkbox" onClick={handlePeople5CheckboxClick} />
             <label htmlFor="">5인</label>
           </div>
         </ChoicesCheck>
@@ -240,7 +241,7 @@ const MotorHMenu = () => {
         <ThinLine />
         <ChoicesCheck>
           <div>
-            <input type="checkbox"  onClick={handleLocationSeoulCheckboxClick}/>
+            <input type="checkbox" onClick={handleLocationSeoulCheckboxClick} />
             <label htmlFor="">Seoul</label>
           </div>
           <div>
@@ -248,7 +249,10 @@ const MotorHMenu = () => {
             <label htmlFor="">Busan</label>
           </div>
           <div>
-            <input type="checkbox" onClick={handleLocationGwangjuCheckboxClick}/>
+            <input
+              type="checkbox"
+              onClick={handleLocationGwangjuCheckboxClick}
+            />
             <label htmlFor="">Gwangju</label>
           </div>
         </ChoicesCheck>

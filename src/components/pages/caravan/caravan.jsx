@@ -5,11 +5,12 @@ import {
   CaravanBack,
   ItemContainer,
   ItemSort,
+  SelectionDiv,
 } from "../TuningCar/style";
 import { Link } from "react-router-dom";
 import CarvanSwitchControl from "./caravanSwitchController";
 import CarvanController from "./CaravanController";
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 const Caravan = () => {
   const [active, setActive] = useState(true);
   const [totalItems, setTotalItems]= useState(0)
@@ -57,7 +58,15 @@ const Caravan = () => {
               <h1>Item</h1>
               <span style={{ color: "#006DAB", fontSize: "18px" }}>{totalItems}</span>
             </div>
-
+            <SelectionDiv>
+            <div class="animation">
+  <h2 class="title">
+    <span class="title-word title-word-1">Camping</span>
+    <span class="title-word title-word-2">with</span>
+    <span class="title-word title-word-3">Camper</span>
+  </h2>
+</div>
+            </SelectionDiv>
             <CarvanController
               onClick={(state) => {
                 setActive(state);

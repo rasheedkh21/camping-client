@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import UsedCarSwitchControl from "./usedCarSwitchController";
 import UsedCarController from "./UsedCarController";
 
-const BASEURL = "http://localhost:5050/api/v1/";
+const BASEURL = "https://api-camping.isabek.uz/api/v1/";
 
 const UsedCar = ({}) => {
   const [active, setActive] = useState(true);
@@ -69,12 +69,13 @@ const UsedCar = ({}) => {
               </span>
             </div>
             <SelectionDiv>
-              <label htmlFor="input">Sort by</label>
-              <SelectionCars placeholder="select">
-                <option value="">Used Car Standart</option>
-                <option value="">Used Car Premium</option>
-                <option value="">Used Car Gold</option>
-              </SelectionCars>
+            <div class="animation">
+  <h2 class="title">
+    <span class="title-word title-word-1">Camping</span>
+    <span class="title-word title-word-2">with</span>
+    <span class="title-word title-word-3">Camper</span>
+  </h2>
+</div>
             </SelectionDiv>
             <UsedCarController
               onClick={(state) => {
